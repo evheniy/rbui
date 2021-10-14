@@ -2941,33 +2941,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rb/env@workspace:packages/env":
+"@rb/core@workspace:packages/core":
   version: 0.0.0-use.local
-  resolution: "@rb/env@workspace:packages/env"
-  languageName: unknown
-  linkType: soft
-
-"@rb/html@workspace:packages/html":
-  version: 0.0.0-use.local
-  resolution: "@rb/html@workspace:packages/html"
-  languageName: unknown
-  linkType: soft
-
-"@rb/path@workspace:packages/path":
-  version: 0.0.0-use.local
-  resolution: "@rb/path@workspace:packages/path"
+  resolution: "@rb/core@workspace:packages/core"
   languageName: unknown
   linkType: soft
 
 "@rb/wdio@workspace:packages/wdio":
   version: 0.0.0-use.local
   resolution: "@rb/wdio@workspace:packages/wdio"
-  languageName: unknown
-  linkType: soft
-
-"@rb/webpack@workspace:packages/webpack":
-  version: 0.0.0-use.local
-  resolution: "@rb/webpack@workspace:packages/webpack"
   languageName: unknown
   linkType: soft
 

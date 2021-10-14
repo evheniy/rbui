@@ -5,9 +5,9 @@ import * as webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import { getEnv } from '@rb/env';
+import { getEnv } from '@rb/core/env';
 
-import html from '@rb/html';
+import html from '@rb/core/html';
 
 process.env.PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
 
