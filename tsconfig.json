@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "target": "ESNext",
+    "types": [
+      "node",
+      "webdriverio/async",
+      "expect-webdriverio",
+      "jest",
+      "@wdio/mocha-framework",
+      "@wdio/devtools-service",
+    ],
+    "module": "CommonJS",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "sourceMap": true
+  },
+  "include": [
+    ".eslintrc.js",
+    "packages",
+    "index.tsx",
+    "webpack.config.ts",
+    "stories",
+    "jest.config.ts",
+    "declarations.d.ts",
+    ".storybook/*.ts",
+    "wdio.conf.ts",
+    "wdio"
+  ]
+}
