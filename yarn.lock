@@ -19497,15 +19497,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "prettier@npm:2.4.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: cc6830588b401b0d742862fe9c46bc9118204fb307c3abe0e49e95b35ed23629573807ffdf9cdd65289c252a0bb51fc0171437f6626ee36378dea80f0ee80b91
-  languageName: node
-  linkType: hard
-
 "prettier@npm:~2.2.1":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
@@ -20088,7 +20079,6 @@ fsevents@^1.2.7:
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
     postcss-preset-env: ^6.7.0
-    prettier: ^2.4.1
     raf: ^3.4.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -20101,7 +20091,6 @@ fsevents@^1.2.7:
     sass-loader: ^12.2.0
     style-loader: ^3.3.0
     stylelint: ^13.13.1
-    stylelint-config-prettier: ^9.0.2
     stylelint-config-standard: ^22.0.0
     stylelint-order: ^4.1.0
     stylelint-scss: ^3.21.0
@@ -22550,18 +22539,6 @@ resolve@^2.0.0-next.3:
   peerDependencies:
     postcss: ^8.2.15
   checksum: 777dbed3987e04f713b9d74e08f66ab4c23c76cabb07c666c0ae9a06e58e8961063e17b5c7b9c23421b75e9caa9fb78084688e509624e57b19c92c174fbd964d
-  languageName: node
-  linkType: hard
-
-"stylelint-config-prettier@npm:^9.0.2":
-  version: 9.0.2
-  resolution: "stylelint-config-prettier@npm:9.0.2"
-  peerDependencies:
-    stylelint: ">=11.0.0"
-  bin:
-    stylelint-config-prettier: bin/check.js
-    stylelint-config-prettier-check: bin/check.js
-  checksum: 9098f179a8c30a05b8880513837dca1c20e30408111f541e74d1044677cec65ac18406741aaf6dfb08c0e95497a272b68d1f3a3879f950874886cf10dacb6cb0
   languageName: node
   linkType: hard
 
