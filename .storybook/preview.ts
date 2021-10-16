@@ -10,7 +10,26 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: [],
+      includeName: true,
+      order: [
+        'Components',
+        [
+          'Button',
+          [
+            'Buttons',
+            [
+              'Style',
+              'Outline',
+              'Tags',
+              'Disabled',
+              'Size',
+            ],
+            'Button',
+            'Input',
+            'Link',
+          ],
+        ],
+      ],
     },
   },
 };

@@ -20,6 +20,17 @@ export const css: webpack.RuleSetRule = {
   },
 };
 
+export const cssBootstrap: webpack.RuleSetRule = {
+  loader: 'css-loader',
+  options: {
+    sourceMap: true,
+    importLoaders: 2,
+    modules: {
+      localIdentName: '[local]',
+    },
+  },
+};
+
 export const cssVendors: webpack.RuleSetRule = {
   loader: 'css-loader',
   options: {

@@ -5,6 +5,7 @@ import * as webpack from 'webpack';
 import {
   js,
   ts,
+  bootstrap,
   scss,
   scssDependencies,
   less,
@@ -19,6 +20,7 @@ import {
 const rules: webpack.RuleSetRule[] = [
   js,
   ts,
+  bootstrap,
   scss,
   scssDependencies,
   less,

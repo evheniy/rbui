@@ -4,9 +4,12 @@ import * as webpack from 'webpack';
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
+import resolvePath from '@rb/core/path';
+
 import {
   postcss,
   css as cssLoader,
+  cssBootstrap,
   cssVendors,
   scss as scssLoader,
   resolveUrl,
@@ -20,7 +23,7 @@ import {
   image,
 } from './loaders';
 
-const exclude = /node_modules\/(?!(@legends)\/).*/;
+const exclude = /node_modules\/(?!(@rb)\/).*/;
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -36,9 +39,17 @@ export const ts: webpack.RuleSetRule = {
   exclude,
 };
 
+export const bootstrap: webpack.RuleSetRule = {
+  test: /\.scss$/,
+  include: resolvePath('packages', 'components'),
+  use: isProduction
+    ? [MiniCssExtractPlugin.loader, cssBootstrap, postcss, resolveUrl, scssLoader]
+    : [cache, style, cssBootstrap, postcss, resolveUrl, scssLoader],
+};
+
 export const scss: webpack.RuleSetRule = {
   test: /\.scss$/,
-  exclude,
+  exclude: [exclude, resolvePath('packages', 'components')],
   use: isProduction
     ? [MiniCssExtractPlugin.loader, cssLoader, postcss, resolveUrl, scssLoader]
     : [cache, style, cssLoader, postcss, resolveUrl, scssLoader],

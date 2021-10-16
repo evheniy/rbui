@@ -2,6 +2,8 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 import { ButtonTypes } from './types';
 
 import Button from '.';
@@ -57,14 +59,14 @@ export default {
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
-export const ButtonStory = Template;
+export const ButtonStory = Template.bind({});
 ButtonStory.storyName = 'Button';
 ButtonStory.args = {
   children: 'Test',
   disabled: false,
   toggle: false,
   active: false,
-  primary: false,
+  primary: true,
   secondary: false,
   success: false,
   danger: false,

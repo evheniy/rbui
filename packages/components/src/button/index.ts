@@ -2,17 +2,30 @@ import { FC, FCP } from '@rb/core/types';
 
 import toggle from './hoc/toogle';
 
-import { ButtonProps, InputProps } from './types';
+import { ButtonProps, InputProps, LinkProps } from './types';
 
 import ButtonComponent from './components/Button';
 import InputComponent from './components/Input';
+import LinkComponent from './components/Link';
 
 const Button = toggle(ButtonComponent as FCP) as FC<ButtonProps>;
-Button.displayName = 'ButtonWithToggle';
+Button.displayName = 'Button';
 
 const Input = toggle(InputComponent as FCP) as FC<InputProps>;
-Input.displayName = 'InputWithToggle';
+Input.displayName = 'Input';
+
+const Link = toggle(LinkComponent as FCP) as FC<LinkProps>;
+Link.displayName = 'Link';
 
 export default Button;
 
-export { Input };
+export {
+  Input,
+  Link,
+};
+
+export type {
+  ButtonProps,
+  InputProps,
+  LinkProps,
+};

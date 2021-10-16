@@ -4,13 +4,12 @@ import React, { FC } from 'react';
 
 import cn from 'classnames';
 
-import { ButtonProps as P, ButtonTypes } from '../types';
+import { LinkProps as P } from '../types';
 
 import variant from '../helpers/variant';
 
-const Button:FC<P> = props => {
+const Link:FC<P> = props => {
   const {
-    type = ButtonTypes.button,
     primary = false,
     secondary = false,
     success = false,
@@ -29,6 +28,8 @@ const Button:FC<P> = props => {
     setActive,
     className,
     children,
+    href,
+    disabled,
     ...rest
   } = props;
 
@@ -67,17 +68,24 @@ const Button:FC<P> = props => {
     }
   }
 
+  if (disabled) {
+    classes.push('disabled');
+    rest['aria-disabled'] = 'true';
+    rest.tabIndex = -1;
+  }
+
   return (
-    <button
-      type={type}
+    <a
+      href={disabled ? undefined : href}
       className={cn(...classes, className)}
+      role="button"
       {...rest}
     >
       {children}
-    </button>
+    </a>
   );
 };
 
-Button.displayName = 'Button';
+Link.displayName = 'Link';
 
-export default Button;
+export default Link;

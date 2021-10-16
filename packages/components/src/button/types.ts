@@ -38,7 +38,7 @@ export interface LinkProps extends ComponentProps, HTMLProps<HTMLAnchorElement> 
   disabled?: boolean;
 }
 export interface InputProps extends ComponentProps, HTMLProps<HTMLInputElement> {
-  value: string;
+  value?: string;
 }
 
 export interface ButtonTest {

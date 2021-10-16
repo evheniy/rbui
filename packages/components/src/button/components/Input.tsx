@@ -8,8 +8,6 @@ import { InputProps as P } from '../types';
 
 import variant from '../helpers/variant';
 
-import styles from './styles.scss';
-
 const Input:FC<P> = props => {
   const {
     primary = false,
@@ -33,16 +31,16 @@ const Input:FC<P> = props => {
     ...rest
   } = props;
 
-  const classes = [styles.btn];
+  const classes = ['btn'];
 
   if (nowrap) {
-    classes.push(styles['text-nowrap']);
+    classes.push('text-nowrap');
   }
 
   const size = variant({ lg, sm });
 
   if (size) {
-    classes.push(styles[`btn-${size}`]);
+    classes.push(`btn-${size}`);
   }
 
   const style = variant({
@@ -58,13 +56,13 @@ const Input:FC<P> = props => {
   });
 
   if (style) {
-    classes.push(styles[`${outline ? 'btn-outline-' : 'btn-'}${style}`]);
+    classes.push(`${outline ? 'btn-outline-' : 'btn-'}${style}`);
   }
 
   if (toggle) {
     if (active) {
       rest['aria-pressed'] = 'true';
-      classes.push(styles.active);
+      classes.push('active');
     }
   }
 
