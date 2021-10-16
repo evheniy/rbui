@@ -17,13 +17,6 @@ export const parameters = {
           'Button',
           [
             'Buttons',
-            [
-              'Style',
-              'Outline',
-              'Tags',
-              'Disabled',
-              'Size',
-            ],
             'Button',
             'Input',
             'Link',

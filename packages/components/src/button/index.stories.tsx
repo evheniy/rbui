@@ -8,58 +8,51 @@ export default {
   title: 'Components/Button/Buttons',
 };
 
-const style: React.CSSProperties = {
-  // overflow: 'hidden',
-  // position: 'absolute',
-  width: '100%',
-  height: '100%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
-
-const buttonStyle: React.CSSProperties = {
-  margin: 10,
-};
-
 export const Style = () => (
-  <div style={style}>
-    <Button primary style={buttonStyle}>Primary</Button>
-    <Button secondary style={buttonStyle}>Secondary</Button>
-    <Button success style={buttonStyle}>Success</Button>
-    <Button danger style={buttonStyle}>Danger</Button>
-    <Button warning style={buttonStyle}>Warning</Button>
-    <Button info style={buttonStyle}>Info</Button>
-    <Button light style={buttonStyle}>Light</Button>
-    <Button dark style={buttonStyle}>Dark</Button>
-    <Button link style={buttonStyle}>Link</Button>
+  <div className="d-grid gap-2 d-md-flex">
+    <Button primary>Primary</Button>
+    <Button secondary>Secondary</Button>
+    <Button success>Success</Button>
+    <Button danger>Danger</Button>
+    <Button warning>Warning</Button>
+    <Button info>Info</Button>
+    <Button light>Light</Button>
+    <Button dark>Dark</Button>
+    <Button link>Link</Button>
   </div>
 );
 Style.storyName = 'Style';
 
 export const Outline = () => (
-  <div style={style}>
-    <Button primary outline style={buttonStyle}>Primary</Button>
-    <Button secondary outline style={buttonStyle}>Secondary</Button>
-    <Button success outline style={buttonStyle}>Success</Button>
-    <Button danger outline style={buttonStyle}>Danger</Button>
-    <Button warning outline style={buttonStyle}>Warning</Button>
-    <Button info outline style={buttonStyle}>Info</Button>
-    <Button light outline style={buttonStyle}>Light</Button>
-    <Button dark outline style={buttonStyle}>Dark</Button>
-    <Button link outline style={buttonStyle}>Link</Button>
+  <div className="d-grid gap-2 d-md-flex">
+    <Button primary outline>Primary</Button>
+    <Button secondary outline>Secondary</Button>
+    <Button success outline>Success</Button>
+    <Button danger outline>Danger</Button>
+    <Button warning outline>Warning</Button>
+    <Button info outline>Info</Button>
+    <Button light outline>Light</Button>
+    <Button dark outline>Dark</Button>
+    <Button link outline>Link</Button>
   </div>
 );
 Outline.storyName = 'Outline';
 
+export const Size = () => (
+  <div className="d-grid gap-2 d-md-flex">
+    <Button primary lg>Large button</Button>
+    <Button primary sm>Small button</Button>
+  </div>
+);
+Size.storyName = 'Size';
+
 export const Tags = () => (
-  <div style={style}>
-    <Button primary style={buttonStyle}>Button</Button>
-    <Input primary style={buttonStyle} value="Input" />
+  <div className="d-grid gap-2 d-md-flex">
+    <Button primary>Button</Button>
+    <Input primary value="Input" />
     <Link
       href="https://skazkajs.org/"
       primary
-      style={buttonStyle}
       onClick={event => event.preventDefault()}
     >
       Link
@@ -69,13 +62,12 @@ export const Tags = () => (
 Tags.storyName = 'Tags';
 
 export const Disabled = () => (
-  <div style={style}>
-    <Button primary disabled style={buttonStyle}>Button</Button>
-    <Input primary disabled style={buttonStyle} value="Input" />
+  <div className="d-grid gap-2 d-md-flex">
+    <Button primary disabled>Button</Button>
+    <Input primary disabled value="Input" />
     <Link
       href="https://skazkajs.org/"
       primary
-      style={buttonStyle}
       onClick={event => event.preventDefault()}
       disabled
     >
@@ -85,10 +77,17 @@ export const Disabled = () => (
 );
 Disabled.storyName = 'Disabled';
 
-export const Size = () => (
-  <div style={style}>
-    <Button primary lg style={buttonStyle}>Large button</Button>
-    <Button primary sm style={buttonStyle}>Small button</Button>
+export const Toggle = () => (
+  <div className="d-grid gap-2 d-md-flex">
+    <Button primary toggle>Primary</Button>
+    <Button secondary toggle>Secondary</Button>
+    <Button success toggle>Success</Button>
+    <Button danger toggle>Danger</Button>
+    <Button warning toggle>Warning</Button>
+    <Button info toggle>Info</Button>
+    <Button light toggle>Light</Button>
+    <Button dark toggle>Dark</Button>
+    <Button link toggle>Link</Button>
   </div>
 );
-Size.storyName = 'Size';
+Toggle.storyName = 'Toggle';
