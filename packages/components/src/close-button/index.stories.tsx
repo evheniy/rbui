@@ -9,6 +9,7 @@ import CloseButton from '.';
 export default {
   title: 'Components/CloseButton',
   component: CloseButton,
+  parameters: { options: { showPanel: true } },
   argTypes: {
     'aria-label': {
       description: 'Text for screen readers',
@@ -34,6 +35,19 @@ export default {
         },
       },
     },
+    white: {
+      description: 'Change the default dark color to white',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    onClick: { action: 'clicked' },
   },
 } as ComponentMeta<typeof CloseButton>;
 
@@ -44,4 +58,5 @@ CloseButtonStory.storyName = 'CloseButton';
 CloseButtonStory.args = {
   'aria-label': 'Close',
   disabled: false,
+  white: false,
 };

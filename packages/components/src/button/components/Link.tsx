@@ -4,9 +4,9 @@ import React, { FC } from 'react';
 
 import cn from 'classnames';
 
-import { LinkProps as P } from '../types';
+import variant from '@rb/core/variant';
 
-import variant from '../helpers/variant';
+import { LinkProps as P } from '../types';
 
 const Link:FC<P> = props => {
   const {

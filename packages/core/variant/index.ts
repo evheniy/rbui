@@ -1,6 +1,8 @@
-import { Variant as V } from '../types';
+export interface Variant {
+  (variants: { [key: string]: boolean | undefined }): string | undefined;
+}
 
-const variant:V = variants => {
+const variant:Variant = variants => {
   let activeVariant: string | undefined;
 
   Object.keys(variants).forEach(key => {

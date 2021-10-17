@@ -6,6 +6,7 @@ import Button, { Input, Link } from '.';
 
 export default {
   title: 'Components/Button/Buttons',
+  parameters: { options: { showPanel: false } },
 };
 
 export const Style = () => (

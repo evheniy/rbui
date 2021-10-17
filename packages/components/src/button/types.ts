@@ -27,10 +27,6 @@ interface ComponentProps {
   setActive?: () => void,
 }
 
-export interface Variant {
-  (variants: { [key: string]: boolean }): string | undefined;
-}
-
 export interface ButtonProps extends ComponentProps, ButtonHTMLAttributes<HTMLButtonElement> {
   type?: ButtonTypes;
 }

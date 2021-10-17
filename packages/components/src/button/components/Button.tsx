@@ -4,9 +4,9 @@ import React, { FC } from 'react';
 
 import cn from 'classnames';
 
-import { ButtonProps as P, ButtonTypes } from '../types';
+import variant from '@rb/core/variant';
 
-import variant from '../helpers/variant';
+import { ButtonProps as P, ButtonTypes } from '../types';
 
 const Button:FC<P> = props => {
   const {

@@ -4,9 +4,9 @@ import React, { FC } from 'react';
 
 import cn from 'classnames';
 
-import { InputProps as P } from '../types';
+import variant from '@rb/core/variant';
 
-import variant from '../helpers/variant';
+import { InputProps as P } from '../types';
 
 const Input:FC<P> = props => {
   const {
