@@ -39,8 +39,9 @@ export const Outline = () => (
 Outline.storyName = 'Outline';
 
 export const Size = () => (
-  <div className="d-grid gap-2 d-md-flex">
+  <div>
     <Button primary lg>Large button</Button>
+    &nbsp;
     <Button primary sm>Small button</Button>
   </div>
 );

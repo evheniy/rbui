@@ -9,6 +9,32 @@ import CloseButton from '.';
 export default {
   title: 'Components/CloseButton',
   component: CloseButton,
+  argTypes: {
+    'aria-label': {
+      description: 'Text for screen readers',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'Close',
+        },
+      },
+    },
+    disabled: {
+      description: 'Disabled close buttons change their opacity',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+  },
 } as ComponentMeta<typeof CloseButton>;
 
 const Template: ComponentStory<typeof CloseButton> = args => <CloseButton {...args} />;
