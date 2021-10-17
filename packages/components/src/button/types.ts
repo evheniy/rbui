@@ -1,4 +1,5 @@
-import { HTMLProps } from 'react';
+import { ButtonHTMLAttributes, InputHTMLAttributes, LinkHTMLAttributes } from 'react';
+
 import { ReactTestRenderer } from 'react-test-renderer';
 
 export enum ButtonTypes {
@@ -30,25 +31,26 @@ export interface Variant {
   (variants: { [key: string]: boolean }): string | undefined;
 }
 
-export interface ButtonProps extends ComponentProps, HTMLProps<HTMLButtonElement> {
+export interface ButtonProps extends ComponentProps, ButtonHTMLAttributes<HTMLButtonElement> {
   type?: ButtonTypes;
 }
 
-export interface LinkProps extends ComponentProps, HTMLProps<HTMLAnchorElement> {
-  disabled?: boolean;
-}
-export interface InputProps extends ComponentProps, HTMLProps<HTMLInputElement> {
+export interface InputProps extends ComponentProps, InputHTMLAttributes<HTMLInputElement> {
   value?: string;
+}
+
+export interface LinkProps extends ComponentProps, LinkHTMLAttributes<HTMLAnchorElement> {
+  disabled?: boolean;
 }
 
 export interface ButtonTest {
   (result: ReactTestRenderer, props: ButtonProps): void;
 }
 
-export interface LinkTest {
-  (result: ReactTestRenderer, props: LinkProps): void;
-}
-
 export interface InputTest {
   (result: ReactTestRenderer, props: InputProps): void;
+}
+
+export interface LinkTest {
+  (result: ReactTestRenderer, props: LinkProps): void;
 }
