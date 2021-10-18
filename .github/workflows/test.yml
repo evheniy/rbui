@@ -11,5 +11,6 @@ jobs:
         with:
           node-version: '14'
       - run: npm i g yarn
+      - run: yarn set version berry
       - run: yarn
       - run: yarn test
