@@ -16,6 +16,3 @@ jobs:
       - uses: borales/actions-yarn@v3.0.2
         with:
           cmd: test
-      - uses: borales/actions-yarn@v3.0.2
-        with:
-          cmd: test
