@@ -1,9 +1,11 @@
+type V = { [key: string]: boolean | undefined };
+type R = string | undefined;
 export interface Variant {
-  (variants: { [key: string]: boolean | undefined }): string | undefined;
+  (variants?: V, defaultValue?: string): R;
 }
 
-const variant:Variant = variants => {
-  let activeVariant: string | undefined;
+const variant:Variant = (variants = {}, defaultValue) => {
+  let activeVariant = defaultValue;
 
   Object.keys(variants).forEach(key => {
     if (!activeVariant && variants[key]) {
