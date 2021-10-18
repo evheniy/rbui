@@ -10,7 +10,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - run: node -v
+      - run: npm -v
       - run: npm i g yarn
       - run: yarn set version berry
-      - run: yarn
+      - run: yarn -v
+      - run: yarn install
       - run: yarn test
