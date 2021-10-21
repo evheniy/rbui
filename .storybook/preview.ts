@@ -24,6 +24,8 @@ export const parameters = {
           'ButtonGroup',
           ['ButtonGroup', 'ButtonToolbar'],
           'CloseButton',
+          'Progress',
+          'Spinner',
         ],
       ],
     },

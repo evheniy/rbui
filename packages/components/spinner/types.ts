@@ -17,6 +17,6 @@ export interface SpinnerProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanE
   sm?: boolean;
 }
 
-export interface CloseButtonTest {
+export interface SpinnerTest {
   (result: ReactTestRenderer, props: SpinnerProps): void;
 }
