@@ -24,7 +24,7 @@ interface ComponentProps {
   nowrap?: boolean;
   toggle?: boolean;
   active?: boolean;
-  setActive?: () => void,
+  setActive?: () => void;
 }
 
 export interface ButtonProps extends ComponentProps, ButtonHTMLAttributes<HTMLButtonElement> {

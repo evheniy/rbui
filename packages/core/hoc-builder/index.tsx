@@ -6,7 +6,7 @@ interface HocBuild {
   (
     hooks?: (props: P) => P | undefined,
     displayName? : string,
-  ): HOC
+  ): HOC;
 }
 
 const hocBuilder: HocBuild = (hooks, displayName = 'HOC') => Component => {

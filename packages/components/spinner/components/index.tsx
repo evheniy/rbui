@@ -19,6 +19,7 @@ const Spinner:FC<P> = props => {
     dark = false,
     sm = false,
     className,
+    children,
     ...rest
   } = props;
 
@@ -51,7 +52,9 @@ const Spinner:FC<P> = props => {
       role="status"
       aria-hidden="true"
       {...rest}
-    />
+    >
+      {children || <span className="visually-hidden">Loading...</span>}
+    </span>
   );
 };
 

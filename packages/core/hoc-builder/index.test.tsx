@@ -17,7 +17,7 @@ const TestComponent: FCP = ({ isToggled, toggle, ...rest }: P) => (
 );
 
 interface JsonTest {
-  (result: ReactTestRendererJSON[], props: P, toggled: boolean): void
+  (result: ReactTestRendererJSON[], props: P, toggled: boolean): void;
 }
 
 const jsonTest: JsonTest = (result, props = {}, toggled: boolean): void => {
@@ -41,7 +41,7 @@ const jsonTest: JsonTest = (result, props = {}, toggled: boolean): void => {
 };
 
 interface HocBuilderTest {
-  (Component: FCP, props: P): void
+  (Component: FCP, props: P): void;
 }
 
 const hocBuilderTest: HocBuilderTest = (Component, props) => {

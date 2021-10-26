@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
 interface UseToggle {
-  (initialState?: boolean | undefined): [boolean, () => void]
+  (initialState?: boolean | undefined): [boolean, () => void];
 }
 
 const useToggle: UseToggle = (initialState = false) => {
