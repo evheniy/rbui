@@ -15,6 +15,7 @@ export const parameters = {
         'Components',
         [
           'Badges',
+          'Breadcrumb',
           'Button',
           [
             'Buttons',
@@ -24,7 +25,6 @@ export const parameters = {
           ],
           'ButtonGroup',
           ['ButtonGroup', 'ButtonToolbar'],
-          'Breadcrumb',
           'CloseButton',
           'Progress',
           'Spinner',
