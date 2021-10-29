@@ -13,8 +13,8 @@ jobs:
         with:
           node-version: '16'
       - run: node -v
+      - run: npm i -g npm yarn
       - run: npm -v
-      - run: npm i -g yarn
       - run: yarn set version berry
       - run: yarn -v
       - run: yarn install
