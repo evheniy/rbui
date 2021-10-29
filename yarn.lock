@@ -2938,10 +2938,12 @@ __metadata:
 "@rbui/components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "@rbui/components@workspace:packages/components"
+  dependencies:
+    "@rbui/core": ^0.0.0
   languageName: unknown
   linkType: soft
 
-"@rbui/core@workspace:packages/core":
+"@rbui/core@^0.0.0, @rbui/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@rbui/core@workspace:packages/core"
   languageName: unknown
