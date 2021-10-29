@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { P, FCP, HOC } from '@rb/core/types';
+import { P, FCP, HOC } from '@rbui/core/types';
 
 interface HocBuild {
   (

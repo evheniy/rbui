@@ -5,8 +5,8 @@ import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-serv
 
 import TerserPlugin from 'terser-webpack-plugin';
 
-import { getEnv } from '@rb/core/env';
-import resolvePath from '@rb/core/path';
+import { getEnv } from '@rbui/core/env';
+import resolvePath from '@rbui/core/path';
 
 import rules from './rules';
 import plugins from './plugins';

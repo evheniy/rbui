@@ -2,7 +2,7 @@ import React from 'react';
 
 import renderer, { act, ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer';
 
-import { P, FCP } from '@rb/core/types';
+import { P, FCP } from '@rbui/core/types';
 
 import useToggle from '.';
 

@@ -1,4 +1,4 @@
-import { FC, FCP } from '@rb/core/types';
+import { FC, FCP } from '@rbui/core/types';
 
 import toggle from './hoc/toogle';
 

@@ -4,7 +4,7 @@ import * as webpack from 'webpack';
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-import resolvePath from '@rb/core/path';
+import resolvePath from '@rbui/core/path';
 
 import {
   postcss,

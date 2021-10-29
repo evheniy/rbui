@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import cn from 'classnames';
 
-import variant from '@rb/core/variant';
+import variant from '@rbui/core/variant';
 
 import { ButtonGroupProps as P } from '../types';
 

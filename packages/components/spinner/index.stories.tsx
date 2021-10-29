@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import Button from '@rb/components/button';
+import Button from '@rbui/components/button';
 
 import Spinner from '.';
 

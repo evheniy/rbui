@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 import renderer, { act, ReactTestRendererJSON } from 'react-test-renderer';
 
-import { P, FCP } from '@rb/core/types';
+import { P, FCP } from '@rbui/core/types';
 
-import useToggle from '@rb/core/use-toggle';
-import compose from '@rb/core/compose';
+import useToggle from '@rbui/core/use-toggle';
+import compose from '@rbui/core/compose';
 
 import hocBuilder from '.';
 

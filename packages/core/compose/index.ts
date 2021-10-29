@@ -1,4 +1,4 @@
-import { FCP, HOC } from '@rb/core/types';
+import { FCP, HOC } from '@rbui/core/types';
 
 export default function compose(...funcs: HOC[]): HOC {
   if (funcs.length === 0) {

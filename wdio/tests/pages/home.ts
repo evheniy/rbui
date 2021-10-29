@@ -1,4 +1,4 @@
-import HomePage from '@rb/wdio/pages/home';
+import HomePage from '@rbui/wdio/pages/home';
 
 describe('Home page test', () => {
   it('should open home page', async () => {

@@ -1,5 +1,5 @@
 import 'webpack';
 
-import config from '@rb/core/webpack';
+import config from '@rbui/core/webpack';
 
 export default config;

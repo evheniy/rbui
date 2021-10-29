@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FCP } from '@rb/core/types';
+import { FCP } from '@rbui/core/types';
 
 const TestComponent: FCP = props => <div>{JSON.stringify(props)}</div>;
 

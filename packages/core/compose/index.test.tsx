@@ -2,8 +2,8 @@ import React from 'react';
 
 import renderer from 'react-test-renderer';
 
-import { HOC } from '@rb/core/types';
-import TestComponent from '@rb/core/test-component';
+import { HOC } from '@rbui/core/types';
+import TestComponent from '@rbui/core/test-component';
 
 import compose from '.';
 

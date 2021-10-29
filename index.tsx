@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import Button from '@rb/components/button';
+import Button from '@rbui/components/button';
 
 const App = () => (
   <div>

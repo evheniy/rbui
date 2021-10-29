@@ -2935,21 +2935,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rb/components@workspace:packages/components":
+"@rbui/components@workspace:packages/components":
   version: 0.0.0-use.local
-  resolution: "@rb/components@workspace:packages/components"
+  resolution: "@rbui/components@workspace:packages/components"
   languageName: unknown
   linkType: soft
 
-"@rb/core@workspace:packages/core":
+"@rbui/core@workspace:packages/core":
   version: 0.0.0-use.local
-  resolution: "@rb/core@workspace:packages/core"
+  resolution: "@rbui/core@workspace:packages/core"
   languageName: unknown
   linkType: soft
 
-"@rb/wdio@workspace:packages/wdio":
+"@rbui/wdio@workspace:packages/wdio":
   version: 0.0.0-use.local
-  resolution: "@rb/wdio@workspace:packages/wdio"
+  resolution: "@rbui/wdio@workspace:packages/wdio"
   languageName: unknown
   linkType: soft
 
@@ -19938,9 +19938,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"rb@workspace:.":
+"rbui@workspace:.":
   version: 0.0.0-use.local
-  resolution: "rb@workspace:."
+  resolution: "rbui@workspace:."
   dependencies:
     "@babel/core": ^7.15.8
     "@babel/plugin-transform-runtime": ^7.15.8

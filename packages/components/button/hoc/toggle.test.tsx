@@ -2,7 +2,7 @@ import React from 'react';
 
 import renderer from 'react-test-renderer';
 
-import TestComponent from '@rb/core/test-component';
+import TestComponent from '@rbui/core/test-component';
 
 import toggleHoc from './toogle';
 

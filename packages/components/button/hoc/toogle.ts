@@ -2,8 +2,8 @@ import {
   MouseEvent,
 } from 'react';
 
-import hocBuilder from '@rb/core/hoc-builder';
-import useToggle from '@rb/core/use-toggle';
+import hocBuilder from '@rbui/core/hoc-builder';
+import useToggle from '@rbui/core/use-toggle';
 
 const toggleHoc = hocBuilder(props => {
   const [active, setActive] = useToggle(props.active);
