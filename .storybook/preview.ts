@@ -14,6 +14,7 @@ export const parameters = {
       order: [
         'Components',
         [
+          'Badges',
           'Button',
           [
             'Buttons',
@@ -23,6 +24,7 @@ export const parameters = {
           ],
           'ButtonGroup',
           ['ButtonGroup', 'ButtonToolbar'],
+          'Breadcrumb',
           'CloseButton',
           'Progress',
           'Spinner',
