@@ -2,7 +2,7 @@
   "name": "rb",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "yarn@3.0.2",
+  "packageManager": "yarn@3.1.0",
   "workspaces": [
     "packages/*"
   ],

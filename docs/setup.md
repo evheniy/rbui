@@ -15,7 +15,10 @@ brew install git nvm zsh zsh-syntax-highlighting zsh-autosuggestions cowsay awsc
 - Node.js
 
 ```bash
-nvm install lts/fermium
+nvm install lts/gallium
+nvm use default lts/gallium
+nvm alias default lts/gallium
+
 ```
 
 ```bash
