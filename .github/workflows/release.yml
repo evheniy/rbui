@@ -1,18 +1,33 @@
-name: Node.js Package
+name: Release
+
 on:
   release:
     types: [created]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      YARN_ENABLE_IMMUTABLE_INSTALLS: false
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
     steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v2
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - run: printenv
+      - run: node -v
+      - run: npm i -g npm yarn
+      - run: npm -v
+      - run: yarn set version berry
+      - run: yarn -v
+      - run: yarn install
+      - run: yarn build
+      # - run: yarn publish
