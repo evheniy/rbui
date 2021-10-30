@@ -29,5 +29,5 @@ jobs:
       - run: yarn set version berry
       - run: yarn -v
       - run: yarn install
-      - run: yarn build
+      # - run: yarn dist
       # - run: yarn publish
