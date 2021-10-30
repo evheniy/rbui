@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+( cd packages/core && yarn version patch --deferred )
+
+( cd packages/components && yarn version patch --deferred )
+
+yarn version patch --deferred
+
+yarn version apply --all
