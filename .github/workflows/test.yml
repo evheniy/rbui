@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
-      HUSKY: 0
+      CI: true
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
+      - run: printenv
       - run: node -v
       - run: npm i -g npm yarn
       - run: npm -v
