@@ -1,9 +1,8 @@
 {
   "name": "@rbui/components",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.2",
   "dependencies": {
-    "@rbui/core": "^0.0.0"
+    "@rbui/core": "^0.0.2"
   },
   "peerDependencies": {
     "@types/react": "^17.0.31",

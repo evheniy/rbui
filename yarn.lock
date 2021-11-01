@@ -5,6 +5,15 @@ __metadata:
   version: 5
   cacheKey: 8
 
+"@4c/tsconfig@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@4c/tsconfig@npm:0.4.0"
+  dependencies:
+    typescript-workspace-plugin: ^2.0.1
+  checksum: 88d99d54c8684a40252716deb3b8ee717f40d2c826f5bc2bd9a98ca2410cf8c986f87984e8f9b54d8c08e1bc13cb51cd96e1e741975de4930a42f90772da36a1
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:7.10.4":
   version: 7.10.4
   resolution: "@babel/code-frame@npm:7.10.4"
@@ -19950,6 +19959,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "rbui@workspace:."
   dependencies:
+    "@4c/tsconfig": ^0.4.0
     "@babel/core": ^7.15.8
     "@babel/plugin-transform-runtime": ^7.15.8
     "@babel/polyfill": ^7.12.1
@@ -23462,6 +23472,15 @@ resolve@^2.0.0-next.3:
   version: 0.0.6
   resolution: "typedarray@npm:0.0.6"
   checksum: 33b39f3d0e8463985eeaeeacc3cb2e28bc3dfaf2a5ed219628c0b629d5d7b810b0eb2165f9f607c34871d5daa92ba1dc69f49051cf7d578b4cbd26c340b9d1b1
+  languageName: node
+  linkType: hard
+
+"typescript-workspace-plugin@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "typescript-workspace-plugin@npm:2.0.1"
+  peerDependencies:
+    typescript: ">= 2.3.1 < 4"
+  checksum: d91fca290982a32890a3f207e0c06ced93b5382f65a5efa9ae2edf92790f6d02bc3b9350a2ba2e6d4116725e5bda43cf0b0ae115e8fa0f24ae4492b8383aae29
   languageName: node
   linkType: hard
 

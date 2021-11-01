@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "publish dist/core"
+(cd dist/core && npm publish --access=public)
+
+echo "publish dist/components"
+(cd dist/components && npm publish --access=public)

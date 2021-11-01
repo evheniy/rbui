@@ -1,6 +1,7 @@
 node_modules
 .yarn
 build
+dist
 storybook-static
 coverage
 !.storybook

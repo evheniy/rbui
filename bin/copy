@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "cp packages/core/Readme.md dist/core/"
+cp packages/core/README.md dist/core/
+
+echo "cp packages/components/Readme.md dist/components/"
+cp packages/components/README.md dist/components/

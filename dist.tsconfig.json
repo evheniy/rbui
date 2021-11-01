@@ -1,0 +1,11 @@
+{
+  "extends": "@4c/tsconfig/web.json",
+  "compilerOptions": {
+    "rootDir": "packages",
+    "outDir": "dist",
+    "noImplicitAny": false,
+    "resolveJsonModule": true
+  },
+  "include": ["packages", "packages/**/package.json"],
+  "exclude": ["packages/wdio"]
+}

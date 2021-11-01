@@ -38,5 +38,8 @@
     ".storybook/*.ts",
     "wdio.conf.ts",
     "wdio"
+  ],
+  "exclude": [
+    "dist"
   ]
 }
