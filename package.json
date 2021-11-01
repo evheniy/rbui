@@ -26,8 +26,7 @@
     "pretest": "rimraf coverage",
     "prebuild-storybook": "rimraf storybook-static",
     "prewdio": "rimraf wdio/reports",
-    "predi1st": "rimraf dist && sh bin/patch",
-    "predist": "rimraf dist",
+    "predist": "rimraf dist && sh bin/patch",
     "postdist": "sh bin/copy",
     "dist": "tsc -p dist.tsconfig.json",
     "publish": "sh bin/publish"
