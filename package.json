@@ -13,7 +13,6 @@
     "test": "npm-run-all 'test:*'",
     "wdio": "wdio run wdio.conf.ts",
     "allure": "allure serve wdio/reports/allure-reports",
-    "dist": "tsc -p dist.tsconfig.json",
     "test:lint": "npm-run-all 'lint:*'",
     "test:code": "jest",
     "test:build-storybook": "yarn run build-storybook",
@@ -27,8 +26,10 @@
     "pretest": "rimraf coverage",
     "prebuild-storybook": "rimraf storybook-static",
     "prewdio": "rimraf wdio/reports",
-    "predist": "rimraf dist && sh bin/patch",
+    "predi1st": "rimraf dist && sh bin/patch",
+    "predist": "rimraf dist",
     "postdist": "sh bin/copy",
+    "dist": "tsc -p dist.tsconfig.json",
     "publish": "sh bin/publish"
   },
   "devDependencies": {

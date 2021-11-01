@@ -7,5 +7,5 @@
     "resolveJsonModule": true
   },
   "include": ["packages", "packages/**/package.json"],
-  "exclude": ["packages/wdio"]
+  "exclude": ["packages/wdio", "packages/**/*.story.tsx", "packages/**/*.stories.tsx"]
 }
