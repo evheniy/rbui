@@ -1,6 +1,6 @@
 {
   "name": "rbui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "packageManager": "yarn@3.1.0",
   "workspaces": [
@@ -30,7 +30,7 @@
     "postdist": "sh bin/copy",
     "publish": "sh bin/publish",
     "patch": "sh bin/patch",
-    "dist": "tsc -p dist.tsconfig.json"
+    "dist": "sh bin/dist"
   },
   "devDependencies": {
     "@4c/tsconfig": "^0.4.0",

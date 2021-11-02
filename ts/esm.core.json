@@ -1,0 +1,11 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "rootDir": "../packages/core",
+    "outDir": "../dist/core"
+  },
+  "include": [
+    "../packages/core",
+    "../packages/core/**/*.json"
+  ]
+}

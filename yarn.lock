@@ -2948,7 +2948,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rbui/components@workspace:packages/components"
   dependencies:
-    "@rbui/core": ^0.0.3
+    "@rbui/core": ^0.0.4
   peerDependencies:
     "@types/react": ^17.0.31
     "@types/react-dom": ^17.0.10
@@ -2959,7 +2959,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rbui/core@^0.0.3, @rbui/core@workspace:packages/core":
+"@rbui/core@^0.0.4, @rbui/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@rbui/core@workspace:packages/core"
   languageName: unknown

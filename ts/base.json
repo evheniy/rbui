@@ -1,0 +1,11 @@
+{
+  "extends": "@rbui/core/ts/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext"
+  },
+  "exclude": [
+    "../packages/wdio",
+    "../packages/**/*.story.tsx",
+    "../packages/**/*.stories.tsx"
+  ]
+}
