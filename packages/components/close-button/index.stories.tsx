@@ -9,7 +9,10 @@ import CloseButton from '.';
 export default {
   title: 'Components/CloseButton',
   component: CloseButton,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
   argTypes: {
     'aria-label': {
       description: 'Text for screen readers',

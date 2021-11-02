@@ -8,7 +8,10 @@ import Spinner from '.';
 
 export default {
   title: 'Components/Spinner/Spinners',
-  parameters: { options: { showPanel: false } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: false },
+  },
 };
 
 export const Base = () => <Spinner />;

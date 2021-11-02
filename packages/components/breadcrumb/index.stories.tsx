@@ -7,7 +7,10 @@ import { Style } from './types';
 
 export default {
   title: 'Components/Breadcrumb/Breadcrumbs',
-  parameters: { options: { showPanel: false } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: false },
+  },
 };
 
 export const Base = () => (

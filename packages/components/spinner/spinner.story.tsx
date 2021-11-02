@@ -9,7 +9,10 @@ import Spinner from '.';
 export default {
   title: 'Components/Spinner/Spinner',
   component: Spinner,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
 } as ComponentMeta<typeof Spinner>;
 
 const Template: ComponentStory<typeof Spinner> = args => <Spinner {...args} />;

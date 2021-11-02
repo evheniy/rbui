@@ -1,11 +1,6 @@
 {
+  "extends": "@rbui/core/ts/tsconfig.json",
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "target": "ESNext",
     "types": [
       "node",
       "webdriverio/async",
@@ -14,18 +9,6 @@
       "@wdio/mocha-framework",
       "@wdio/devtools-service",
     ],
-    "module": "CommonJS",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react",
-    "sourceMap": true
   },
   "include": [
     ".eslintrc.js",
@@ -40,6 +23,7 @@
     "wdio"
   ],
   "exclude": [
-    "dist"
+    "dist",
+    "build"
   ]
 }

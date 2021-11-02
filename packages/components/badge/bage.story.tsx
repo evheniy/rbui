@@ -9,7 +9,10 @@ import Badge from '.';
 export default {
   title: 'Components/Badges/Badge',
   component: Badge,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
 } as ComponentMeta<typeof Badge>;
 
 const Template: ComponentStory<typeof Badge> = args => <Badge {...args} />;

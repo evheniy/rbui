@@ -11,7 +11,10 @@ import ButtonGroup, { ButtonToolbar } from '.';
 export default {
   title: 'Components/ButtonGroup/ButtonToolbar',
   component: ButtonToolbar,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
   argTypes: {
     'aria-label': {
       description: 'Text for screen readers',

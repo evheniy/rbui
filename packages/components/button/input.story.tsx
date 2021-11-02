@@ -9,7 +9,10 @@ import { Input } from '.';
 export default {
   title: 'Components/Button/Input',
   component: Input,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
   argTypes: {
     value: {
       // name: 'Test',

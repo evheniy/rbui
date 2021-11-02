@@ -9,7 +9,10 @@ import Breadcrumb, { Item } from '.';
 export default {
   title: 'Components/Breadcrumb/Breadcrumb',
   component: Breadcrumb,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
 } as ComponentMeta<typeof Breadcrumb>;
 
 const Template: ComponentStory<typeof Breadcrumb> = args => (

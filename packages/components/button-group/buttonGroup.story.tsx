@@ -11,7 +11,10 @@ import ButtonGroup from '.';
 export default {
   title: 'Components/ButtonGroup/ButtonGroup',
   component: ButtonGroup,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
   argTypes: {
     'aria-label': {
       description: 'Text for screen readers',

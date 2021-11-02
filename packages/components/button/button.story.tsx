@@ -11,7 +11,10 @@ import Button from '.';
 export default {
   title: 'Components/Button/Button',
   component: Button,
-  parameters: { options: { showPanel: true } },
+  parameters: {
+    layout: 'centered',
+    options: { showPanel: true },
+  },
   argTypes: {
     children: {
       // name: 'Test',
