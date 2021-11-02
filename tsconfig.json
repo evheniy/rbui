@@ -1,6 +1,7 @@
 {
   "extends": "@rbui/core/ts/tsconfig.json",
   "compilerOptions": {
+    "declaration": false,
     "types": [
       "node",
       "webdriverio/async",
