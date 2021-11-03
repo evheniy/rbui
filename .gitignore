@@ -15,4 +15,5 @@ dist
 coverage
 wdio/reports
 
+!/bin/dist
 !/**/.gitkeep

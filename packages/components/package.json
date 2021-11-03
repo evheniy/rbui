@@ -1,11 +1,11 @@
 {
   "name": "@rbui/components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "cjs/index.js",
   "types": "index.d.ts",
   "module": "index.js",
   "dependencies": {
-    "@rbui/core": "^0.0.4"
+    "@rbui/core": "^0.0.5"
   },
   "peerDependencies": {
     "@types/react": "^17.0.31",

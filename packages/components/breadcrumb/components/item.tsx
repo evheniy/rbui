@@ -8,6 +8,7 @@ const Item:FC<P> = props => {
   const {
     active = false,
     href,
+    className,
     children,
     ...rest
   } = props;
@@ -17,7 +18,7 @@ const Item:FC<P> = props => {
   }
 
   return (
-    <li className={cn('breadcrumb-item', { active })} {...rest}>
+    <li className={cn('breadcrumb-item', { active }, className)} {...rest}>
       <a href={href || undefined}>
         {children}
       </a>

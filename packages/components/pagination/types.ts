@@ -3,7 +3,6 @@ import {
   LiHTMLAttributes,
   AnchorHTMLAttributes,
   HTMLAttributes,
-  ReactNode,
 } from 'react';
 
 import { ReactTestRenderer } from 'react-test-renderer';
@@ -12,14 +11,18 @@ export interface LinkProps extends DetailedHTMLProps<AnchorHTMLAttributes<HTMLAn
   href?: string;
 }
 
+export type TextProps = DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
+
 export interface ItemProps extends DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement> {
   active?: boolean;
   disabled?: boolean;
   href?: string;
+  custom?: boolean;
 }
 
 export interface PaginationProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
-  children: ReactNode;
+  sm?: boolean;
+  lg?: boolean;
 }
 
 export interface LinkTest {
