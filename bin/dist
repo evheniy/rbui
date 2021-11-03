@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+for TYPE in "esm" "cjs"
+do
+  for PACKAGE in "core" "components"
+  do
+    echo "$TYPE - $PACKAGE"
+    tsc -p "ts/$TYPE.$PACKAGE.json"
+  done
+done
