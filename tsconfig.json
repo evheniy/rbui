@@ -1,5 +1,5 @@
 {
-  "extends": "@rbui/core/ts/tsconfig.json",
+  "extends": "@rbui/core/tsconfig/index.json",
   "compilerOptions": {
     "declaration": false,
     "types": [

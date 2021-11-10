@@ -1,4 +1,8 @@
-import { ButtonHTMLAttributes, InputHTMLAttributes, LinkHTMLAttributes } from 'react';
+import {
+  ButtonHTMLAttributes,
+  InputHTMLAttributes,
+  LinkHTMLAttributes,
+} from 'react';
 
 import { ReactTestRenderer } from 'react-test-renderer';
 

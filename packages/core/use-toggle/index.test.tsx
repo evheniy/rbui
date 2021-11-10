@@ -1,12 +1,15 @@
-import React from 'react';
+/* eslint-disable react/require-default-props */
+import React, { FC } from 'react';
 
 import renderer, { act, ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer';
 
-import { P, FCP } from '@rbui/core/types';
-
 import useToggle from '.';
 
-const TestComponent: FCP = ({ isToggled }: P) => {
+interface Props {
+  isToggled?: boolean;
+}
+
+const TestComponent: FC<Props> = ({ isToggled = false }) => {
   const [isTextChanged, setIsTextChanged] = useToggle(isToggled);
 
   return (

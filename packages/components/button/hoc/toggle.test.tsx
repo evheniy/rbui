@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import renderer from 'react-test-renderer';
-
-import TestComponent from '@rbui/core/test-component';
 
 import toggleHoc from './toogle';
 
 describe('Test @rb/core/button/containers/toggle.ts', () => {
+  interface Props {
+    active: boolean;
+  }
+
+  const TestComponent: FC<Props> = props => <div>{JSON.stringify(props)}</div>;
+
   test('test toggle hoc', () => {
     const Component = toggleHoc(TestComponent);
-    const component = renderer.create(<Component />);
+    const component = renderer.create(<Component active={false} />);
 
     const result = component.toJSON() as renderer.ReactTestRendererJSON;
 
