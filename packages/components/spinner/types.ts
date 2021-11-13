@@ -1,22 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
-import { ReactTestRenderer } from 'react-test-renderer';
+import { Grow, Colors, Sizes } from '@rbui/core/variant/types';
 
-export interface SpinnerProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
-  grow?: boolean;
+export interface SpinnerProps extends Grow, Colors, Pick<Sizes, 'sm'>, ComponentProps<'span'> {}
 
-  primary?: boolean;
-  secondary?: boolean;
-  success?: boolean;
-  danger?: boolean;
-  warning?: boolean;
-  info?: boolean;
-  light?: boolean;
-  dark?: boolean;
-
-  sm?: boolean;
-}
-
-export interface SpinnerTest {
-  (result: ReactTestRenderer, props: SpinnerProps): void;
+export interface MapSpinnerProps {
+  (props: SpinnerProps): ComponentProps<'span'>;
 }

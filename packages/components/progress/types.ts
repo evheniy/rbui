@@ -1,6 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-
-import { ReactTestRenderer } from 'react-test-renderer';
+import { ComponentProps } from 'react';
 
 interface BaseProps {
   min?: number;
@@ -15,14 +13,6 @@ interface BaseProps {
   animated?: boolean;
 }
 
-export interface ProgressProps extends BaseProps, DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>{}
+export interface ProgressProps extends BaseProps, ComponentProps<'div'> {}
 
-export interface BarProps extends BaseProps, DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>{}
-
-export interface ProgressTest {
-  (result: ReactTestRenderer, props: ProgressProps): void;
-}
-
-export interface BarTest {
-  (result: ReactTestRenderer, props: BarProps): void;
-}
+export interface BarProps extends BaseProps, ComponentProps<'div'> {}

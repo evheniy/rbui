@@ -1,22 +1,12 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
-import { ReactTestRenderer } from 'react-test-renderer';
-
-export interface ButtonGroupProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface ButtonGroupProps extends ComponentProps<'div'> {
   ['aria-label']?: string;
   lg?: boolean;
   sm?: boolean;
   vertical?: boolean;
 }
 
-export interface ButtonToolbarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface ButtonToolbarProps extends ComponentProps<'div'> {
   ['aria-label']?: string;
-}
-
-export interface ButtonGroupTest {
-  (result: ReactTestRenderer, props: ButtonGroupProps): void;
-}
-
-export interface ButtonToolbarTest {
-  (result: ReactTestRenderer, props: ButtonToolbarProps): void;
 }

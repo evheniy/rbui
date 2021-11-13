@@ -26,6 +26,18 @@ export default {
         },
       },
     },
+    className: {
+      description: 'Default button class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
     disabled: {
       description: 'Disabled close buttons change their opacity',
       control: { type: 'boolean' },
@@ -50,7 +62,19 @@ export default {
         },
       },
     },
-    onClick: { action: 'clicked' },
+    onClick: {
+      description: 'Button action',
+      action: 'clicked',
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: undefined,
+        },
+      },
+      control: { type: null },
+    },
   },
 } as ComponentMeta<typeof CloseButton>;
 
@@ -60,6 +84,7 @@ export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'CloseButton';
 CloseButtonStory.args = {
   'aria-label': 'Close',
+  className: '',
   disabled: false,
   white: false,
 };

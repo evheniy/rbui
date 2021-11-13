@@ -4,12 +4,10 @@ import renderer from 'react-test-renderer';
 
 import toggleHoc from './toogle';
 
-describe('Test @rb/core/button/containers/toggle.ts', () => {
-  interface Props {
-    active: boolean;
-  }
+import { BaseProps } from '../types';
 
-  const TestComponent: FC<Props> = props => <div>{JSON.stringify(props)}</div>;
+describe('Test @rb/core/button/containers/toggle.ts', () => {
+  const TestComponent: FC<BaseProps> = props => <div>{JSON.stringify(props)}</div>;
 
   test('test toggle hoc', () => {
     const Component = toggleHoc(TestComponent);

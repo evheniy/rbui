@@ -26,7 +26,6 @@ const Button:FC<P> = props => {
     nowrap = false,
     toggle = false,
     active = false,
-    setActive,
     className,
     children,
     ...rest

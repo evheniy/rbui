@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
-import withProps from './props';
+import mapProps from './props';
 import compose from './compose';
 
 describe('Test @rb/core/hoc/props', () => {
@@ -11,24 +11,25 @@ describe('Test @rb/core/hoc/props', () => {
       data: string;
     }
 
-    interface Props {
+    interface Props extends Base {
       test: string;
     }
 
-    const TestComponent: FC<Base & Props> = ({ data, test }) => (
+    const TestComponent: FC<Props> = ({ data, test }) => (
       <div>
         {data}
         {test}
       </div>
     );
 
-    const Container = withProps<Base, Props>({
+    const Container = mapProps(props => ({
+      ...props,
       test: 'test',
-    }, { displayName: 'TEST' });
+    }) as Props);
 
-    const Component: FC<Base> = Container(TestComponent as FC<Base>);
+    const Component: FC<Base> = Container(TestComponent);
 
-    expect(Component.displayName).toEqual('TEST');
+    expect(Component.displayName).toEqual('TestComponent');
 
     const component = renderer.create(<Component data="data" />);
 
@@ -47,7 +48,7 @@ describe('Test @rb/core/hoc/props', () => {
       data: string;
     }
 
-    interface Props {
+    interface Props extends Base {
       test: string;
     }
 
@@ -58,14 +59,14 @@ describe('Test @rb/core/hoc/props', () => {
       </div>
     );
 
-    const Container = withProps<Base, Props>(() => ({
+    const Container = mapProps<Base, Props>(() => ({
       data: 'test data',
       test: 'test',
-    }), { displayName: 'TEST' });
+    }));
 
-    const Component: FC<Base> = Container(TestComponent as FC<Base>);
+    const Component: FC<Base> = Container(TestComponent);
 
-    expect(Component.displayName).toEqual('TEST');
+    expect(Component.displayName).toEqual('TestComponent');
 
     const component = renderer.create(<Component data="data" />);
 
@@ -84,7 +85,7 @@ describe('Test @rb/core/hoc/props', () => {
       data: string;
     }
 
-    interface Props {
+    interface Props extends Base {
       test: string;
     }
 
@@ -95,20 +96,21 @@ describe('Test @rb/core/hoc/props', () => {
       </div>
     );
 
-    const Container1 = withProps<Base, Props>({
+    const Container1 = mapProps(props => ({
+      ...props,
       test: 'test',
-    }, { displayName: 'TEST' });
+    }) as Props);
 
-    const Container2 = withProps<Base, Props>(() => ({
+    const Container2 = mapProps(() => ({
       data: 'test data',
       test: 'test test',
-    }), { displayName: 'TEST' });
+    }));
 
     const Container = compose(Container1, Container2);
 
-    const Component: FC<Base> = Container(TestComponent as FC<Base>);
+    const Component: FC<Base> = Container(TestComponent);
 
-    expect(Component.displayName).toEqual('TEST');
+    expect(Component.displayName).toEqual('TestComponent');
 
     const component = renderer.create(<Component data="data" />);
 

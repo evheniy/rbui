@@ -25,7 +25,6 @@ const Input:FC<P> = props => {
     nowrap = false,
     toggle = false,
     active = false,
-    setActive,
     className,
     value,
     ...rest

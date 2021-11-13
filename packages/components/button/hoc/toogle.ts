@@ -2,20 +2,17 @@ import {
   MouseEvent,
 } from 'react';
 
-import hocBuilder from '@rbui/core/hoc/hooks';
+import mapProps from '@rbui/core/hoc/props';
 import useToggle from '@rbui/core/use-toggle';
 
+import { BaseProps } from '../types';
+
 export interface P {
-  active: boolean;
+  active?: boolean;
   onClick?: (event: MouseEvent) => void;
 }
 
-export interface H {
-  active: boolean;
-  onClick: (event: MouseEvent) => void;
-}
-
-const toggleHoc = hocBuilder<P, H>(props => {
+const toggleHoc = mapProps<P, BaseProps>(props => {
   const [active, setActive] = useToggle(props.active);
 
   const onClick = (event: MouseEvent) => {
@@ -25,7 +22,7 @@ const toggleHoc = hocBuilder<P, H>(props => {
     }
   };
 
-  return { active, onClick };
-}, { displayName: 'ToggleHOC' });
+  return { ...props, active, onClick };
+});
 
 export default toggleHoc;
