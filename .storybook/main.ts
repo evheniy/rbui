@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 import custom from '../webpack.config';
 
-module.exports = {
+export default {
   stories: [
     '../packages/**/*.stories.@(js|jsx|ts|tsx)',
     '../packages/**/*.story.@(js|jsx|ts|tsx)',

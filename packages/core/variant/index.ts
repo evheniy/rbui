@@ -1,6 +1,6 @@
 import { Variant } from './types';
 
-const variant:Variant = (variants = {}, defaultValue) => {
+const variant:Variant = (variants = {}, defaultValue = undefined) => {
   let activeVariant = defaultValue;
 
   Object.keys(variants).forEach(key => {
