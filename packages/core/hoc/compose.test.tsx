@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import renderer from 'react-test-renderer';
 
-import { HOC } from '@rbui/core/types';
-import TestComponent from '@rbui/core/test-component';
+import compose from './compose';
 
-import compose from '.';
+describe('Test @rb/core/hoc/compose', () => {
+  interface Props {
+    isTest: boolean;
+  }
 
-describe('Test @rb/core/compose', () => {
+  const TestComponent: FC<Props> = props => <div>{JSON.stringify(props)}</div>;
+
   test('test compose', () => {
-    const props = {
+    const props: Props = {
       isTest: true,
     };
 
     const messageA = 'A';
 
-    const ContainerA: HOC = Component => p => (
+    const ContainerA = (Component: FC<Props>) => (p: Props) => (
       <div>
         {messageA}
         <Component {...p} />
@@ -23,7 +26,7 @@ describe('Test @rb/core/compose', () => {
     );
 
     const messageB = 'B';
-    const ContainerB: HOC = Component => p => (
+    const ContainerB = (Component: FC<Props>) => (p: Props) => (
       <div>
         {messageB}
         <Component {...p} />
@@ -62,13 +65,13 @@ describe('Test @rb/core/compose', () => {
   });
 
   test('test compose with 1 function', () => {
-    const props = {
+    const props: Props = {
       isTest: true,
     };
 
     const message = 'Test';
 
-    const ContainerTest: HOC = Component => p => (
+    const ContainerTest = (Component: FC<Props>) => (p: Props) => (
       <div>
         {message}
         <Component {...p} />
@@ -98,7 +101,7 @@ describe('Test @rb/core/compose', () => {
   });
 
   test('test compose with 0 functions', () => {
-    const props = {
+    const props: Props = {
       isTest: true,
     };
     const Container = compose();

@@ -1,4 +1,4 @@
-import CloseButton from './components';
+import CloseButton from './CloseButton';
 
 export default CloseButton;
 

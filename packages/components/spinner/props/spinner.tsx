@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import cn from 'classnames';
 
 import variant from '@rbui/core/variant';
 
-import { SpinnerProps as P } from '../types';
+import { MapSpinnerProps as P } from '../types';
 
-const Spinner:FC<P> = props => {
+const mapSpinnerProps: P = props => {
   const {
     grow = false,
     primary = false,
@@ -18,10 +18,10 @@ const Spinner:FC<P> = props => {
     light = false,
     dark = false,
     sm = false,
-    className,
-    children,
     ...rest
   } = props;
+
+  const newProps = { ...rest };
 
   const classes = grow ? ['spinner-grow'] : ['spinner-border'];
 
@@ -46,18 +46,12 @@ const Spinner:FC<P> = props => {
     classes.push(`text-${style}`);
   }
 
-  return (
-    <span
-      className={cn(...classes, className)}
-      role="status"
-      aria-hidden="true"
-      {...rest}
-    >
-      {children || <span className="visually-hidden">Loading...</span>}
-    </span>
-  );
+  newProps.className = cn(...classes, newProps.className);
+  newProps.role = 'status';
+  newProps['aria-hidden'] = 'true';
+  newProps.children = newProps.children || <span className="visually-hidden">Loading...</span>;
+
+  return newProps;
 };
 
-Spinner.displayName = 'Spinner';
-
-export default Spinner;
+export default mapSpinnerProps;

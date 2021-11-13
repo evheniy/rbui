@@ -54,7 +54,7 @@ export const State = () => (
 );
 State.storyName = 'State';
 
-export const CustomState = () => (
+export const Custom = () => (
   <Pagination aria-label="Page navigation example">
     <Item custom disabled>
       <Text>Previous</Text>
@@ -73,9 +73,9 @@ export const CustomState = () => (
     </Item>
   </Pagination>
 );
-CustomState.storyName = 'CustomState';
+Custom.storyName = 'Custom';
 
-export const SizingLarge = () => (
+export const Large = () => (
   <Pagination lg aria-label="Page navigation example">
     <Item disabled>Previous</Item>
     <Item active>1</Item>
@@ -84,9 +84,9 @@ export const SizingLarge = () => (
     <Item href="#">Next</Item>
   </Pagination>
 );
-SizingLarge.storyName = 'SizingLarge';
+Large.storyName = 'Large';
 
-export const SizingSmalle = () => (
+export const Smalle = () => (
   <Pagination sm aria-label="Page navigation example">
     <Item disabled>Previous</Item>
     <Item active>1</Item>
@@ -95,9 +95,9 @@ export const SizingSmalle = () => (
     <Item href="#">Next</Item>
   </Pagination>
 );
-SizingSmalle.storyName = 'SizingSmalle';
+Smalle.storyName = 'Smalle';
 
-export const AlignmentCenter = () => (
+export const Center = () => (
   <Pagination aria-label="Page navigation example" className="justify-content-center">
     <Item disabled>Previous</Item>
     <Item active>1</Item>
@@ -106,9 +106,9 @@ export const AlignmentCenter = () => (
     <Item href="#">Next</Item>
   </Pagination>
 );
-AlignmentCenter.storyName = 'AlignmentCenter';
+Center.storyName = 'Center';
 
-export const AlignmentRight = () => (
+export const Right = () => (
   <Pagination aria-label="Page navigation example" className="justify-content-end">
     <Item disabled>Previous</Item>
     <Item active>1</Item>
@@ -117,4 +117,4 @@ export const AlignmentRight = () => (
     <Item href="#">Next</Item>
   </Pagination>
 );
-AlignmentRight.storyName = 'AlignmentRight';
+Right.storyName = 'Right';

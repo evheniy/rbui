@@ -1,29 +1,14 @@
-import {
-  DetailedHTMLProps,
-  LiHTMLAttributes,
-  HTMLAttributes,
-  CSSProperties,
-} from 'react';
-
-import { ReactTestRenderer } from 'react-test-renderer';
+import { ComponentProps, CSSProperties } from 'react';
 
 export interface Style extends CSSProperties {
   '--bs-breadcrumb-divider'?: string;
 }
 
-export interface BreadcrumbProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>{
+export interface BreadcrumbProps extends ComponentProps<'nav'>{
   divider?: string;
 }
 
-export interface ItemProps extends DetailedHTMLProps<LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>{
+export interface ItemProps extends ComponentProps<'li'>{
   active?: boolean;
   href?: string;
-}
-
-export interface BreadcrumbTest {
-  (result: ReactTestRenderer, props: BreadcrumbProps): void;
-}
-
-export interface ItemTest {
-  (result: ReactTestRenderer, props: ItemProps): void;
 }

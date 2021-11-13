@@ -1,12 +1,10 @@
-import React, { FC } from 'react';
-
 import cn from 'classnames';
 
 import variant from '@rbui/core/variant';
 
-import { BadgeProps as P } from '../types';
+import { MapBadgeProps as P } from '../types';
 
-const Badge:FC<P> = props => {
+const mapBadgeProps: P = props => {
   const {
     primary = false,
     secondary = false,
@@ -18,9 +16,10 @@ const Badge:FC<P> = props => {
     dark = false,
     pill = false,
     circle = false,
-    className,
     ...rest
   } = props;
+
+  const newProps = { ...rest };
 
   const classes = ['badge'];
 
@@ -51,9 +50,9 @@ const Badge:FC<P> = props => {
     classes.push('rounded-circle');
   }
 
-  return <span className={cn(...classes, className)} {...rest} />;
+  newProps.className = cn(...classes, newProps.className);
+
+  return newProps;
 };
 
-Badge.displayName = 'Badge';
-
-export default Badge;
+export default mapBadgeProps;

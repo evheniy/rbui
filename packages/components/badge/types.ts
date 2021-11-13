@@ -1,21 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
-import { ReactTestRenderer } from 'react-test-renderer';
+import { Colors, Pill, Circle } from '@rbui/core/variant/types';
 
-export interface BadgeProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
-  primary?: boolean;
-  secondary?: boolean;
-  success?: boolean;
-  danger?: boolean;
-  warning?: boolean;
-  info?: boolean;
-  light?: boolean;
-  dark?: boolean;
+export interface BadgeProps extends Colors, Pill, Circle, ComponentProps<'span'> {}
 
-  pill?: boolean;
-  circle?: boolean;
-}
-
-export interface BadgeTest {
-  (result: ReactTestRenderer, props: BadgeProps): void;
+export interface MapBadgeProps {
+  (props: BadgeProps): ComponentProps<'span'>;
 }

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+echo "git fetch origin"
+git fetch origin
+
+echo "git pull origin/main"
+git pull origin/main
+
 echo "yarn workspace @rbui/core version patch --deferred"
 yarn workspace @rbui/core version patch --deferred
 

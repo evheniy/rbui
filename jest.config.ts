@@ -31,6 +31,9 @@ export default {
   // ],
   coveragePathIgnorePatterns: [
     '\\.stories.[tj]s?(x)$',
+    '\\.story.[tj]s?(x)$',
+    '/dist/',
+    '/build/',
   ],
 
   // Indicates which provider should be used to instrument code for coverage
