@@ -28,4 +28,5 @@ Component.args = {
   active: true,
   href: '',
   children: 'Library',
+  className: '',
 };

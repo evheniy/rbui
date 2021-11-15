@@ -1,16 +1,13 @@
-/* eslint-disable react/button-has-type */
-
-import React, { FC } from 'react';
-
 import cn from 'classnames';
 
 import variant from '@rbui/core/variant';
 
-import { ButtonProps as P, ButtonTypes } from '../types';
+import useToggle from '@rbui/core/use-toggle';
 
-const Button:FC<P> = props => {
+import { MapLinkProps as P } from '../types';
+
+const mapLinkProps: P = props => {
   const {
-    type = ButtonTypes.button,
     primary = false,
     secondary = false,
     success = false,
@@ -19,17 +16,25 @@ const Button:FC<P> = props => {
     info = false,
     light = false,
     dark = false,
+
     link = false,
+
     outline = false,
+
     lg = false,
     sm = false,
+
     nowrap = false,
+
     toggle = false,
-    active = false,
-    className,
-    children,
+
+    disabled,
     ...rest
   } = props;
+
+  const [active, setActive] = useToggle(props.active);
+
+  const newProps = { ...rest };
 
   const classes = ['btn'];
 
@@ -66,17 +71,25 @@ const Button:FC<P> = props => {
     }
   }
 
-  return (
-    <button
-      type={type}
-      className={cn(...classes, className)}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
+  if (disabled) {
+    classes.push('disabled');
+    rest['aria-disabled'] = 'true';
+    rest.tabIndex = -1;
+  }
+
+  newProps.href = disabled ? undefined : newProps.href;
+  newProps.className = cn(...classes, newProps.className);
+  newProps.role = 'button';
+
+  newProps.onClick = event => {
+    setActive();
+
+    if (props.onClick) {
+      props.onClick(event);
+    }
+  };
+
+  return newProps;
 };
 
-Button.displayName = 'Button';
-
-export default Button;
+export default mapLinkProps;

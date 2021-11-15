@@ -1,5 +1,9 @@
-import { ComponentProps } from 'react';
+import { ComponentPropsWithRef } from 'react';
 
-export interface CloseButtonProps extends ComponentProps<'button'> {
-  white?: boolean;
+import { White } from '@rbui/core/variant/types';
+
+export interface CloseButtonProps extends White, ComponentPropsWithRef<'button'> {}
+
+export interface MapCloseButtonProps {
+  (props: CloseButtonProps): ComponentPropsWithRef<'button'>;
 }

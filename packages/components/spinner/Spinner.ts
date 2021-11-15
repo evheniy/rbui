@@ -1,10 +1,8 @@
-import { FC } from 'react';
-
-import { SpinnerProps } from './types';
+import span from '@rbui/core/jsx/span';
 
 import withSpinner from './hocs/spinner';
 
-const Spinner:FC<SpinnerProps> = withSpinner('span');
+const Spinner = withSpinner(span);
 Spinner.displayName = 'Spinner';
 
 export default Spinner;

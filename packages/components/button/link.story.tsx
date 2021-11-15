@@ -59,10 +59,12 @@ const Template: ComponentStory<typeof Link> = args => <Link {...args} />;
 export const LinkStory = Template.bind({});
 LinkStory.storyName = 'Link';
 LinkStory.args = {
+  // Base
   children: 'Test',
+  className: '',
+  // Link
   disabled: false,
-  toggle: false,
-  active: false,
+  // Colors
   primary: true,
   secondary: false,
   success: false,
@@ -71,9 +73,16 @@ LinkStory.args = {
   info: false,
   light: false,
   dark: false,
+  // Link
   link: false,
+  // Outline
   outline: false,
+  // Sizes
   lg: false,
   sm: false,
+  // Nowrap
   nowrap: false,
+  // Toggle
+  toggle: false,
+  active: false,
 };

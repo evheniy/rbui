@@ -1,14 +1,12 @@
-/* eslint-disable react/button-has-type */
-
-import React, { FC } from 'react';
-
 import cn from 'classnames';
 
 import variant from '@rbui/core/variant';
 
-import { InputProps as P } from '../types';
+import useToggle from '@rbui/core/use-toggle';
 
-const Input:FC<P> = props => {
+import { MapInputProps as P } from '../types';
+
+const mapInputProps: P = props => {
   const {
     primary = false,
     secondary = false,
@@ -18,17 +16,24 @@ const Input:FC<P> = props => {
     info = false,
     light = false,
     dark = false,
+
     link = false,
+
     outline = false,
+
     lg = false,
     sm = false,
+
     nowrap = false,
+
     toggle = false,
-    active = false,
-    className,
-    value,
+
     ...rest
   } = props;
+
+  const [active, setActive] = useToggle(props.active);
+
+  const newProps = { ...rest };
 
   const classes = ['btn'];
 
@@ -65,15 +70,17 @@ const Input:FC<P> = props => {
     }
   }
 
-  return (
-    <input
-      value={value}
-      className={cn(...classes, className)}
-      {...rest}
-    />
-  );
+  newProps.className = cn(...classes, newProps.className);
+
+  newProps.onClick = event => {
+    setActive();
+
+    if (props.onClick) {
+      props.onClick(event);
+    }
+  };
+
+  return newProps;
 };
 
-Input.displayName = 'Input';
-
-export default Input;
+export default mapInputProps;

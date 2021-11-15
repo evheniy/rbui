@@ -55,4 +55,5 @@ export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'ButtonToolbar';
 CloseButtonStory.args = {
   'aria-label': 'ButtonToolbar',
+  className: '',
 };

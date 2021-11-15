@@ -66,10 +66,11 @@ const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 export const ButtonStory = Template.bind({});
 ButtonStory.storyName = 'Button';
 ButtonStory.args = {
+  // Base
   children: 'Test',
+  className: '',
   disabled: false,
-  toggle: false,
-  active: false,
+  // colors
   primary: true,
   secondary: false,
   success: false,
@@ -78,9 +79,16 @@ ButtonStory.args = {
   info: false,
   light: false,
   dark: false,
+  // Link
   link: false,
+  // Outline
   outline: false,
+  // Sizes
   lg: false,
   sm: false,
+  // Nowrap
   nowrap: false,
+  // Toggle
+  toggle: false,
+  active: false,
 };

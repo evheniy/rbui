@@ -59,10 +59,12 @@ const Template: ComponentStory<typeof Input> = args => <Input {...args} />;
 export const InputStory = Template.bind({});
 InputStory.storyName = 'Input';
 InputStory.args = {
+  // Input
   value: 'Test',
+  // Base
+  className: '',
   disabled: false,
-  toggle: false,
-  active: false,
+  // colors
   primary: true,
   secondary: false,
   success: false,
@@ -71,9 +73,16 @@ InputStory.args = {
   info: false,
   light: false,
   dark: false,
+  // Link
   link: false,
+  // Outline
   outline: false,
+  // Sizes
   lg: false,
   sm: false,
+  // Nowrap
   nowrap: false,
+  // Toggle
+  toggle: false,
+  active: false,
 };

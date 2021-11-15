@@ -16,6 +16,10 @@ export interface Colors {
   dark?: boolean;
 }
 
+export interface White {
+  white?: boolean;
+}
+
 export interface Link {
   link?: boolean;
 }
@@ -48,4 +52,13 @@ export interface Toggle {
 
 export interface Grow {
   grow?: boolean;
+}
+
+export interface Progress {
+  min?: number;
+  max?: number;
+  now?: number;
+  label?: boolean;
+  striped?: boolean;
+  animated?: boolean;
 }

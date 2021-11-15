@@ -27,7 +27,7 @@ describe('Test @rb/core/hoc/props', () => {
       test: 'test',
     }) as Props);
 
-    const Component: FC<Base> = Container(TestComponent);
+    const Component = Container(TestComponent) as FC<Base>;
 
     expect(Component.displayName).toEqual('TestComponent');
 

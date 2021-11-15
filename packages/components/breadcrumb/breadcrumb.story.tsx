@@ -26,4 +26,5 @@ export const Component = Template.bind({});
 Component.storyName = 'Breadcrumb';
 Component.args = {
   divider: '',
+  className: '',
 };

@@ -1,10 +1,11 @@
+/* eslint-disable import/no-import-module-exports */
 import { Configuration } from 'webpack';
 
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 import custom from '../webpack.config';
 
-export default {
+module.exports = {
   stories: [
     '../packages/**/*.stories.@(js|jsx|ts|tsx)',
     '../packages/**/*.story.@(js|jsx|ts|tsx)',

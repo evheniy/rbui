@@ -1,10 +1,8 @@
-import { FC } from 'react';
+import button from '@rbui/core/jsx/button';
 
-import { CloseButtonProps } from './types';
+import withCloseButton from './hocs/closeButton';
 
-import withCloseButton from './hocs';
-
-const CloseButton:FC<CloseButtonProps> = withCloseButton('button');
+const CloseButton = withCloseButton(button);
 CloseButton.displayName = 'CloseButton';
 
 export default CloseButton;

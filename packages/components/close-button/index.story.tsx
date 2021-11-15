@@ -83,8 +83,10 @@ const Template: ComponentStory<typeof CloseButton> = args => <CloseButton {...ar
 export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'CloseButton';
 CloseButtonStory.args = {
+  // Base
   'aria-label': 'Close',
   className: '',
   disabled: false,
+  // White
   white: false,
 };
