@@ -14,7 +14,7 @@ export default {
   },
   argTypes: {
     className: {
-      description: 'Default Progress class',
+      description: 'Default class',
       control: { type: 'text' },
       type: {
         required: false,

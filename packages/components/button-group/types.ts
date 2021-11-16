@@ -1,12 +1,20 @@
 import { ComponentPropsWithRef } from 'react';
 
-export interface ButtonGroupProps extends ComponentPropsWithRef<'div'> {
+import { Sizes } from '@rbui/core/variant/types';
+
+export interface ButtonGroupProps extends Sizes, ComponentPropsWithRef<'div'> {
   ['aria-label']?: string;
-  lg?: boolean;
-  sm?: boolean;
   vertical?: boolean;
 }
 
 export interface ButtonToolbarProps extends ComponentPropsWithRef<'div'> {
   ['aria-label']?: string;
+}
+
+export interface MapButtonGroupProps {
+  (props: ButtonGroupProps): ComponentPropsWithRef<'div'>;
+}
+
+export interface MapButtonToolbarProps {
+  (props: ButtonToolbarProps): ComponentPropsWithRef<'div'>;
 }

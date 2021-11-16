@@ -12,3 +12,11 @@ export interface ItemProps extends ComponentPropsWithRef<'li'>{
   active?: boolean;
   href?: string;
 }
+
+export interface MapBreadcrumbProps {
+  (props: BreadcrumbProps): ComponentPropsWithRef<'nav'>;
+}
+
+export interface MapItemProps {
+  (props: ItemProps): ComponentPropsWithRef<'li'>;
+}

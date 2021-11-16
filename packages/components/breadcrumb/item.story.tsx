@@ -13,6 +13,56 @@ export default {
     layout: 'centered',
     options: { showPanel: true },
   },
+  argTypes: {
+    children: {
+      description: 'Children',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+    active: {
+      description: 'Active Item',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    href: {
+      description: 'Item url',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+  },
 } as ComponentMeta<typeof Item>;
 
 const Template: ComponentStory<typeof Item> = args => (
@@ -25,8 +75,8 @@ const Template: ComponentStory<typeof Item> = args => (
 export const Component = Template.bind({});
 Component.storyName = 'Item';
 Component.args = {
-  active: true,
-  href: '',
   children: 'Library',
   className: '',
+  active: true,
+  href: '',
 };

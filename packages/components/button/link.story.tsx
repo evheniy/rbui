@@ -15,42 +15,221 @@ export default {
   },
   argTypes: {
     children: {
-      // name: 'Test',
-      description: 'Components content',
+      description: 'Сhildren',
       control: { type: 'text' },
       type: {
-        required: true,
+        required: false,
       },
       table: {
-        type: {
-          summary: 'Something short',
-          detail: 'Something really really long',
-        },
         defaultValue: {
-          summary: 'Something short',
-          detail: 'Something really really long',
+          summary: '',
         },
       },
     },
-    primary: { control: { type: 'boolean' } },
-    secondary: { control: { type: 'boolean' } },
-    success: { control: { type: 'boolean' } },
-    danger: { control: { type: 'boolean' } },
-    warning: { control: { type: 'boolean' } },
-    info: { control: { type: 'boolean' } },
-    light: { control: { type: 'boolean' } },
-    dark: { control: { type: 'boolean' } },
-    link: { control: { type: 'boolean' } },
-    outline: { control: { type: 'boolean' } },
-    lg: { control: { type: 'boolean' } },
-    sm: { control: { type: 'boolean' } },
-    disabled: { control: { type: 'boolean' } },
-    nowrap: {
-      description: 'If you don’t want the button text to wrap',
-      control: { type: 'boolean' },
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
     },
-    toggle: { control: { type: 'boolean' } },
-    active: { control: { type: 'boolean' } },
+    disabled: {
+      description: 'Disabled button',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    primary: {
+      description: 'Primary color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    secondary: {
+      description: 'Secondary color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    success: {
+      description: 'Success color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    danger: {
+      description: 'Danger color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    warning: {
+      description: 'Warning color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    info: {
+      description: 'Info color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    light: {
+      description: 'Info color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    dark: {
+      description: 'Info color',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    link: {
+      description: 'Link style',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    outline: {
+      description: 'Outline style',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    lg: {
+      description: 'Large size',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    sm: {
+      description: 'Small size',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    nowrap: {
+      description: 'Disable button text wrap',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    toggle: {
+      description: 'Toggle button',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    active: {
+      description: 'Toggle a button’s active state',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
   },
 } as ComponentMeta<typeof Link>;
 

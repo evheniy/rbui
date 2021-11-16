@@ -13,6 +13,32 @@ export default {
     layout: 'centered',
     options: { showPanel: true },
   },
+  argTypes: {
+    divider: {
+      description: 'Custom divider',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+  },
 } as ComponentMeta<typeof Breadcrumb>;
 
 const Template: ComponentStory<typeof Breadcrumb> = args => (

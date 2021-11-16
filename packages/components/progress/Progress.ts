@@ -1,6 +1,9 @@
+import mapProps from '@rbui/core/hoc/props';
 import div from '@rbui/core/jsx/div';
 
-import withProgress from './hocs/progress';
+import mapProgressProps from './props/progress';
+
+const withProgress = mapProps(mapProgressProps);
 
 const Progress = withProgress(div);
 Progress.displayName = 'Progress';

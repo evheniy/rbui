@@ -16,6 +16,18 @@ export default {
     options: { showPanel: true },
   },
   argTypes: {
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
     'aria-label': {
       description: 'Text for screen readers',
       control: { type: 'text' },
@@ -54,6 +66,6 @@ const Template: ComponentStory<typeof ButtonToolbar> = args => (
 export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'ButtonToolbar';
 CloseButtonStory.args = {
-  'aria-label': 'ButtonToolbar',
   className: '',
+  'aria-label': 'ButtonToolbar',
 };

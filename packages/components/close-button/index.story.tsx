@@ -27,7 +27,7 @@ export default {
       },
     },
     className: {
-      description: 'Default button class',
+      description: 'Default class',
       control: { type: 'text' },
       type: {
         required: false,

@@ -15,7 +15,7 @@ export default {
   },
   argTypes: {
     children: {
-      children: 'Children',
+      description: 'Children',
       control: { type: 'text' },
       type: {
         required: false,
@@ -27,7 +27,7 @@ export default {
       },
     },
     className: {
-      description: 'Default Spinner class',
+      description: 'Default class',
       control: { type: 'text' },
       type: {
         required: false,

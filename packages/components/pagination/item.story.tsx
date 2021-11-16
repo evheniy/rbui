@@ -13,75 +13,77 @@ export default {
     layout: 'centered',
     options: { showPanel: true },
   },
-  children: {
-    description: 'Children',
-    control: { type: 'text' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: '',
+  argTypes: {
+    children: {
+      description: 'Children',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
       },
     },
-  },
-  className: {
-    description: 'Default class',
-    control: { type: 'text' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: '',
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
       },
     },
-  },
-  active: {
-    description: 'Active state',
-    control: { type: 'boolean' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: 'false',
+    active: {
+      description: 'Active state',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
       },
     },
-  },
-  disabled: {
-    description: 'Disabled state',
-    control: { type: 'boolean' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: 'false',
+    disabled: {
+      description: 'Disabled state',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
       },
     },
-  },
-  href: {
-    description: 'Item href',
-    control: { type: 'text' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: '',
+    href: {
+      description: 'Item href',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
       },
     },
-  },
-  custom: {
-    description: 'Use Link/Text components',
-    control: { type: 'boolean' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: 'false',
+    custom: {
+      description: 'Use Link/Text components',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
       },
     },
   },

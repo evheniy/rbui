@@ -1,7 +1,5 @@
-import ButtonGroup from './components/ButtonGroup';
+import ButtonGroup from './ButtonGroup';
 
 export default ButtonGroup;
 
-export { default as ButtonToolbar } from './components/ButtonToolbar';
-
-export type { ButtonGroupProps, ButtonToolbarProps } from './types';
+export { default as ButtonToolbar } from './ButtonToolbar';

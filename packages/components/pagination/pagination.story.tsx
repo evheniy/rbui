@@ -13,51 +13,53 @@ export default {
     layout: 'centered',
     options: { showPanel: true },
   },
-  'aria-label': {
-    description: 'aria-label',
-    control: { type: 'text' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: '',
+  argTypes: {
+    'aria-label': {
+      description: 'aria-label',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
       },
     },
-  },
-  className: {
-    description: 'Default class',
-    control: { type: 'text' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: '',
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
       },
     },
-  },
-  sm: {
-    description: 'Smaller pagination',
-    control: { type: 'boolean' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: 'false',
+    sm: {
+      description: 'Smaller pagination',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
       },
     },
-  },
-  lg: {
-    description: 'Larger pagination',
-    control: { type: 'boolean' },
-    type: {
-      required: false,
-    },
-    table: {
-      defaultValue: {
-        summary: 'false',
+    lg: {
+      description: 'Larger pagination',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
       },
     },
   },

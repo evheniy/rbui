@@ -1,11 +1,8 @@
-import React, {
-  FC,
-  ComponentPropsWithRef,
-  forwardRef,
-  ComponentProps,
-} from 'react';
+import React, { FC, ComponentPropsWithRef, forwardRef } from 'react';
 
-const Pagination: FC<ComponentPropsWithRef<'nav'>> = forwardRef(({ className, children, ...rest }: ComponentProps<'nav'>, ref) => (
+import { PaginationProps as P } from '../types';
+
+const Pagination: FC<ComponentPropsWithRef<'nav'>> = forwardRef(({ className, children, ...rest }: P, ref) => (
   <nav {...rest} ref={ref}>
     <ul className={className}>
       {children}

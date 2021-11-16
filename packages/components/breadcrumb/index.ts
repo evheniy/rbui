@@ -1,7 +1,5 @@
-import Breadcrumb from './components/breadcrumb';
+import Breadcrumb from './Breadcrumb';
 
 export default Breadcrumb;
 
-export { default as Item } from './components/item';
-
-export type { BreadcrumbProps, ItemProps } from './types';
+export { default as Item } from './Item';

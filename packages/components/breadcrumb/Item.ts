@@ -1,14 +1,11 @@
 import mapProps from '@rbui/core/hoc/props';
-import list from '@rbui/core/jsx/list';
 
 import mapItemProps from './props/item';
+import List from './jsx/item';
 
 const withItem = mapProps(mapItemProps);
 
-const Item = withItem(list);
+const Item = withItem(List);
 Item.displayName = 'Item';
 
 export default Item;
-
-export { default as Link } from './Link';
-export { default as Text } from './Text';

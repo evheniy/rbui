@@ -15,7 +15,7 @@ export default {
   },
   argTypes: {
     className: {
-      description: 'Default Spinner class',
+      description: 'Default class',
       control: { type: 'text' },
       type: {
         required: false,

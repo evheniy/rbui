@@ -1,6 +1,9 @@
+import mapProps from '@rbui/core/hoc/props';
 import span from '@rbui/core/jsx/span';
 
-import withText from './hocs/text';
+import mapTextProps from './props/text';
+
+const withText = mapProps(mapTextProps);
 
 const Text = withText(span);
 Text.displayName = 'Text';
