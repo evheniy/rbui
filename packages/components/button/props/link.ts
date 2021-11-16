@@ -64,11 +64,9 @@ const mapLinkProps: P = props => {
     classes.push(`${outline ? 'btn-outline-' : 'btn-'}${style}`);
   }
 
-  if (toggle) {
-    if (active) {
-      rest['aria-pressed'] = 'true';
-      classes.push('active');
-    }
+  if (active) {
+    rest['aria-pressed'] = 'true';
+    classes.push('active');
   }
 
   if (disabled) {
@@ -82,7 +80,9 @@ const mapLinkProps: P = props => {
   newProps.role = 'button';
 
   newProps.onClick = event => {
-    setActive();
+    if (toggle) {
+      setActive();
+    }
 
     if (props.onClick) {
       props.onClick(event);

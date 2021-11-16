@@ -8,7 +8,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  options: {
+  /* options: {
     storySort: {
       includeName: true,
       order: [
@@ -32,5 +32,5 @@ export const parameters = {
         ],
       ],
     },
-  },
+  }, */
 };

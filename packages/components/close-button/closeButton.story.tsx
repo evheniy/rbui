@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import CloseButton from '.';
 
 export default {
-  title: 'Components/CloseButton',
+  title: 'Components/CloseButton/CloseButton',
   component: CloseButton,
   parameters: {
     layout: 'centered',

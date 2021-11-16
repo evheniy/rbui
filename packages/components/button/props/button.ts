@@ -63,18 +63,18 @@ const mapButtonProps: P = props => {
     classes.push(`${outline ? 'btn-outline-' : 'btn-'}${style}`);
   }
 
-  if (toggle) {
-    if (active) {
-      rest['aria-pressed'] = 'true';
-      classes.push('active');
-    }
+  if (active) {
+    rest['aria-pressed'] = 'true';
+    classes.push('active');
   }
 
   newProps.type = newProps.type || ButtonTypes.button;
   newProps.className = cn(...classes, newProps.className);
 
   newProps.onClick = event => {
-    setActive();
+    if (toggle) {
+      setActive();
+    }
 
     if (props.onClick) {
       props.onClick(event);
