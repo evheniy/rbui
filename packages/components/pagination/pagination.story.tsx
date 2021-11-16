@@ -13,6 +13,56 @@ export default {
     layout: 'centered',
     options: { showPanel: true },
   },
+  argTypes: {
+    'aria-label': {
+      description: 'aria-label',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
+    sm: {
+      description: 'Smaller pagination',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    lg: {
+      description: 'Larger pagination',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+  },
 } as ComponentMeta<typeof Pagination>;
 
 const Template: ComponentStory<typeof Pagination> = args => (
@@ -28,7 +78,10 @@ const Template: ComponentStory<typeof Pagination> = args => (
 export const PaginationStory = Template.bind({});
 PaginationStory.storyName = 'Pagination';
 PaginationStory.args = {
+  // Base
   'aria-label': 'Page navigation example',
+  className: '',
+  // Sizes
   sm: false,
   lg: false,
 };

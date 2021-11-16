@@ -1,18 +1,17 @@
-import { ComponentProps } from 'react';
+import { ComponentPropsWithRef } from 'react';
 
-interface BaseProps {
-  min?: number;
-  max?: number;
-  now?: number;
-  label?: boolean;
-  success?: boolean;
-  info?: boolean;
-  warning?: boolean;
-  danger?: boolean;
-  striped?: boolean;
-  animated?: boolean;
+import { Progress, Colors } from '@rbui/core/variant/types';
+
+interface BaseProps extends Progress, Pick<Colors, 'success' | 'info' | 'warning' | 'danger'> {}
+
+export interface ProgressProps extends BaseProps, ComponentPropsWithRef<'div'> {}
+
+export interface BarProps extends BaseProps, ComponentPropsWithRef<'div'> {}
+
+export interface MapProgressProps {
+  (props: ProgressProps): ComponentPropsWithRef<'div'>;
 }
 
-export interface ProgressProps extends BaseProps, ComponentProps<'div'> {}
-
-export interface BarProps extends BaseProps, ComponentProps<'div'> {}
+export interface MapBarProps {
+  (props: BarProps): ComponentPropsWithRef<'div'>;
+}

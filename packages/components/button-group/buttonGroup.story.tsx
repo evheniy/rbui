@@ -16,6 +16,18 @@ export default {
     options: { showPanel: true },
   },
   argTypes: {
+    className: {
+      description: 'Default class',
+      control: { type: 'text' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: '',
+        },
+      },
+    },
     'aria-label': {
       description: 'Text for screen readers',
       control: { type: 'text' },
@@ -28,9 +40,42 @@ export default {
         },
       },
     },
-    vertical: { control: { type: 'boolean' } },
-    lg: { control: { type: 'boolean' } },
-    sm: { control: { type: 'boolean' } },
+    vertical: {
+      description: 'Vertical variation',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    lg: {
+      description: 'Large size',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    sm: {
+      description: 'Small size',
+      control: { type: 'boolean' },
+      type: {
+        required: false,
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
   },
 } as ComponentMeta<typeof ButtonGroup>;
 
@@ -45,6 +90,7 @@ const Template: ComponentStory<typeof ButtonGroup> = args => (
 export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'ButtonGroup';
 CloseButtonStory.args = {
+  className: '',
   'aria-label': 'ButtonGroup',
   vertical: false,
   lg: false,

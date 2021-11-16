@@ -1,7 +1,5 @@
-import Propgress from './components/propgress';
+import Propgress from './Progress';
 
 export default Propgress;
 
-export { default as Bar } from './components/bar';
-
-export type { ProgressProps, BarProps } from './types';
+export { default as Bar } from './Bar';

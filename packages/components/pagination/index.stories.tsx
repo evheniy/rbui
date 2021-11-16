@@ -3,7 +3,8 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import Pagination, { Item, Link, Text } from '.';
+import Pagination, { Item } from '.';
+import { Link, Text } from './Item';
 
 export default {
   title: 'Components/Pagination/Examples',
@@ -86,7 +87,7 @@ export const Large = () => (
 );
 Large.storyName = 'Large';
 
-export const Smalle = () => (
+export const Small = () => (
   <Pagination sm aria-label="Page navigation example">
     <Item disabled>Previous</Item>
     <Item active>1</Item>
@@ -95,7 +96,7 @@ export const Smalle = () => (
     <Item href="#">Next</Item>
   </Pagination>
 );
-Smalle.storyName = 'Smalle';
+Small.storyName = 'Small';
 
 export const Center = () => (
   <Pagination aria-label="Page navigation example" className="justify-content-center">
