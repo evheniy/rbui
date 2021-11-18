@@ -154,6 +154,7 @@ const Template: ComponentStory<typeof Spinner> = args => <Spinner {...args} />;
 export const SpinnerStory = Template.bind({});
 SpinnerStory.storyName = 'Spinner';
 SpinnerStory.args = {
+  // Base
   className: '',
   // Grow
   grow: false,

@@ -51,6 +51,8 @@ const Template: ComponentStory<typeof Breadcrumb> = args => (
 export const Component = Template.bind({});
 Component.storyName = 'Breadcrumb';
 Component.args = {
-  divider: '',
+  // Base
   className: '',
+  // Breadcrumb
+  divider: '',
 };

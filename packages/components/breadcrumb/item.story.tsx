@@ -75,8 +75,10 @@ const Template: ComponentStory<typeof Item> = args => (
 export const Component = Template.bind({});
 Component.storyName = 'Item';
 Component.args = {
+  // Base
   children: 'Library',
   className: '',
+  // Item
   active: true,
   href: '',
 };
