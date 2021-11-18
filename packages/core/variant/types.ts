@@ -45,9 +45,16 @@ export interface Nowrap {
   nowrap?: boolean;
 }
 
-export interface Toggle {
-  toggle?: boolean;
+export interface Disabled {
+  disabled?: boolean;
+}
+
+export interface Active {
   active?: boolean;
+}
+
+export interface Toggle extends Active {
+  toggle?: boolean;
 }
 
 export interface Grow {
@@ -61,4 +68,20 @@ export interface Progress {
   label?: boolean;
   striped?: boolean;
   animated?: boolean;
+}
+
+export enum Breakpoints {
+  sm = 'sm',
+  md = 'md',
+  lg = 'lg',
+  xl = 'xl',
+  xxl = 'xxl',
+}
+
+export interface Horizontal {
+  horizontal?: boolean | Breakpoints | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+}
+
+export interface Flush {
+  flush?: boolean;
 }
