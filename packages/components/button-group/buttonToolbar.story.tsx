@@ -66,6 +66,7 @@ const Template: ComponentStory<typeof ButtonToolbar> = args => (
 export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'ButtonToolbar';
 CloseButtonStory.args = {
+  // Base
   className: '',
   'aria-label': 'ButtonToolbar',
 };

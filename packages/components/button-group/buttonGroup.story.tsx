@@ -90,9 +90,12 @@ const Template: ComponentStory<typeof ButtonGroup> = args => (
 export const CloseButtonStory = Template.bind({});
 CloseButtonStory.storyName = 'ButtonGroup';
 CloseButtonStory.args = {
+  // Base
   className: '',
   'aria-label': 'ButtonGroup',
+  // ButtonGroup
   vertical: false,
+  // Sizes
   lg: false,
   sm: false,
 };
