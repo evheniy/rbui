@@ -2,13 +2,14 @@ name: Release
 
 on:
   workflow_dispatch:
-    branches: [ main ]
+    branches: [main]
     inputs:
       type:
         description: 'Release type'
         required: true
+        type: choice
         default: 'patch'
-        options: 
+        options:
           - patch
           - minor
           - major
@@ -19,6 +20,7 @@ jobs:
 
     env:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
+      CI: true
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
@@ -31,6 +33,7 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
+      - run: echo "environment is ${{ github.event.inputs.type }}"
       - run: printenv
       - run: node -v
       - run: npm i -g npm yarn
