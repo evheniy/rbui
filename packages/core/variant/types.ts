@@ -79,7 +79,7 @@ export enum Breakpoints {
 }
 
 export interface Horizontal {
-  horizontal?: boolean | Breakpoints | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  horizontal?: boolean | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 }
 
 export interface Flush {

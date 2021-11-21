@@ -5,7 +5,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import ListGroup, { Item } from '.';
-import { Breakpoints } from './types';
 
 export default {
   title: 'Components/ListGroup/ListGroup',
@@ -30,7 +29,7 @@ export default {
     horizontal: {
       description: 'Add ""horizontal" to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant {sm|md|lg|xl|xxl} to make a list group horizontal starting at that breakpoint’s min-width. Currently horizontal list groups cannot be combined with flush list groups.',
       control: { type: 'select' },
-      options: [false, true, ...Object.values(Breakpoints)],
+      options: [false, true, 'sm', 'md', 'lg', 'xl', 'xxl'],
       type: {
         required: false,
       },

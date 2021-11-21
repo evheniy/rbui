@@ -1,8 +1,17 @@
 name: Release
 
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
+    branches: [ main ]
+    inputs:
+      type:
+        description: 'Release type'
+        required: true
+        default: 'patch'
+        options: 
+          - patch
+          - minor
+          - major
 
 jobs:
   release:
@@ -29,5 +38,3 @@ jobs:
       - run: yarn set version berry
       - run: yarn -v
       - run: yarn install
-      - run: yarn dist
-      - run: yarn publish

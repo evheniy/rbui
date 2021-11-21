@@ -1,17 +1,16 @@
-import cn from 'classnames';
+import { MapListGroupProps as P } from '../types';
 
-import { MapListGroupProps as P, Breakpoints } from '../types';
+import mapGroupClassName from './map/groupClassName';
 
 const mapListGroupProps: P = ({ flush, horizontal, ...props }) => {
   const newProps = { ...props };
 
-  newProps.className = cn(
-    'list-group',
-    { 'list-group-flush': !!flush },
-    { 'list-group-horizontal': !flush && horizontal === true },
-    { [`list-group-horizontal-${horizontal}`]: !flush && horizontal && !!Breakpoints[horizontal as Breakpoints] },
-    newProps.className,
-  );
+  newProps.className = mapGroupClassName({
+    base: ['list-group'],
+    flush,
+    horizontal,
+    className: newProps.className,
+  });
 
   return newProps;
 };
