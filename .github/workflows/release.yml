@@ -2,7 +2,6 @@ name: Release
 
 on:
   workflow_dispatch:
-    branches: [main]
     inputs:
       type:
         description: 'Release type'
@@ -33,11 +32,8 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
-      - run: echo "environment is ${{ github.event.inputs.type }}"
+      - name: Main
+        if: github.ref == 'refs/heads/main'
+        run: echo "environment is ${{ github.event.inputs.type }}"
+
       - run: printenv
-      - run: node -v
-      - run: npm i -g npm yarn
-      - run: npm -v
-      - run: yarn set version berry
-      - run: yarn -v
-      - run: yarn install
