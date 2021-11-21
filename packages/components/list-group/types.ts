@@ -6,10 +6,7 @@ import {
   Active,
   Disabled,
   Colors,
-  Breakpoints,
 } from '@rbui/core/variant/types';
-
-export { Breakpoints };
 
 interface BaseItemProps extends Active, Disabled, Colors {}
 
@@ -24,6 +21,11 @@ export interface ActiveGroupProps extends Horizontal, Flush, ComponentPropsWithR
 export interface LinkItemProps extends BaseItemProps, ComponentPropsWithRef<'a'> {}
 
 export interface ButtonItemProps extends BaseItemProps, ComponentPropsWithRef<'button'> {}
+
+export interface GroupClassName extends Horizontal, Flush {
+  base: string[];
+  className?: string;
+}
 
 export interface MapListGroupProps {
   (props: ListGroupProps): ComponentPropsWithRef<'ul'>;

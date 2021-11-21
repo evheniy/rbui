@@ -6,6 +6,8 @@ on:
       - '**'
     tags-ignore:
       - '*.*'
+    branches-ignore:
+      - main
 
 jobs:
   test:
