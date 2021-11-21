@@ -37,9 +37,3 @@ jobs:
         run: echo "environment is ${{ github.event.inputs.type }}"
 
       - run: printenv
-      - run: node -v
-      - run: npm i -g npm yarn
-      - run: npm -v
-      - run: yarn set version berry
-      - run: yarn -v
-      - run: yarn install
