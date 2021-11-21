@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
     # branches: [ main ]
     inputs:
-      type:
+      release_type:
         description: 'Release type'
         required: true
         type: choice
         default: 'patch'
-        options: 
+        options:
           - patch
           - minor
           - major
