@@ -2,9 +2,8 @@ name: Release
 
 on:
   workflow_dispatch:
-    branches: [ main ]
     inputs:
-      release_type:
+      type:
         description: 'Release type'
         required: true
         type: choice
@@ -32,6 +31,7 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
+      - run: echo "environment is ${{ github.event.inputs.type }}"
       - run: printenv
       - run: node -v
       - run: npm i -g npm yarn
