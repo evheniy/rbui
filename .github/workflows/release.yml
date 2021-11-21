@@ -2,6 +2,7 @@ name: Release
 
 on:
   workflow_dispatch:
+    branches: [main]
     inputs:
       type:
         description: 'Release type'
@@ -19,6 +20,7 @@ jobs:
 
     env:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
+      CI: true
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
