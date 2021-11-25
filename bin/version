@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-# echo ${github.event.inputs.type} 
-echo $0
-echo $1
-echo $2
+echo "New version: $1"
+
 exit 1
 
 echo "yarn workspace @rbui/core version ${github.event.inputs.type} --deferred"
