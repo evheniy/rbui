@@ -23,9 +23,9 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
-      #      - name: Check main
-      #        if: github.ref != 'refs/heads/main'
-      #        run: exit 1
+      #- name: Check main
+      #  if: github.ref != 'refs/heads/main'
+      #  run: exit 1
 
       - name: Type
         run: echo "environment is ${{ github.event.inputs.type }}"
@@ -54,10 +54,17 @@ jobs:
       - run: yarn run dist
 
       # - run: yarn run publish
+      
+      #- name: Commit changes
+      #  run: |
+      #    git config --global user.name 'Evheniy Bystrov'
+      #    git config --global user.email 'evheniy.bystrov@gmail.com'
+      #    git commit -am "Release"
+      #    git push
 
       - name: Get New Version
         id: new_version
-        run: echo "::set-output name=version::$(node -pe \"require('./package.json').version\")"
+        run: echo "::set-output name=version::$(bash bin/get_version)"
         shell: bash
 
       - uses: release-drafter/release-drafter@v5
