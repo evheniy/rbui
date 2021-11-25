@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Check main
         if: github.ref != 'refs/heads/main'
-        run: exit_with_success
+        run: exit 0
 
       - name: Type
         run: echo "environment is ${{ github.event.inputs.type }}"
