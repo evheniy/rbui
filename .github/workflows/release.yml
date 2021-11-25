@@ -55,10 +55,13 @@ jobs:
 
       - run: yarn run publish
 
-      - run: node -pe "require('./package.json').version" >> $NEW_VERSION
+      - name: Get New Version
+        id: new_version
+        run: echo "::set-output name=version::$(node -pe \"require('./package.json').version\")"
+        shell: bash
 
       - uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          version: ${{ NEW_VERSION }}
+          version: ${{ steps.new_version.outputs.version }}
