@@ -49,7 +49,7 @@ jobs:
       - run: yarn -v
       - run: yarn install
 
-      - run: yarn run version
+      - run: bash bin/version
 
       - run: yarn run dist
 
