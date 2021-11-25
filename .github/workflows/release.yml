@@ -23,9 +23,9 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
-      - name: Check main
-        if: github.ref != 'refs/heads/main'
-        run: exit 1
+      #      - name: Check main
+      #        if: github.ref != 'refs/heads/main'
+      #        run: exit 1
 
       - name: Type
         run: echo "environment is ${{ github.event.inputs.type }}"
