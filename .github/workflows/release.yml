@@ -55,8 +55,10 @@ jobs:
 
       - run: yarn run publish
 
+      - run: node -pe "require('./package.json').version" >> $NEW_VERSION
+
       - uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          version: ${{ node -pe "require('./package.json').version" }}
+          version: ${{ NEW_VERSION }}
