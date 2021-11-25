@@ -23,6 +23,16 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
+      - name: Check main
+        if: github.ref != 'refs/heads/main'
+        run: exit_with_success
+
+      - name: Type
+        run: echo "environment is ${{ github.event.inputs.type }}"
+
+      - name: Printenv
+        run: printenv
+
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
@@ -32,8 +42,21 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Main
-        if: github.ref == 'refs/heads/main'
-        run: echo "environment is ${{ github.event.inputs.type }}"
+      - run: node -v
+      - run: npm i -g npm yarn
+      - run: npm -v
+      - run: yarn set version berry
+      - run: yarn -v
+      - run: yarn install
 
-      - run: printenv
+      - run: yarn run version
+
+      - run: yarn run dist
+
+      - run: yarn run publish
+
+      - uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version: ${{ node -pe "require('./package.json').version" }}

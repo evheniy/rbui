@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+echo ${github.event.inputs.type} 
+exit 0
+
+echo "yarn workspace @rbui/core version ${github.event.inputs.type} --deferred"
+yarn workspace @rbui/core version ${github.event.inputs.type} --deferred
+
+echo "yarn workspace @rbui/components version ${github.event.inputs.type} --deferred"
+yarn workspace @rbui/components version ${github.event.inputs.type} --deferred
+
+echo "yarn version ${github.event.inputs.type} --deferred"
+yarn version ${github.event.inputs.type} --deferred
+
+echo "yarn version apply --all"
+yarn version apply --all

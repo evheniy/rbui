@@ -29,7 +29,6 @@
     "predist": "rimraf dist",
     "postdist": "sh bin/copy",
     "publish": "sh bin/publish",
-    "patch": "sh bin/patch",
     "dist": "sh bin/dist"
   },
   "devDependencies": {
