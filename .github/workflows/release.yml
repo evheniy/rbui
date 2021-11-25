@@ -60,14 +60,14 @@ jobs:
 
       - run: yarn run dist
 
-      - run: yarn run publish
-
       - name: Commit changes
         run: |
           git config --global user.name 'Evheniy Bystrov'
           git config --global user.email 'evheniy.bystrov@gmail.com'
           git commit -am "${{ steps.new_version.outputs.version }}"
           git push
+
+      - run: yarn run publish
 
       - uses: release-drafter/release-drafter@v5
         env:
