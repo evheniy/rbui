@@ -1,3 +1,11 @@
+type OnlyOne<T> =
+    Pick<T, Exclude<keyof T, keyof T>>
+    & {
+      [K in keyof T]-?:
+      Pick<T, K>
+      & Partial<Record<Exclude<keyof T, K>, false | undefined>>
+    }[keyof T];
+
 export interface Variant {
   (
     variants?: { [key: string]: boolean | undefined },
@@ -15,6 +23,8 @@ export interface Colors {
   light?: boolean;
   dark?: boolean;
 }
+
+export type Color = OnlyOne<Colors>;
 
 export interface White {
   white?: boolean;

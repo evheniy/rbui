@@ -5,22 +5,22 @@ import {
   Flush,
   Active,
   Disabled,
-  Colors,
+  Color,
 } from '@rbui/core/variant/types';
 
-interface BaseItemProps extends Active, Disabled, Colors {}
+type BaseItemProps = Active & Disabled & Color;
 
 export interface ListGroupProps extends Horizontal, Flush, ComponentPropsWithRef<'ul'> {}
 
-export interface ItemProps extends BaseItemProps, ComponentPropsWithRef<'li'> {}
+export type ItemProps = BaseItemProps & ComponentPropsWithRef<'li'>;
 
 export interface NumberedGroupProps extends Horizontal, Flush, ComponentPropsWithRef<'ol'> {}
 
 export interface ActiveGroupProps extends Horizontal, Flush, ComponentPropsWithRef<'div'> {}
 
-export interface LinkItemProps extends BaseItemProps, ComponentPropsWithRef<'a'> {}
+export type LinkItemProps = BaseItemProps & ComponentPropsWithRef<'a'>;
 
-export interface ButtonItemProps extends BaseItemProps, ComponentPropsWithRef<'button'> {}
+export type ButtonItemProps = BaseItemProps & ComponentPropsWithRef<'button'>;
 
 export interface GroupClassName extends Horizontal, Flush {
   base: string[];

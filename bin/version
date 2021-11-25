@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "yarn workspace @rbui/core version $1 --deferred"
+yarn workspace @rbui/core version $1 --deferred
+
+echo "yarn workspace @rbui/components version $1 --deferred"
+yarn workspace @rbui/components version $1 --deferred
+
+echo "yarn version $1 --deferred"
+yarn version $1 --deferred
+
+echo "yarn version apply --all"
+yarn version apply --all
