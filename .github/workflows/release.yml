@@ -49,11 +49,11 @@ jobs:
       - run: yarn -v
       - run: yarn install
 
-      - run: bash bin/version
+      - run: bash bin/version ${{ github.event.inputs.type }}
 
       - run: yarn run dist
 
-      - run: yarn run publish
+      # - run: yarn run publish
 
       - name: Get New Version
         id: new_version
