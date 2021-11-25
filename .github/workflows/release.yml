@@ -53,24 +53,26 @@ jobs:
 
       - run: bash bin/version ${{ github.event.inputs.type }}
 
-      - run: yarn run dist
-
-      # - run: yarn run publish
-
-      #- name: Commit changes
-      #  run: |
-      #    git config --global user.name 'Evheniy Bystrov'
-      #    git config --global user.email 'evheniy.bystrov@gmail.com'
-      #    git commit -am "Release"
-      #    git push
-
       - name: Get New Version
         id: new_version
         run: echo "::set-output name=version::$(bash bin/get_version)"
         shell: bash
+
+      - run: yarn run dist
+
+      - run: yarn run publish
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'Evheniy Bystrov'
+          git config --global user.email 'evheniy.bystrov@gmail.com'
+          git commit -am "${{ steps.new_version.outputs.version }}"
+          git push
 
       - uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           version: ${{ steps.new_version.outputs.version }}
+          tag: ${{ steps.new_version.outputs.version }}
+          publish: true
