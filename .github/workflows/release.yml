@@ -35,6 +35,8 @@ jobs:
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Install and Build 🔧
         uses: actions/setup-node@v2
@@ -54,7 +56,7 @@ jobs:
       - run: yarn run dist
 
       # - run: yarn run publish
-      
+
       #- name: Commit changes
       #  run: |
       #    git config --global user.name 'Evheniy Bystrov'
