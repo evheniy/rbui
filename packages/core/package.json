@@ -1,6 +1,6 @@
 {
   "name": "@rbui/core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "cjs/index.js",
   "types": "index.d.ts",
   "module": "index.js"
