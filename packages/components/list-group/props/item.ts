@@ -1,15 +1,14 @@
-import cn from 'classnames';
+import { oneOf } from '@rbui/core/props/validation';
 
-import variant from '@rbui/core/variant';
+import mapAria from './item/aria';
+import mapClassName from './item/className';
 
 import { MapItemProps as P } from '../types';
 
 const mapItemProps: P = props => {
   const {
     active,
-
     disabled,
-
     primary,
     secondary,
     success,
@@ -18,15 +17,13 @@ const mapItemProps: P = props => {
     info,
     light,
     dark,
-
+    className,
     ...rest
   } = props;
 
-  const newProps = { ...rest };
+  oneOf({ active, disabled });
 
-  const classes = ['list-group-item'];
-
-  const style = variant({
+  oneOf({
     primary,
     secondary,
     success,
@@ -37,23 +34,23 @@ const mapItemProps: P = props => {
     dark,
   });
 
-  if (style) {
-    classes.push(`list-group-item-${style}`);
-  }
-
-  if (active) {
-    classes.push('active');
-    newProps['aria-current'] = 'true';
-  }
-
-  if (disabled) {
-    classes.push('disabled');
-    newProps['aria-disabled'] = 'true';
-  }
-
-  newProps.className = cn(...classes, newProps.className);
-
-  return newProps;
+  return {
+    ...mapAria({ active, disabled }),
+    className: mapClassName({
+      primary,
+      secondary,
+      success,
+      danger,
+      warning,
+      info,
+      light,
+      dark,
+      active,
+      disabled,
+      className,
+    }),
+    ...rest,
+  };
 };
 
 export default mapItemProps;

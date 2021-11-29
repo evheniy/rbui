@@ -1,18 +1,27 @@
+import { oneOf } from '@rbui/core/props/validation';
+
+import mapClassName from './group/className';
+
 import { MapActiveGroupProps as P } from '../types';
 
-import mapGroupClassName from './map/groupClassName';
-
-const mapActiveGroupProps: P = ({ flush, horizontal, ...props }) => {
-  const newProps = { ...props };
-
-  newProps.className = mapGroupClassName({
-    base: ['list-group'],
+const mapActiveGroupProps: P = props => {
+  const {
     flush,
     horizontal,
-    className: newProps.className,
-  });
+    className,
+    ...rest
+  } = props;
 
-  return newProps;
+  oneOf({ flush, horizontal: !!horizontal });
+
+  return {
+    className: mapClassName({
+      flush,
+      horizontal,
+      className,
+    }),
+    ...rest,
+  };
 };
 
 export default mapActiveGroupProps;

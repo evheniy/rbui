@@ -1,9 +1,14 @@
 import { ComponentPropsWithRef } from 'react';
 
-import { Colors, Pill, Circle } from '@rbui/core/variant/types';
+import {
+  Color,
+  Pill,
+  Circle,
+  Colors,
+  OnlyOne,
+  ClassName,
+} from '@rbui/core/props/types';
 
-export interface BadgeProps extends Colors, Pill, Circle, ComponentPropsWithRef<'span'> {}
-
-export interface MapBadgeProps {
-  (props: BadgeProps): ComponentPropsWithRef<'span'>;
-}
+export type BadgeProps = Color & OnlyOne<Pill & Circle> & ComponentPropsWithRef<'span'>;
+export type MapBadgeProps = (props: BadgeProps) => ComponentPropsWithRef<'span'>;
+export type MapBadgeClassName = (props: Colors & Pill & Circle & ClassName) => string;

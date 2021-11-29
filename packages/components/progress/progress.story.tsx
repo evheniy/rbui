@@ -15,10 +15,7 @@ export default {
   argTypes: {
     className: {
       description: 'Default class',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -27,10 +24,7 @@ export default {
     },
     min: {
       description: 'Min value',
-      control: { type: 'number' },
-      type: {
-        required: false,
-      },
+      control: { type: 'number', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -39,10 +33,7 @@ export default {
     },
     max: {
       description: 'Max value',
-      control: { type: 'number' },
-      type: {
-        required: false,
-      },
+      control: { type: 'number', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -51,10 +42,7 @@ export default {
     },
     now: {
       description: 'Current value',
-      control: { type: 'number' },
-      type: {
-        required: false,
-      },
+      control: { type: 'number', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -63,10 +51,7 @@ export default {
     },
     label: {
       description: 'Add labels to progress bar',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -75,10 +60,7 @@ export default {
     },
     striped: {
       description: 'Add striped to any progress bar to apply a stripe via CSS gradient over the progress bar’s background color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -87,10 +69,7 @@ export default {
     },
     animated: {
       description: 'The striped gradient can also be animated',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -99,10 +78,7 @@ export default {
     },
     success: {
       description: 'Success color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -111,10 +87,7 @@ export default {
     },
     info: {
       description: 'Info color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -123,10 +96,7 @@ export default {
     },
     warning: {
       description: 'Warning color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -135,10 +105,7 @@ export default {
     },
     danger: {
       description: 'Danger color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',

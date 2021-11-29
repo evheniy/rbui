@@ -16,10 +16,7 @@ export default {
   argTypes: {
     'aria-label': {
       description: 'Text for screen readers',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: 'Close',
@@ -28,10 +25,7 @@ export default {
     },
     className: {
       description: 'Default class',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -40,10 +34,7 @@ export default {
     },
     disabled: {
       description: 'Disabled close buttons change their opacity',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -52,10 +43,7 @@ export default {
     },
     white: {
       description: 'Change the default dark color to white',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -65,15 +53,12 @@ export default {
     onClick: {
       description: 'Button action',
       action: 'clicked',
-      type: {
-        required: false,
-      },
       table: {
         defaultValue: {
           summary: undefined,
         },
       },
-      control: { type: null },
+      control: { type: null, required: false },
     },
   },
 } as ComponentMeta<typeof CloseButton>;

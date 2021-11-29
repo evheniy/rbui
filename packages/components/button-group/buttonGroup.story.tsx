@@ -18,10 +18,7 @@ export default {
   argTypes: {
     className: {
       description: 'Default class',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -30,10 +27,7 @@ export default {
     },
     'aria-label': {
       description: 'Text for screen readers',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: 'ButtonGroup',
@@ -42,10 +36,7 @@ export default {
     },
     vertical: {
       description: 'Vertical variation',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -54,10 +45,7 @@ export default {
     },
     lg: {
       description: 'Large size',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -66,10 +54,7 @@ export default {
     },
     sm: {
       description: 'Small size',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',

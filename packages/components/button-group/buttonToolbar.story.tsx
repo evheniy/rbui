@@ -18,10 +18,7 @@ export default {
   argTypes: {
     className: {
       description: 'Default class',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -30,10 +27,7 @@ export default {
     },
     'aria-label': {
       description: 'Text for screen readers',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: 'ButtonGroup',

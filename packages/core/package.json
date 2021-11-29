@@ -3,5 +3,8 @@
   "version": "0.0.9",
   "main": "cjs/index.js",
   "types": "index.d.ts",
-  "module": "index.js"
+  "module": "index.js",
+  "dependencies": {
+    "warning": "^4.0.3"
+  }
 }

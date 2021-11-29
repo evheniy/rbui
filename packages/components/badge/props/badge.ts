@@ -1,6 +1,6 @@
-import cn from 'classnames';
+import { oneOf } from '@rbui/core/props/validation';
 
-import variant from '@rbui/core/variant';
+import mapClassName from './className';
 
 import { MapBadgeProps as P } from '../types';
 
@@ -16,14 +16,11 @@ const mapBadgeProps: P = props => {
     dark = false,
     pill = false,
     circle = false,
+    className,
     ...rest
   } = props;
 
-  const newProps = { ...rest };
-
-  const classes = ['badge'];
-
-  const style = variant({
+  oneOf({
     primary,
     secondary,
     success,
@@ -34,25 +31,24 @@ const mapBadgeProps: P = props => {
     dark,
   });
 
-  if (style) {
-    classes.push(`bg-${style}`);
+  oneOf({ pill, circle });
 
-    if (['warning', 'info', 'light'].includes(style)) {
-      classes.push('text-dark');
-    }
-  }
-
-  if (pill) {
-    classes.push('rounded-pill');
-  }
-
-  if (circle) {
-    classes.push('rounded-circle');
-  }
-
-  newProps.className = cn(...classes, newProps.className);
-
-  return newProps;
+  return {
+    className: mapClassName({
+      primary,
+      secondary,
+      success,
+      danger,
+      warning,
+      info,
+      light,
+      dark,
+      pill,
+      circle,
+      className,
+    }),
+    ...rest,
+  };
 };
 
 export default mapBadgeProps;

@@ -1,32 +1,35 @@
-import { ComponentPropsWithRef } from 'react';
+import {
+  ComponentPropsWithRef,
+  AriaAttributes,
+  PropsWithChildren,
+  ReactNode,
+} from 'react';
 
-import { Sizes } from '@rbui/core/variant/types';
+import {
+  OnlyOne,
+  Large,
+  Small,
+  Size,
+  Active,
+  Disabled,
+  Href,
+  Custom,
+  ClassName,
+} from '@rbui/core/props/types';
 
 export type LinkProps = ComponentPropsWithRef<'a'>;
+export type MapLinkProps = (props: LinkProps) => LinkProps;
+export type MapLinkClassName = (props: ClassName) => string;
 
 export type TextProps = ComponentPropsWithRef<'span'>;
+export type MapTextProps = (props: TextProps) => TextProps;
 
-export interface ItemProps extends ComponentPropsWithRef<'li'> {
-  active?: boolean;
-  disabled?: boolean;
-  href?: string;
-  custom?: boolean;
-}
+export type ItemProps = OnlyOne<Active & Disabled> & Href & Custom & ComponentPropsWithRef<'li'>;
+export type MapItemProps = (props: ItemProps) => ComponentPropsWithRef<'li'>;
+export type MapItemClassName = (props: Active & Disabled & ClassName) => string;
+export type MapItemAria = (props: Active) => AriaAttributes;
+export type MapItemChildren = (props: PropsWithChildren<Custom & Href & Active & Disabled>) => ReactNode;
 
-export interface PaginationProps extends Sizes, ComponentPropsWithRef<'nav'> {}
-
-export interface MapLinkProps {
-  (props: LinkProps): ComponentPropsWithRef<'a'>;
-}
-
-export interface MapTextProps {
-  (props: TextProps): ComponentPropsWithRef<'span'>;
-}
-
-export interface MapItemProps {
-  (props: ItemProps): ComponentPropsWithRef<'li'>;
-}
-
-export interface MapPaginationProps {
-  (props: PaginationProps): ComponentPropsWithRef<'nav'>;
-}
+export type PaginationProps = Size & ComponentPropsWithRef<'nav'>;
+export type MapPaginationProps = (props: PaginationProps) => ComponentPropsWithRef<'nav'>;
+export type MapPaginationClassName = (props: ClassName & Large & Small) => string;

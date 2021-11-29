@@ -16,10 +16,7 @@ export default {
   argTypes: {
     children: {
       description: 'Children',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -28,10 +25,7 @@ export default {
     },
     className: {
       description: 'Default class',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -40,10 +34,7 @@ export default {
     },
     active: {
       description: 'Active state',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -52,10 +43,7 @@ export default {
     },
     disabled: {
       description: 'Disabled state',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -64,10 +52,7 @@ export default {
     },
     href: {
       description: 'Item href',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -76,10 +61,7 @@ export default {
     },
     custom: {
       description: 'Use Link/Text components',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',

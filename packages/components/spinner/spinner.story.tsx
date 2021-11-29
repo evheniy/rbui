@@ -16,10 +16,7 @@ export default {
   argTypes: {
     className: {
       description: 'Default class',
-      control: { type: 'text' },
-      type: {
-        required: false,
-      },
+      control: { type: 'text', required: false },
       table: {
         defaultValue: {
           summary: '',
@@ -28,10 +25,7 @@ export default {
     },
     grow: {
       description: 'If you don’t fancy a border spinner, switch to the grow spinner. While it doesn’t technically spin, it does repeatedly grow!',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -40,10 +34,7 @@ export default {
     },
     sm: {
       description: 'Add it to make a smaller spinner that can quickly be used within other components.',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -52,10 +43,7 @@ export default {
     },
     primary: {
       description: 'Primary color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -64,10 +52,7 @@ export default {
     },
     secondary: {
       description: 'Secondary color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -76,10 +61,7 @@ export default {
     },
     success: {
       description: 'Success color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -88,10 +70,7 @@ export default {
     },
     danger: {
       description: 'Danger color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -100,10 +79,7 @@ export default {
     },
     warning: {
       description: 'Warning color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -112,10 +88,7 @@ export default {
     },
     info: {
       description: 'Info color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -124,10 +97,7 @@ export default {
     },
     light: {
       description: 'Light color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',
@@ -136,10 +106,7 @@ export default {
     },
     dark: {
       description: 'Dark color',
-      control: { type: 'boolean' },
-      type: {
-        required: false,
-      },
+      control: { type: 'boolean', required: false },
       table: {
         defaultValue: {
           summary: 'false',

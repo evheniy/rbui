@@ -1,15 +1,14 @@
-import cn from 'classnames';
+import type from './type';
+import aria from './aria';
+import mapClassName from './className';
 
 import { MapCloseButtonProps as P } from '../types';
 
-const mapCloseButtonProps: P = ({ white, ...props }) => {
-  const newProps = { ...props };
-
-  newProps.type = newProps.type || 'button';
-  newProps['aria-label'] = newProps['aria-label'] || 'Close';
-  newProps.className = cn('btn-close', { 'btn-close-white': !!white }, newProps.className);
-
-  return newProps;
-};
+const mapCloseButtonProps: P = ({ white, className, ...props }) => ({
+  ...type,
+  ...aria,
+  className: mapClassName({ white, className }),
+  ...props,
+});
 
 export default mapCloseButtonProps;

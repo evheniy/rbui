@@ -1,42 +1,37 @@
-import { ComponentPropsWithRef } from 'react';
+import {
+  ComponentPropsWithRef, AriaAttributes, HTMLAttributes, DOMAttributes,
+} from 'react';
 
 import {
-  Colors,
+  OnlyOne,
+  Color,
   Link,
   Outline,
-  Sizes,
+  Size,
   Nowrap,
   Toggle,
-} from '@rbui/core/variant/types';
+  Active,
+  Disabled,
+  Colors,
+  Sizes,
+  Href,
+  ClassName,
+} from '@rbui/core/props/types';
 
-export enum ButtonTypes {
-  'button' = 'button',
-  'submit' = 'submit',
-  'reset' = 'reset',
-}
+type BaseProps = Color & Link & Outline & Size & Nowrap & Toggle & OnlyOne<Active & Disabled>;
 
-interface BaseProps extends Colors, Link, Outline, Sizes, Nowrap, Toggle {}
+export type ButtonProps = BaseProps & ComponentPropsWithRef<'button'>;
+export type MapButtonProps = (props: ButtonProps) => ComponentPropsWithRef<'button'>;
 
-export interface ButtonProps extends BaseProps, ComponentPropsWithRef<'button'> {
-  type?: ButtonTypes;
-}
+export type InputProps = BaseProps & ComponentPropsWithRef<'input'>;
+export type MapInputProps = (props: InputProps) => ComponentPropsWithRef<'input'>;
 
-export interface InputProps extends BaseProps, ComponentPropsWithRef<'input'> {
-  value?: string;
-}
+export type LinkProps = BaseProps & ComponentPropsWithRef<'a'>;
+export type MapLinkProps = (props: LinkProps) => ComponentPropsWithRef<'a'>;
+export type MapLinkHref = (props: Href & Disabled) => Href;
+export type MapLinkTabIndex = (props: Disabled) => Pick<HTMLAttributes<HTMLAnchorElement>, 'tabIndex'>;
 
-export interface LinkProps extends BaseProps, ComponentPropsWithRef<'a'> {
-  disabled?: boolean;
-}
-
-export interface MapButtonProps {
-  (props: ButtonProps): ComponentPropsWithRef<'button'>;
-}
-
-export interface MapInputProps {
-  (props: InputProps): ComponentPropsWithRef<'input'>;
-}
-
-export interface MapLinkProps {
-  (props: LinkProps): ComponentPropsWithRef<'a'>;
-}
+export type Validate = (props: Colors & Link & Sizes) => void;
+export type MapAria = (props: Active & Disabled) => AriaAttributes;
+export type MapClassName = (props: Nowrap & Sizes & Outline & Colors & Active & Disabled & Link & ClassName) => string;
+export type Action = <T>(props: Active & Toggle & Pick<DOMAttributes<T>, 'onClick'>) => Active & Pick<DOMAttributes<T>, 'onClick'>;

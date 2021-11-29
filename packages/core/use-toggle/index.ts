@@ -1,11 +1,11 @@
 import { useCallback, useState } from 'react';
 
 interface UseToggle {
-  (initialState?: boolean | undefined): [boolean, () => void];
+  (initialState?: boolean): [boolean, () => void];
 }
 
 const useToggle: UseToggle = (initialState = false) => {
-  const [isToggled, setState] = useState<boolean>(initialState);
+  const [isToggled, setState] = useState(initialState);
 
   const toggle = useCallback((): void => setState(prevState => !prevState), []);
 

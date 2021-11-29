@@ -1,9 +1,14 @@
-import { ComponentPropsWithRef } from 'react';
+import { ComponentPropsWithRef, ReactNode } from 'react';
 
-import { Grow, Colors, Sizes } from '@rbui/core/variant/types';
+import {
+  Color,
+  Grow,
+  Small,
+  Colors,
+  ClassName,
+} from '@rbui/core/props/types';
 
-export interface SpinnerProps extends Grow, Colors, Pick<Sizes, 'sm'>, ComponentPropsWithRef<'span'> {}
-
-export interface MapSpinnerProps {
-  (props: SpinnerProps): ComponentPropsWithRef<'span'>;
-}
+export type SpinnerProps = Grow & Small & Color & ComponentPropsWithRef<'span'>;
+export type MapSpinnerProps = (props: SpinnerProps) => ComponentPropsWithRef<'span'>;
+export type MapSpinnerClassName = (props: Grow & Small & Colors & ClassName) => string;
+export type MapSpinnerChildren = (children?: ReactNode) => ReactNode;

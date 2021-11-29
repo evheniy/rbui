@@ -1,18 +1,28 @@
+import { oneOf } from '@rbui/core/props/validation';
+
+import mapClassName from './group/className';
+
 import { MapNumberedGroupProps as P } from '../types';
 
-import mapGroupClassName from './map/groupClassName';
-
-const mapNumberedGroupProps: P = ({ flush, horizontal, ...props }) => {
-  const newProps = { ...props };
-
-  newProps.className = mapGroupClassName({
-    base: ['list-group', 'list-group-numbered'],
+const mapNumberedGroupProps: P = props => {
+  const {
     flush,
     horizontal,
-    className: newProps.className,
-  });
+    className,
+    ...rest
+  } = props;
 
-  return newProps;
+  oneOf({ flush, horizontal: !!horizontal });
+
+  return {
+    className: mapClassName({
+      flush,
+      horizontal,
+      className,
+      numbered: true,
+    }),
+    ...rest,
+  };
 };
 
 export default mapNumberedGroupProps;
