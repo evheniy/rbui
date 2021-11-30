@@ -49,6 +49,11 @@ export interface HtmlProps {
   script?: string;
 }
 
+/**
+ * Page HTML
+ * @param props PAge HTML parameters
+ * @returns {string} Page HTML
+ */
 const html = (props: HtmlProps = {}): string => {
   const {
     htmlAttributes = defaultHtmlAttributes,
