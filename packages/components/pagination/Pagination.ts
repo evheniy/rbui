@@ -5,6 +5,13 @@ import PaginationComponent from './jsx/pagination';
 
 const withPagination = mapProps(mapPaginationProps);
 
+/**
+ * @name Pagination
+ * @link https://getbootstrap.com/docs/5.1/components/pagination/
+ *
+ * @param {boolean} lg - Makes pagination larger.
+ * @param {boolean} sm - Makes pagination smaller.
+ */
 const Pagination = withPagination(PaginationComponent);
 Pagination.displayName = 'Pagination';
 

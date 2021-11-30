@@ -5,6 +5,15 @@ import mapItemProps from './props/item';
 
 const withItem = mapProps(mapItemProps);
 
+/**
+ * @name Pagination Item
+ * @link https://getbootstrap.com/docs/5.1/components/pagination/
+ *
+ * @param {boolean} active - Sets Item as current page.
+ * @param {boolean} disabled - Makes Item disabled.
+ * @param {boolean} href - Uses for Link component.
+ * @param {boolean} custom - Helps to use children as is without wrapping to Text or Link components.
+ */
 const Item = withItem(list);
 Item.displayName = 'Item';
 
