@@ -34,6 +34,7 @@ export default {
     '\\.story.[tj]s?(x)$',
     '/dist/',
     '/build/',
+    '/storybook/',
   ],
 
   // Indicates which provider should be used to instrument code for coverage
