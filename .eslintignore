@@ -2,7 +2,7 @@ node_modules
 .yarn
 build
 dist
-storybook-static
+storybook
 coverage
 !.storybook
 wdio/reports

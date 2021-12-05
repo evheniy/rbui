@@ -76,3 +76,9 @@ jobs:
           version: ${{ steps.new_version.outputs.version }}
           tag: ${{ steps.new_version.outputs.version }}
           publish: true
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: storybook

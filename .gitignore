@@ -9,7 +9,7 @@
 .DS_Store
 .idea
 node_modules
-storybook-static
+storybook
 build
 dist
 coverage
