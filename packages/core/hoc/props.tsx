@@ -1,11 +1,9 @@
 import React, { FC, forwardRef } from 'react';
 
-interface MapProps<P extends object, M extends object> {
-  (props: P): M;
-}
+import compose, { MapProps } from '@rbui/core/props/compose';
 
-const withProps = <P extends object, M extends object>(mapProps: MapProps<P, M>) => (Component: FC<M>) => {
-  const Cmp = forwardRef<M, P>((props, ref) => <Component {...mapProps(props)} ref={ref} />);
+const withProps = <P extends object, R extends object = P>(...mapProps: Array<MapProps<P, R>>) => (Component: FC<R>) => {
+  const Cmp = forwardRef<R, P>((props, ref) => <Component {...compose(...mapProps)(props) as R} ref={ref} />);
 
   Cmp.displayName = Component.displayName || Component.name || 'HOC';
 
