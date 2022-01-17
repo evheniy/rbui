@@ -2,7 +2,7 @@
 
 for TYPE in "esm" "cjs"
 do
-  for PACKAGE in "core" "components"
+  for PACKAGE in "core" "components" "utilities"
   do
     echo "$TYPE - $PACKAGE"
     tsc -p "ts/$TYPE.$PACKAGE.json"
@@ -14,3 +14,6 @@ cp packages/core/README.md dist/core/
 
 echo "cp packages/components/Readme.md dist/components/"
 cp packages/components/README.md dist/components/
+
+echo "cp packages/componutilitiesents/Readme.md dist/utilities/"
+cp packages/utilities/README.md dist/utilities/

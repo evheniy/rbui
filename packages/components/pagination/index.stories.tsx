@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
+import { ComponentStory } from '@storybook/react';
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 import Pagination, { Item } from '.';
@@ -109,13 +111,19 @@ export const Center = () => (
 );
 Center.storyName = 'Center';
 
-export const Right = () => (
-  <Pagination aria-label="Page navigation example" className="justify-content-end">
-    <Item disabled>Previous</Item>
-    <Item active>1</Item>
-    <Item href="#">2</Item>
-    <Item href="#">3</Item>
-    <Item href="#">Next</Item>
-  </Pagination>
+export const Right: ComponentStory<typeof Pagination> = () => (
+  <div style={{ margin: '20px 20px 40px 0' }}>
+    <Pagination aria-label="Page navigation example" className="justify-content-end">
+      <Item disabled>Previous</Item>
+      <Item active>1</Item>
+      <Item href="#">2</Item>
+      <Item href="#">3</Item>
+      <Item href="#">Next</Item>
+    </Pagination>
+  </div>
 );
+
 Right.storyName = 'Right';
+Right.parameters = {
+  layout: 'default',
+};

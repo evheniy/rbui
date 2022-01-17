@@ -1,0 +1,12 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "rootDir": "../packages/utilities",
+    "outDir": "../dist/utilities/cjs"
+  },
+  "include": [
+    "../packages/utilities",
+    "../packages/utilities/**/*.json"
+  ]
+}

@@ -5,3 +5,6 @@ echo "publish dist/core"
 
 echo "publish dist/components"
 (cd dist/components && npm publish --access=public)
+
+echo "publish dist/utilities"
+(cd dist/utilities && npm publish --access=public)
