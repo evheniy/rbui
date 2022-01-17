@@ -1,8 +1,14 @@
 export type OnlyOne<T> = Pick<T, Exclude<keyof T, keyof T>> & {
-  [K in keyof T]-?:
-  Pick<T, K>
-  & Partial<Record<Exclude<keyof T, K>, false | undefined>>
+  [K in keyof T]-?: Pick<T, K> & Partial<Record<Exclude<keyof T, K>, false | undefined>>
 }[keyof T];
+
+export type Required<T> = {
+  [P in keyof T]-?: true;
+};
+
+export type Undefined<T> = {
+  [P in keyof T]?: undefined;
+};
 
 export type ClassName = {
   className?: string;
@@ -136,4 +142,64 @@ export type Custom = {
 
 export type Vertical = {
   vertical?: boolean;
+};
+
+export type Start = {
+  start?: boolean;
+};
+
+export type Center = {
+  center?: boolean;
+};
+
+export type End = {
+  end?: boolean;
+};
+
+export type Sm = {
+  sm?: boolean;
+};
+
+export type Md = {
+  md?: boolean;
+};
+
+export type Lg = {
+  lg?: boolean;
+};
+
+export type Xl = {
+  xl?: boolean;
+};
+
+export type Wrap = {
+  wrap?: boolean;
+};
+
+export type NoWrap = {
+  nowrap?: boolean;
+};
+
+export type Break = {
+  break?: boolean;
+};
+
+export type Lowercase = {
+  lowercase?: boolean;
+};
+
+export type Uppercase = {
+  uppercase?: boolean;
+};
+
+export type Capitalize = {
+  capitalize?: boolean;
+};
+
+export type Muted = {
+  muted?: boolean;
+};
+
+export type Reset = {
+  reset?: boolean;
 };

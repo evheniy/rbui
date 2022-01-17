@@ -6,6 +6,7 @@
   "module": "index.js",
   "dependencies": {
     "@rbui/core": "^0.0.12",
+    "@rbui/utilities": "^0.0.12",
     "classnames": "^2.3.1"
   },
   "peerDependencies": {

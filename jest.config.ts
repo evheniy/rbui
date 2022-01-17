@@ -35,6 +35,7 @@ export default {
     '/dist/',
     '/build/',
     '/storybook/',
+    '/coverage/',
   ],
 
   // Indicates which provider should be used to instrument code for coverage
