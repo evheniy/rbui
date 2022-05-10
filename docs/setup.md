@@ -19,6 +19,9 @@ nvm install lts/gallium
 nvm use default lts/gallium
 nvm alias default lts/gallium
 
+yarn plugin import interactive-tools
+yarn plugin import version
+
 ```
 
 ```bash

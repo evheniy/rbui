@@ -17,6 +17,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
+    "@typescript-eslint/space-before-blocks": 0,
     "react/function-component-definition": 0,
     "@typescript-eslint/member-delimiter-style": "error",
     "import/no-extraneous-dependencies": 0,

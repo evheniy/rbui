@@ -33,7 +33,7 @@ const wrapper = <P, W, T, M>(
 };
 
 const wrapperHOC = <P, W, T, M>(
-  Wrapper?: FC<W>,
+  Wrapper?: FC<W | undefined>,
   options?: W,
   mapToProps?: MapToProps<T, M> | undefined,
   Component?: FC<P | (P & M)>,

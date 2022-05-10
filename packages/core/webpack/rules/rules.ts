@@ -29,13 +29,13 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export const js: webpack.RuleSetRule = {
   test: /.jsx?$/,
-  use: [cache, babel],
+  use: isProduction ? babel : [cache, babel],
   exclude,
 };
 
 export const ts: webpack.RuleSetRule = {
   test: /.tsx?$/,
-  use: [cache, typescript],
+  use: isProduction ? [cache, babel, typescript] : [babel, typescript],
   exclude,
 };
 
@@ -60,7 +60,7 @@ export const scssDependencies: webpack.RuleSetRule = {
   include: /node_modules/,
   use: isProduction
     ? [MiniCssExtractPlugin.loader, cssVendors, postcss, resolveUrl, scssLoader]
-    : [style, cssVendors, postcss, resolveUrl, scssLoader],
+    : [cache, style, cssVendors, postcss, resolveUrl, scssLoader],
 };
 
 export const less: webpack.RuleSetRule = {
@@ -76,7 +76,7 @@ export const lessDependencies: webpack.RuleSetRule = {
   include: /node_modules/,
   use: isProduction
     ? [MiniCssExtractPlugin.loader, cssVendors, postcss, lessLoader]
-    : [style, cssVendors, postcss, lessLoader],
+    : [cache, style, cssVendors, postcss, lessLoader],
 };
 
 export const css: webpack.RuleSetRule = {
@@ -91,8 +91,8 @@ export const cssDependencies: webpack.RuleSetRule = {
   test: /\.css$/,
   include: /node_modules/,
   use: isProduction
-    ? [MiniCssExtractPlugin.loader, cssVendors, postcss]
-    : [style, cssVendors, postcss],
+    ? [MiniCssExtractPlugin.loader, cssVendors]
+    : [cache, style, cssVendors],
 };
 
 export const fonts: webpack.RuleSetRule = {
