@@ -4,9 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Tags:'
+        description: 'Tag:'
         required: true
         type: string
+        default: latest
       environment:
         description: 'Environment:'
         type: choice
@@ -16,11 +17,11 @@ on:
         required: true
 
 jobs:
-  daploy:
+  deploy:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      - name: "Daploy tag:"
+      - name: "Deploy tag:"
         run: echo  "${{ github.event.inputs.tag }}"
-      - name: "Daploy environment:"
+      - name: "Deploy environment:"
         run: echo  "${{ github.event.inputs.environment }}"
