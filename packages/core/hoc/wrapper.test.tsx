@@ -27,17 +27,21 @@ describe('Test @rb/core/hoc/wrapper', () => {
       </div>
     );
 
-    const Wrapper:FC<W> = ({ children, result }) => (
-      <div>
-        {children && children(result)}
-      </div>
-    );
+    const Wrapper:FC<W | undefined> = props => {
+      const { children, result } = props || {};
+
+      return (
+        <div>
+          {children && result && children(result)}
+        </div>
+      );
+    };
 
     Wrapper.displayName = 'WrapperHOC';
 
     const Container = withWrapper(Wrapper, { result: 'test' }, result => ({ result }));
 
-    const Component = Container(TestComponent as FC) as FC<P>;
+    const Component = Container(TestComponent as FC<unknown>) as FC<P>;
 
     expect(Component.displayName).toEqual(Wrapper.displayName);
 
@@ -83,11 +87,15 @@ describe('Test @rb/core/hoc/wrapper', () => {
       </div>
     );
 
-    const Wrapper:FC<W> = ({ children, result }) => (
-      <div>
-        {children && children(result)}
-      </div>
-    );
+    const Wrapper:FC<W | undefined> = props => {
+      const { children, result } = props || {};
+
+      return (
+        <div>
+          {children && result && children(result)}
+        </div>
+      );
+    };
 
     Wrapper.displayName = 'WrapperHOC';
 
