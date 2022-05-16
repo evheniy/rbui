@@ -39,7 +39,7 @@ jobs:
           SLACK_CHANNEL: general
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: 'Post Content :rocket:'
-          SLACK_TITLE: Github
+          SLACK_MESSAGE: ':rocket:'
+          SLACK_TITLE: Test
           SLACK_USERNAME: rtCamp
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
