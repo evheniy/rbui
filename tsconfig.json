@@ -21,9 +21,11 @@
     "declarations.d.ts",
     ".storybook/*.ts",
     "wdio.conf.ts",
-    "wdio"
+    "wdio",
+    "bin/cdk.ts"
   ],
   "exclude": [
+    "node_modules",
     "dist",
     "build",
     "storybook",
