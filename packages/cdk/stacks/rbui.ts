@@ -2,58 +2,25 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
-import getDomain, {
-  WWW,
-  DEV,
-  DEVELOP,
-  STAGING,
-  TEST,
-  TESTING,
-  QA,
-  UAT,
-  PREPROD,
-} from '@rbui/cdk/domains';
+import {
+  domain,
+  getHostedZone,
+  stagingDomain,
+  testDomain,
+  wwwDomain,
+} from '@rbui/cdk/route53';
+import { getCertificate } from '@rbui/cdk/certificateManager';
+import { getWwwBucket } from '@rbui/cdk/s3';
 
 class RBUICdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // Domains
-    const domain = getDomain(); // rbui.tools
-    const wwwDomain = getDomain(WWW); // www.rbui.tools
-    const stagingDomain = getDomain(STAGING); // staging.rbui.tools
-    const testDomain = getDomain(TEST); // test.rbui.tools
+    const hostedZone = getHostedZone(this);
 
-    // Hosted zone
-    const hostedZone = cdk.aws_route53.HostedZone.fromLookup(this, 'HostedZone', { domainName: domain });
+    const certificate = getCertificate(this, hostedZone);
 
-    // SSL/TLS certificate
-    const certificate = new cdk.aws_certificatemanager.Certificate(this, 'Certificate', {
-      domainName: domain,
-      subjectAlternativeNames: [
-        `*.${domain}`,
-        `*.${getDomain(DEV)}`,
-        `*.${getDomain(DEVELOP)}`,
-        `*.${getDomain(STAGING)}`,
-        `*.${getDomain(TEST)}`,
-        `*.${getDomain(TESTING)}`,
-        `*.${getDomain(QA)}`,
-        `*.${getDomain(UAT)}`,
-        `*.${getDomain(PREPROD)}`,
-      ],
-      validation: cdk.aws_certificatemanager.CertificateValidation.fromDns(hostedZone),
-    });
-
-    // S3 buckets
-    const wwwBucket = new cdk.aws_s3.Bucket(this, 'WwwBucket', {
-      bucketName: wwwDomain,
-      removalPolicy: cdk.RemovalPolicy.RETAIN,
-      versioned: false,
-      websiteRedirect: {
-        hostName: domain,
-        protocol: cdk.aws_s3.RedirectProtocol.HTTPS,
-      },
-    });
+    const wwwBucket = getWwwBucket(this);
 
     const domainBucket = new cdk.aws_s3.Bucket(this, 'DomainBucket', {
       bucketName: domain,

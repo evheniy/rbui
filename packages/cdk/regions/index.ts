@@ -1,11 +1,18 @@
-import { getRegion } from '@rbui/cdk/env';
+import { getCdkRegion, getRegion as getEnvRegion } from '@rbui/cdk/env';
 
-export const US_EAST = 'us-east-1'; // US East (N. Virginia)
+/**
+ * US East (N. Virginia)
+ */
+export const US_EAST_1 = 'us-east-1';
 
-export default () => {
-  const region = getRegion() || US_EAST;
+/**
+ * Get region
+ * @returns {!string} Region
+ */
+export const getRegion = (): never | string => {
+  const region = getEnvRegion() || getCdkRegion() || US_EAST_1;
 
-  if (![US_EAST].includes(region)) {
+  if (![US_EAST_1].includes(region)) {
     throw new Error('Wrong region!');
   }
 

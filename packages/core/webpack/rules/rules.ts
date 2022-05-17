@@ -7,20 +7,20 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import resolvePath from '@rbui/core/path';
 
 import {
-  postcss,
-  css as cssLoader,
-  cssBootstrap,
-  cssVendors,
-  scss as scssLoader,
-  resolveUrl,
-  less as lessLoader,
-  cache,
   babel,
-  typescript,
+  cache,
+  cssBootstrap,
+  css as cssLoader,
+  cssVendors,
   file,
+  image,
+  less as lessLoader,
+  postcss,
+  resolveUrl,
+  scss as scssLoader,
   style,
   svg as svgLoader,
-  image,
+  typescript,
 } from './loaders';
 
 const exclude = /node_modules\/(?!(@rb)\/).*/;

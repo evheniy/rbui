@@ -16,7 +16,7 @@ coverage
 wdio/reports
 cdk.out
 cdk.context.json
-template.drawio.bak
+jsdoc
 
 !/bin/dist
 !/**/.gitkeep

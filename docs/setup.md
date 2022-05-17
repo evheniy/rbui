@@ -28,4 +28,10 @@ yarn plugin import version
 npm i -g npm && npm i -g npm yarn ts-node typescript ntl http-server npm-run-all && yarn set version berry
 ```
 
+Upgrade all packages:
+
+```bash
+yarn upgrade-interactive
+```
+
 - [iTerm](https://medium.com/@evheniybystrov/iterm2-config-or-new-project-new-battle-9118c9cb157a)

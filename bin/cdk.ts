@@ -3,12 +3,14 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 
 import RBUICdkStack from '@rbui/cdk/stacks/rbui';
+import { getCdkAccount } from '@rbui/cdk/env';
+import { getRegion } from '@rbui/cdk/regions';
 
 const app = new cdk.App();
 
 new RBUICdkStack(app, 'RBUICdkStack', {
   env: {
-    account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: process.env.CDK_DEFAULT_REGION,
+    account: getCdkAccount(),
+    region: getRegion(),
   },
 });

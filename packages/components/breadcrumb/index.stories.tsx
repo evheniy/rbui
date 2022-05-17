@@ -2,8 +2,9 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import Breadcrumb, { Item } from '.';
 import { Style } from './types';
+
+import Breadcrumb, { Item } from '.';
 
 export default {
   title: 'Components/Breadcrumb/Breadcrumbs',

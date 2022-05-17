@@ -1,8 +1,7 @@
 import { oneOf, requires } from '@rbui/core/props/validation';
 
-import mapClassName from './className';
-
 import { MapProps as P, TextProps } from '../types';
+import mapClassName from './className';
 
 const mapProps: P = props => {
   const {

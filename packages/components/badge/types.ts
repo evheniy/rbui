@@ -1,12 +1,12 @@
 import { ComponentPropsWithRef } from 'react';
 
 import {
-  Color,
-  Pill,
   Circle,
+  ClassName,
+  Color,
   Colors,
   OnlyOne,
-  ClassName,
+  Pill,
 } from '@rbui/core/props/types';
 
 export type BadgeProps = Color & OnlyOne<Pill & Circle> & ComponentPropsWithRef<'span'>;

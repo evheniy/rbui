@@ -1,9 +1,8 @@
 import React, { FC, ReactNode } from 'react';
-
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
-import withWrapper from './wrapper';
 import compose from './compose';
+import withWrapper from './wrapper';
 
 describe('Test @rb/core/hoc/wrapper', () => {
   test('wrapper', () => {

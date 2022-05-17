@@ -1,11 +1,11 @@
 import { ComponentPropsWithRef } from 'react';
 
 import {
-  Size,
-  Vertical,
-  Large,
-  Small,
   ClassName,
+  Large,
+  Size,
+  Small,
+  Vertical,
 } from '@rbui/core/props/types';
 
 export type ButtonGroupProps = Size & Vertical & ComponentPropsWithRef<'div'>;

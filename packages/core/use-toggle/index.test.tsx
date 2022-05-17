@@ -1,7 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React, { FC } from 'react';
-
-import renderer, { act, ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer';
+import renderer, { ReactTestRenderer, ReactTestRendererJSON, act } from 'react-test-renderer';
 
 import useToggle from '.';
 

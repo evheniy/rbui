@@ -1,11 +1,7 @@
+import { HTTPS, getUrl } from '@rbui/cdk/url';
+
 export default class Page {
-  mainUrl = 'https://skazkajs.org/';
-
-  currentUrl = this.mainUrl;
-
-  open(path = '/'): Promise<string> {
-    this.currentUrl = `${this.mainUrl}${path}`;
-
-    return browser.url(this.currentUrl);
+  open(path = '', protocol = HTTPS, subDomain = '') {
+    return browser.url(getUrl(path, protocol, subDomain));
   }
 }

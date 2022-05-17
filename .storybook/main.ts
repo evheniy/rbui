@@ -1,7 +1,6 @@
 /* eslint-disable import/no-import-module-exports */
-import { Configuration } from 'webpack';
-
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { Configuration } from 'webpack';
 
 import custom from '../webpack.config';
 

@@ -1,14 +1,14 @@
-import { ComponentPropsWithRef, AriaAttributes } from 'react';
+import { AriaAttributes, ComponentPropsWithRef } from 'react';
 
 import {
-  OnlyOne,
-  Horizontal,
-  Flush,
   Active,
-  Disabled,
+  ClassName,
   Color,
   Colors,
-  ClassName,
+  Disabled,
+  Flush,
+  Horizontal,
+  OnlyOne,
 } from '@rbui/core/props/types';
 
 type Numbered = {

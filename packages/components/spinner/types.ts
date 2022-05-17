@@ -1,11 +1,11 @@
 import { ComponentPropsWithRef, ReactNode } from 'react';
 
 import {
+  ClassName,
   Color,
+  Colors,
   Grow,
   Small,
-  Colors,
-  ClassName,
 } from '@rbui/core/props/types';
 
 export type SpinnerProps = Grow & Small & Color & ComponentPropsWithRef<'span'>;

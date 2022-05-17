@@ -5,8 +5,9 @@ import { ComponentStory } from '@storybook/react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import Pagination, { Item } from '.';
 import { Link, Text } from './Item';
+
+import Pagination, { Item } from '.';
 
 export default {
   title: 'Components/Pagination/Examples',
