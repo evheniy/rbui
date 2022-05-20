@@ -8,9 +8,9 @@ import {
   stagingDomain,
   testDomain,
   wwwDomain,
-} from '@rbui/cdk/route53';
-import { getCertificate } from '@rbui/cdk/certificateManager';
-import { getWwwBucket } from '@rbui/cdk/s3';
+} from '@rbui/cdk/services/route53';
+import { getCertificate } from '@rbui/cdk/services/certificateManager';
+import { getWwwBucket } from '@rbui/cdk/services/s3';
 
 class RBUICdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {

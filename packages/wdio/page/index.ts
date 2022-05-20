@@ -1,4 +1,4 @@
-import { HTTPS, getUrl } from '@rbui/cdk/url';
+import { HTTPS, getUrl } from '@rbui/core/url';
 
 export default class Page {
   open(path = '', protocol = HTTPS, subDomain = '') {

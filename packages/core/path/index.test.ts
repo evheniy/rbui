@@ -1,7 +1,7 @@
-import path from '.';
+import { getFullPath } from '.';
 
 describe('Test @rb/core-path', () => {
   test('test path', () => {
-    expect(path()).toContain('rb');
+    expect(getFullPath()).toContain('rb');
   });
 });
