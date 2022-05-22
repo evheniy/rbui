@@ -25,7 +25,10 @@ jobs:
           node-version: '16'
 
       - run: printenv
-      - run: aws configure
+      - run: aws configure set aws_access_key_id default_access_key
+      - run: aws configure set aws_secret_access_key default_secret_key
+      - run: aws configure set default.region default_region
+      - run: aws configure set default.output default_output
       - run: node -v
       - run: npm i -g npm yarn
       - run: npm -v
