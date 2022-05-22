@@ -29,7 +29,6 @@ jobs:
       - run: aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - run: aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
       - run: aws configure set default.output json
-      - run: aws configure set default.cli_pager
       - run: cat ~/.aws/config
       - run: node -v
       - run: npm i -g npm yarn
