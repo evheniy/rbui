@@ -25,6 +25,7 @@ jobs:
           node-version: '16'
 
       - run: printenv
+      - run: aws configure
       - run: node -v
       - run: npm i -g npm yarn
       - run: npm -v
