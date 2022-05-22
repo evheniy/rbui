@@ -29,6 +29,7 @@ jobs:
       - run: aws configure set aws_secret_access_key default_secret_key
       - run: aws configure set default.region default_region
       - run: aws configure set default.output default_output
+      - run: cat ~/.aws/config
       - run: node -v
       - run: npm i -g npm yarn
       - run: npm -v
@@ -39,6 +40,7 @@ jobs:
 
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
+        if: always()
         env:
           SLACK_CHANNEL: general
           SLACK_COLOR: ${{ job.status }}
