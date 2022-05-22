@@ -20,6 +20,8 @@
     "plugin:import/typescript"
   ],
   "rules": {
+    "no-new": 0,
+    "import/prefer-default-export": 0,
     "@typescript-eslint/space-before-blocks": 0,
     "react/function-component-definition": 0,
     "@typescript-eslint/member-delimiter-style": "error",

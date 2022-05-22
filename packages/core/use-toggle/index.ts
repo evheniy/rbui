@@ -9,12 +9,10 @@ interface UseToggle {
  * @param {boolean} initialState
  * @returns {[boolean, () => void]}
  */
-const useToggle: UseToggle = (initialState = false) => {
+export const useToggle: UseToggle = (initialState = false) => {
   const [isToggled, setState] = useState(initialState);
 
   const toggle = useCallback((): void => setState(prevState => !prevState), []);
 
   return [isToggled, toggle];
 };
-
-export default useToggle;

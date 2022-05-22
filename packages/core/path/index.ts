@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { realpathSync } from 'fs';
 import { resolve } from 'path';
 

@@ -7,7 +7,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 import { getEnv } from '@rbui/core/env';
 
-import html from '@rbui/core/html';
+import { html } from '@rbui/core/html';
 
 process.env.PUBLIC_PATH = process.env.PUBLIC_PATH || '/';
 

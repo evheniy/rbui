@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import {
   Stack,
   aws_certificatemanager as certificateManager,
@@ -17,7 +16,7 @@ import {
   getDomain,
 } from '@rbui/core/domains';
 
-import { domain } from '@rbui/cdk/services/route53';
+import { domain } from '@rbui/cdk/services/route53/domain';
 
 /**
  * SSL/TLS certificate

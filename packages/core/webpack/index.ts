@@ -30,7 +30,7 @@ const alias = {
   'react-dom': '@hot-loader/react-dom',
 };
 
-const config: Configuration = {
+export const config: Configuration = {
   resolve: { extensions, alias },
   mode: isProduction ? 'production' : 'development',
   target: isProduction ? 'browserslist' : 'web',
@@ -66,5 +66,3 @@ const config: Configuration = {
     hints: false,
   },
 };
-
-export default config;

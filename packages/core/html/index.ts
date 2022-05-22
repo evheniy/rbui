@@ -54,7 +54,7 @@ export interface HtmlProps {
  * @param props Page HTML parameters
  * @returns {string} Page HTML
  */
-const html = (props: HtmlProps = {}): string => {
+export const html = (props: HtmlProps = {}): string => {
   const {
     htmlAttributes = defaultHtmlAttributes,
     title = defaultTitle,
@@ -86,5 +86,3 @@ const html = (props: HtmlProps = {}): string => {
   </html>
   `;
 };
-
-export default html;

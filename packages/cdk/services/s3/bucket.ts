@@ -2,13 +2,13 @@ import { RemovalPolicy, Stack, aws_s3 as s3 } from 'aws-cdk-lib';
 
 import {
   domain,
-  sbDomain,
-  sbStagingDomain,
-  sbTestDomain,
   stagingDomain,
+  storybookDomain,
+  storybookStagingDomain,
+  storybookTestDomain,
   testDomain,
   wwwDomain,
-} from '@rbui/cdk/services/route53';
+} from '@rbui/cdk/services/route53/domain';
 
 /**
  * Get Bucket
@@ -33,14 +33,14 @@ export const getBucket = (
 );
 
 /**
- * WWW Bucket (Redirect Bucket)
+ * WwwDomain Bucket (Redirect Bucket)
  * Bucket: www.rbui.tools
  * @param {cdk.Stack} stack Stack
  * @returns {cdk.aws_s3.Bucket} Bucket
  */
-export const getWwwBucket = (stack: Stack) => getBucket(
+export const getWwwDomainBucket = (stack: Stack) => getBucket(
   stack,
-  'WwwBucket',
+  'WwwDomainBucket',
   wwwDomain,
   {
     websiteRedirect: {
@@ -71,7 +71,7 @@ export const getDomainBucket = (stack: Stack) => getBucket(
 export const getStorybookDomainBucket = (stack: Stack) => getBucket(
   stack,
   'StorybookDomainBucket',
-  sbDomain,
+  storybookDomain,
 );
 
 /**
@@ -95,7 +95,7 @@ export const getStagingDomainBucket = (stack: Stack) => getBucket(
 export const getStorybookStagingDomainBucket = (stack: Stack) => getBucket(
   stack,
   'StorybookStagingBucket',
-  sbStagingDomain,
+  storybookStagingDomain,
 );
 
 /**
@@ -119,5 +119,5 @@ export const getTestDomainBucket = (stack: Stack) => getBucket(
 export const getStorybookTestDomainBucket = (stack: Stack) => getBucket(
   stack,
   'StorybookTestBucket',
-  sbTestDomain,
+  storybookTestDomain,
 );

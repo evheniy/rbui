@@ -2,7 +2,7 @@
 import React, { FC } from 'react';
 import renderer, { ReactTestRenderer, ReactTestRendererJSON, act } from 'react-test-renderer';
 
-import useToggle from '.';
+import { useToggle } from '.';
 
 interface Props {
   isToggled?: boolean;
