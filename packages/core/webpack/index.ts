@@ -6,7 +6,7 @@ import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-serv
 import TerserPlugin from 'terser-webpack-plugin';
 
 import { getEnv } from '@rbui/core/env';
-import resolvePath from '@rbui/core/path';
+import { getFullPath } from '@rbui/core/path';
 
 import rules from './rules';
 import plugins from './plugins';
@@ -19,25 +19,25 @@ interface Configuration extends WebpackConfiguration {
 
 const isProduction = getEnv() === 'production';
 
-const context = resolvePath();
+const context = getFullPath();
 
 const publicPath = process.env.PUBLIC_PATH || '/';
 
 const extensions = ['*', '.js', '.ts', '.jsx', '.tsx', '.css', '.scss', '.png', '.less'];
 
 const alias = {
-  '@babel/runtime': resolvePath('node_modules/@babel/runtime'),
+  '@babel/runtime': getFullPath('node_modules/@babel/runtime'),
   'react-dom': '@hot-loader/react-dom',
 };
 
-const config: Configuration = {
+export const config: Configuration = {
   resolve: { extensions, alias },
   mode: isProduction ? 'production' : 'development',
   target: isProduction ? 'browserslist' : 'web',
-  entry: ['react-hot-loader/patch', '@babel/polyfill', 'raf/polyfill', resolvePath('index.tsx')], // TODO change @rb/ui-icon to app
+  entry: ['react-hot-loader/patch', '@babel/polyfill', 'raf/polyfill', getFullPath('index.tsx')], // TODO change @rb/ui-icon to app
   output: {
     filename: '[name].[contenthash].js',
-    path: resolvePath('build'),
+    path: getFullPath('build'),
     publicPath,
     chunkFilename: '[name].[id].[contenthash].js',
   },
@@ -66,5 +66,3 @@ const config: Configuration = {
     hints: false,
   },
 };
-
-export default config;

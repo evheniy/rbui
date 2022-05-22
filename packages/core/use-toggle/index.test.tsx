@@ -1,9 +1,8 @@
 /* eslint-disable react/require-default-props */
 import React, { FC } from 'react';
+import renderer, { ReactTestRenderer, ReactTestRendererJSON, act } from 'react-test-renderer';
 
-import renderer, { act, ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer';
-
-import useToggle from '.';
+import { useToggle } from '.';
 
 interface Props {
   isToggled?: boolean;

@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
-
 import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 
-import mapProps from './props';
 import compose from './compose';
+import mapProps from './props';
 
 describe('Test @rb/core/hoc/props', () => {
   test('Props', () => {

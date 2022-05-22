@@ -1,4 +1,4 @@
-import React, { FC, ComponentPropsWithRef, forwardRef } from 'react';
+import React, { ComponentPropsWithRef, FC, forwardRef } from 'react';
 
 /**
  * HTML div with ref

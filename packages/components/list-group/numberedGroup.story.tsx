@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import { NumberedGroup, Item } from '.';
+import { Item, NumberedGroup } from '.';
 
 export default {
   title: 'Components/ListGroup/NumberedGroup',

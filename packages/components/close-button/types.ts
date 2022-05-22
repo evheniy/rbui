@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from 'react';
 
-import { White, ClassName } from '@rbui/core/props/types';
+import { ClassName, White } from '@rbui/core/props/types';
 
 export type CloseButtonProps = White & ComponentPropsWithRef<'button'>;
 

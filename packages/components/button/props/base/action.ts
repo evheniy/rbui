@@ -1,4 +1,4 @@
-import useToggle from '@rbui/core/use-toggle';
+import { useToggle } from '@rbui/core/use-toggle';
 
 import { Action as A } from '../../types';
 

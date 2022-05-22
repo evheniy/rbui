@@ -3,7 +3,7 @@ import { oneOf } from '@rbui/core/props/validation';
 import mapClassName from './className';
 import mapChildren from './children';
 
-import { MapProgressProps as P, BaseProps } from '../../types';
+import { BaseProps, MapProgressProps as P } from '../../types';
 
 const mapProgressProps: P = props => {
   const {

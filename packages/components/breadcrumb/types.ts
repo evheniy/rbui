@@ -1,10 +1,10 @@
-import { ComponentPropsWithRef, CSSProperties, AriaAttributes } from 'react';
+import { AriaAttributes, CSSProperties, ComponentPropsWithRef } from 'react';
 
 import {
-  Divider,
   Active,
-  Href,
   ClassName,
+  Divider,
+  Href,
 } from '@rbui/core/props/types';
 
 export type Style = CSSProperties & {

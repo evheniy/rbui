@@ -1,5 +1,5 @@
-import Page from '../../page';
+import { Page } from '../../page';
 
 class Home extends Page {}
 
-export default new Home();
+export const homePage = new Home();

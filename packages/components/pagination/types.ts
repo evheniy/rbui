@@ -1,20 +1,20 @@
 import {
-  ComponentPropsWithRef,
   AriaAttributes,
+  ComponentPropsWithRef,
   PropsWithChildren,
   ReactNode,
 } from 'react';
 
 import {
-  OnlyOne,
-  Large,
-  Small,
-  Size,
   Active,
+  ClassName,
+  Custom,
   Disabled,
   Href,
-  Custom,
-  ClassName,
+  Large,
+  OnlyOne,
+  Size,
+  Small,
 } from '@rbui/core/props/types';
 
 export type LinkProps = ComponentPropsWithRef<'a'>;

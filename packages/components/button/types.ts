@@ -1,24 +1,24 @@
 import {
-  ComponentPropsWithRef,
   AriaAttributes,
-  HTMLAttributes,
+  ComponentPropsWithRef,
   DOMAttributes,
+  HTMLAttributes,
 } from 'react';
 
 import {
-  OnlyOne,
+  Active,
+  ClassName,
   Color,
+  Colors,
+  Disabled,
+  Href,
   Link,
+  Nowrap,
+  OnlyOne,
   Outline,
   Size,
-  Nowrap,
-  Toggle,
-  Active,
-  Disabled,
-  Colors,
   Sizes,
-  Href,
-  ClassName,
+  Toggle,
 } from '@rbui/core/props/types';
 
 type BaseProps = Color & Link & Outline & Size & Nowrap & Toggle & OnlyOne<Active & Disabled>;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -15,7 +15,7 @@ export default {
   },
   argTypes: {
     children: {
-      description: 'Сhildren',
+      description: 'Children',
       control: { type: 'text', required: false },
       table: {
         defaultValue: {

@@ -1,11 +1,7 @@
-export default class Page {
-  mainUrl = 'https://skazkajs.org/';
+import { HTTPS, getUrl } from '@rbui/core/url';
 
-  currentUrl = this.mainUrl;
-
-  open(path = '/'): Promise<string> {
-    this.currentUrl = `${this.mainUrl}${path}`;
-
-    return browser.url(this.currentUrl);
+export class Page {
+  open(path = '', protocol = HTTPS, subDomain = '') {
+    return browser.url(getUrl(path, protocol, subDomain));
   }
 }

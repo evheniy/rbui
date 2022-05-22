@@ -2,8 +2,9 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import ListGroup, { NumberedGroup, Item } from '.';
-import ActiveGroup, { LinkItem, ButtonItem } from './ActiveGroup';
+import ActiveGroup, { ButtonItem, LinkItem } from './ActiveGroup';
+
+import ListGroup, { Item, NumberedGroup } from '.';
 
 export default {
   title: 'Components/ListGroup/ListGroups',

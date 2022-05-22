@@ -1,22 +1,22 @@
 import {
-  ComponentPropsWithRef,
   AriaAttributes,
   CSSProperties,
+  ComponentPropsWithRef,
   PropsWithChildren,
   ReactNode,
 } from 'react';
 
 import {
-  OnlyOne,
-  Success,
-  Info,
-  Warning,
-  Danger,
-  Striped,
   Animated,
-  Label,
-  Progress,
   ClassName,
+  Danger,
+  Info,
+  Label,
+  OnlyOne,
+  Progress,
+  Striped,
+  Success,
+  Warning,
 } from '@rbui/core/props/types';
 
 type Colors = Success & Info & Warning & Danger;
