@@ -9,7 +9,7 @@ import { getRegion } from '@rbui/core/regions';
 
 const app = new cdk.App();
 
-new RBUIProductionCdkStack(app, 'RBUIProductionCdkStack', {
+const rbuiProduction = new RBUIProductionCdkStack(app, 'RBUIProductionCdkStack', {
   env: {
     account: getCdkAccount(),
     region: getRegion(),
@@ -21,6 +21,7 @@ new RBUIStagingCdkStack(app, 'RBUIStagingCdkStack', {
     account: getCdkAccount(),
     region: getRegion(),
   },
+  certificate: rbuiProduction.certificate,
 });
 
 new RBUITestCdkStack(app, 'RBUITestCdkStack', {
@@ -28,4 +29,5 @@ new RBUITestCdkStack(app, 'RBUITestCdkStack', {
     account: getCdkAccount(),
     region: getRegion(),
   },
+  certificate: rbuiProduction.certificate,
 });

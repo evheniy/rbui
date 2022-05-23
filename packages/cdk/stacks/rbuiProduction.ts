@@ -24,6 +24,8 @@ import {
 import { deployDomainBucket, deployStorybookDomainBucket } from '@rbui/cdk/services/s3/deployment';
 
 export class RBUIProductionCdkStack extends cdk.Stack {
+  public readonly certificate: cdk.aws_certificatemanager.Certificate;
+
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -33,11 +35,11 @@ export class RBUIProductionCdkStack extends cdk.Stack {
 
     const hostedZone = getHostedZone(this);
 
-    const certificate = getCertificate(this, hostedZone);
+    this.certificate = getCertificate(this, hostedZone);
 
-    const wwwDomainCloudFront = getWwwDomainCloudFront(this, certificate, wwwDomainBucket);
-    const domainCloudFront = getDomainCloudFront(this, certificate, domainBucket);
-    const storybookDomainCloudFront = getStorybookDomainCloudFront(this, certificate, storybookDomainBucket);
+    const wwwDomainCloudFront = getWwwDomainCloudFront(this, this.certificate, wwwDomainBucket);
+    const domainCloudFront = getDomainCloudFront(this, this.certificate, domainBucket);
+    const storybookDomainCloudFront = getStorybookDomainCloudFront(this, this.certificate, storybookDomainBucket);
 
     getWwwDomainARecord(this, hostedZone, wwwDomainCloudFront);
     getWwwDomainAaaaRecord(this, hostedZone, wwwDomainCloudFront);

@@ -29,7 +29,7 @@ export const getCloudFront = (
   stack: Stack,
   name: string,
   domainName: string,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => new cf.Distribution(stack, name, {
   certificate,
@@ -44,13 +44,13 @@ export const getCloudFront = (
 /**
  * Get WwwDomain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getWwwDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,
@@ -63,13 +63,13 @@ export const getWwwDomainCloudFront = (
 /**
  * Get Domain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,
@@ -82,13 +82,13 @@ export const getDomainCloudFront = (
 /**
  * Get StorybookDomain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getStorybookDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,
@@ -101,13 +101,13 @@ export const getStorybookDomainCloudFront = (
 /**
  * Get StagingDomain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getStagingDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,
@@ -120,13 +120,13 @@ export const getStagingDomainCloudFront = (
 /**
  * Get StorybookStagingDomain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getStorybookStagingDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,
@@ -139,13 +139,13 @@ export const getStorybookStagingDomainCloudFront = (
 /**
  * Get TestDomain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getTestDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,
@@ -158,13 +158,13 @@ export const getTestDomainCloudFront = (
 /**
  * Get StorybookTestDomain CloudFront
  * @param {cdk.Stack} stack Stack
- * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
+ * @param {cdk.aws_certificatemanager.ICertificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getStorybookTestDomainCloudFront = (
   stack: Stack,
-  certificate: cm.Certificate,
+  certificate: cm.ICertificate,
   bucket: s3.Bucket,
 ) => getCloudFront(
   stack,

@@ -35,7 +35,10 @@
     "drawio:RBUITestCdkStack": "cfn-dia draw.io -c -t cdk.out/RBUITestCdkStack.template.json -o cdk.out/RBUITestCdkStack.drawio",
     "jsdoc": "jsdoc dist -r -d jsdoc",
     "presynth": "rimraf cdk.out",
-    "postsynth": "npm-run-all 'drawio:*'"
+    "postsynth": "npm-run-all 'drawio:*'",
+    "deploy:production": "cdk deploy RBUIProductionCdkStack",
+    "deploy:staging": "cdk deploy RBUIStagingCdkStack",
+    "deploy:test": "cdk deploy RBUITestCdkStack"
   },
   "devDependencies": {
     "@4c/tsconfig": "^0.4.1",

@@ -2,7 +2,6 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
 import { getHostedZone } from '@rbui/cdk/services/route53/hostedZone';
-import { getCertificate } from '@rbui/cdk/services/certificateManager';
 import { getStagingDomainBucket, getStorybookStagingDomainBucket } from '@rbui/cdk/services/s3/bucket';
 import { getStagingDomainCloudFront, getStorybookStagingDomainCloudFront } from '@rbui/cdk/services/cloudFront';
 import {
@@ -14,7 +13,7 @@ import {
 import { deployStagingDomainBucket, deployStorybookStagingDomainBucket } from '@rbui/cdk/services/s3/deployment';
 
 export class RBUIStagingCdkStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props: cdk.StackProps & { certificate: cdk.aws_certificatemanager.Certificate }) {
     super(scope, id, props);
 
     const stagingDomainBucket = getStagingDomainBucket(this);
@@ -22,7 +21,7 @@ export class RBUIStagingCdkStack extends cdk.Stack {
 
     const hostedZone = getHostedZone(this);
 
-    const certificate = getCertificate(this, hostedZone);
+    const { certificate } = props;
 
     const stagingDomainCloudFront = getStagingDomainCloudFront(this, certificate, stagingDomainBucket);
     const storybookStagingDomainCloudFront = getStorybookStagingDomainCloudFront(this, certificate, storybookStagingDomainBucket);
