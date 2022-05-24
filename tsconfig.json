@@ -22,7 +22,8 @@
     ".storybook/*.ts",
     "wdio.conf.ts",
     "wdio",
-    "bin/cdk.ts"
+    "bin/cdk.ts",
+    "bin/upload.ts"
   ],
   "exclude": [
     "node_modules",

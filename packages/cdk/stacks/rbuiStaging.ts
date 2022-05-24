@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
 import { getHostedZone } from '@rbui/cdk/services/route53/hostedZone';
-import { getStagingDomainBucket, getStorybookStagingDomainBucket } from '@rbui/cdk/services/s3/bucket';
+import { getStagingDomainBucket, getStorybookStagingDomainBucket } from '@rbui/cdk/services/s3';
 import { getStagingDomainCloudFront, getStorybookStagingDomainCloudFront } from '@rbui/cdk/services/cloudFront';
 import {
   getStagingDomainARecord,
@@ -10,7 +10,6 @@ import {
   getStorybookStagingDomainARecord,
   getStorybookStagingDomainAaaaRecord,
 } from '@rbui/cdk/services/route53/record';
-import { deployStagingDomainBucket, deployStorybookStagingDomainBucket } from '@rbui/cdk/services/s3/deployment';
 
 export class RBUIStagingCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: cdk.StackProps & { certificate: cdk.aws_certificatemanager.Certificate }) {
@@ -31,8 +30,5 @@ export class RBUIStagingCdkStack extends cdk.Stack {
 
     getStorybookStagingDomainARecord(this, hostedZone, storybookStagingDomainCloudFront);
     getStorybookStagingDomainAaaaRecord(this, hostedZone, storybookStagingDomainCloudFront);
-
-    deployStagingDomainBucket(this, stagingDomainBucket, stagingDomainCloudFront);
-    deployStorybookStagingDomainBucket(this, storybookStagingDomainBucket, storybookStagingDomainCloudFront);
   }
 }

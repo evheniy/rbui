@@ -1,5 +1,4 @@
 import {
-  Fn,
   Stack,
   aws_certificatemanager as certificateManager,
   aws_route53 as route53,

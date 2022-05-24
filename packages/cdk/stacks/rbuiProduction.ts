@@ -7,7 +7,7 @@ import {
   getDomainBucket,
   getStorybookDomainBucket,
   getWwwDomainBucket,
-} from '@rbui/cdk/services/s3/bucket';
+} from '@rbui/cdk/services/s3';
 import {
   getDomainCloudFront,
   getStorybookDomainCloudFront,
@@ -21,7 +21,6 @@ import {
   getWwwDomainARecord,
   getWwwDomainAaaaRecord,
 } from '@rbui/cdk/services/route53/record';
-import { deployDomainBucket, deployStorybookDomainBucket } from '@rbui/cdk/services/s3/deployment';
 
 export class RBUIProductionCdkStack extends cdk.Stack {
   public readonly certificate: cdk.aws_certificatemanager.Certificate;
@@ -49,8 +48,5 @@ export class RBUIProductionCdkStack extends cdk.Stack {
 
     getStorybookDomainARecord(this, hostedZone, storybookDomainCloudFront);
     getStorybookDomainAaaaRecord(this, hostedZone, storybookDomainCloudFront);
-
-    deployDomainBucket(this, domainBucket, domainCloudFront);
-    deployStorybookDomainBucket(this, storybookDomainBucket, storybookDomainCloudFront);
   }
 }

@@ -35,6 +35,7 @@ export const getCloudFront = (
   certificate,
   defaultBehavior: {
     origin: new origins.S3Origin(bucket),
+    allowedMethods: cf.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
     viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
   },
   domainNames: [domainName],

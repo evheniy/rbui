@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
 import { getHostedZone } from '@rbui/cdk/services/route53/hostedZone';
-import { getStorybookTestDomainBucket, getTestDomainBucket } from '@rbui/cdk/services/s3/bucket';
+import { getStorybookTestDomainBucket, getTestDomainBucket } from '@rbui/cdk/services/s3';
 import { getStorybookTestDomainCloudFront, getTestDomainCloudFront } from '@rbui/cdk/services/cloudFront';
 import {
   getStorybookTestDomainARecord,
@@ -10,7 +10,6 @@ import {
   getTestDomainARecord,
   getTestDomainAaaaRecord,
 } from '@rbui/cdk/services/route53/record';
-import { deployStorybookTestDomainBucket, deployTestDomainBucket } from '@rbui/cdk/services/s3/deployment';
 
 export class RBUITestCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: cdk.StackProps & { certificate: cdk.aws_certificatemanager.Certificate }) {
@@ -31,8 +30,5 @@ export class RBUITestCdkStack extends cdk.Stack {
 
     getStorybookTestDomainARecord(this, hostedZone, storybookTestDomainCloudFront);
     getStorybookTestDomainAaaaRecord(this, hostedZone, storybookTestDomainCloudFront);
-
-    deployTestDomainBucket(this, testDomainBucket, testDomainCloudFront);
-    deployStorybookTestDomainBucket(this, storybookTestDomainBucket, storybookTestDomainCloudFront);
   }
 }
