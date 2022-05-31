@@ -56,6 +56,9 @@ jobs:
       - name: Setup Node
         run: bash bin/node
 
+      - name: Deploy
+        run: bash bin/deploy
+
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         if: always()
