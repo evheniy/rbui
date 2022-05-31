@@ -46,7 +46,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Setup AWS CLI
-        run: bash bin/aws
+        run: bash bin/aws ${{ secrets.AWS_ACCESS_KEY_ID }} ${{ secrets.AWS_SECRET_ACCESS_KEY }} ${{ secrets.AWS_DEFAULT_REGION }}
 
       - name: Setup Node
         run: bash bin/node
