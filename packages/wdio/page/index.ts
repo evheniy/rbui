@@ -5,7 +5,7 @@ import * as stages from '@rbui/core/stages';
 export class Page {
   open(path = '') {
     const stage = {
-      [stages.DEV]: `${HTTP}://localhost:3000/${path}`,
+      [stages.DEV]: `${HTTP}://localhost:8000/${path}`,
       [stages.STAGING]: getUrl(path, HTTPS, STAGING),
       [stages.TEST]: getUrl(path, HTTPS, TEST),
       [stages.PRODUCTION]: getUrl(path, HTTPS),
