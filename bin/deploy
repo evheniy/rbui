@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "Deploy tag: ${DEPLOY_TAG}"
+
+echo "Deploy environment: ${DEPLOY_ENV}"

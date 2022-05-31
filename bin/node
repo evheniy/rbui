@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+echo "Node version:"
+node -v
+
+npm i -g npm yarn
+
+echo "NPM version:"
+npm -v
+
+yarn set version berry
+
+echo "Yarn version:"
+yarn -v
+
+echo "Install dependencies..."
+yarn install

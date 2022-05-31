@@ -19,9 +19,51 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     if: ${{ github.ref == 'refs/heads/main' }}
+
+    env:
+      YARN_ENABLE_IMMUTABLE_INSTALLS: false
+      CI: true
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      DEPLOY_TAG: ${{ github.event.inputs.tag }}
+      DEPLOY_ENV: ${{ github.event.inputs.environment }}
+    
     steps:
-      - name: "Deploy tag:"
-        run: echo  "${{ github.event.inputs.tag }}"
-      - name: "Deploy environment:"
-        run: echo  "${{ github.event.inputs.environment }}"
+      - name: Deploy tag
+        run: echo  "${{ env.DEPLOY_TAG }}"
+      
+      - name: Deploy environment
+        run: echo  "${{ env.DEPLOY_ENV }}"
+
+      - name: Env variables
+        run: printenv
+
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Setup AWS CLI
+        run: bash bin/aws
+
+      - name: Setup Node
+        run: bash bin/node
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: always()
+        env:
+          SLACK_CHANNEL: general
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          # SLACK_MESSAGE: ':rocket:'
+          # SLACK_TITLE: Test
+          SLACK_USERNAME: rtCamp
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
