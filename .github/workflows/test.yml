@@ -16,26 +16,26 @@ jobs:
       CI: true
 
     steps:
+      - name: Env variables
+        run: printenv
+
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install and Build 🔧
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
 
-      - run: printenv
-      - run: aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-      - run: aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
-      - run: aws configure set default.output json
-      - run: node -v
-      - run: npm i -g npm yarn
-      - run: npm -v
-      - run: yarn set version berry
-      - run: yarn -v
-      - run: yarn install
-      - run: yarn test
+      - name: Setup AWS CLI
+        run: bash bin/aws
+
+      - name: Setup Node
+        run: bash bin/node
+
+      - name: Unit testing
+        run: yarn test
 
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
@@ -44,7 +44,7 @@ jobs:
           SLACK_CHANNEL: general
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: ':rocket:'
-          SLACK_TITLE: Test
+          # SLACK_MESSAGE: ':rocket:'
+          # SLACK_TITLE: Test
           SLACK_USERNAME: rtCamp
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

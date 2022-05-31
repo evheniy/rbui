@@ -25,38 +25,39 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
-      - name: Type
+      - name: Environment
         run: echo "environment is ${{ github.event.inputs.type }}"
 
-      - name: Printenv
+      - name: Env variables
         run: printenv
 
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Install and Build 🔧
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
-      - run: node -v
-      - run: npm i -g npm yarn
-      - run: npm -v
-      - run: yarn set version berry
-      - run: yarn -v
-      - run: yarn install
+      - name: Setup AWS CLI
+        run: bash bin/aws
 
-      - run: bash bin/version ${{ github.event.inputs.type }}
+      - name: Setup Node
+        run: bash bin/node
+
+      - name: Set a new version
+        run: bash bin/version ${{ github.event.inputs.type }}
 
       - name: Get New Version
         id: new_version
         run: echo "::set-output name=version::$(bash bin/get_version)"
         shell: bash
 
-      - run: yarn run dist
+      - name: Build packages
+        run: yarn run dist
 
       - name: Commit changes
         run: |
@@ -65,9 +66,11 @@ jobs:
           git commit -am "${{ steps.new_version.outputs.version }}"
           git push
 
-      - run: yarn run publish
+      - name: Publish new packages
+        run: yarn run publish
 
-      - uses: release-drafter/release-drafter@v5
+      - name: Github release
+        uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -75,8 +78,14 @@ jobs:
           tag: ${{ steps.new_version.outputs.version }}
           publish: true
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: storybook
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: always()
+        env:
+          SLACK_CHANNEL: general
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          # SLACK_MESSAGE: ':rocket:'
+          # SLACK_TITLE: Test
+          SLACK_USERNAME: rtCamp
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

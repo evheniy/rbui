@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+node -v
+npm i -g npm yarn
+npm -v
+yarn set version berry
+yarn -v
+yarn install
