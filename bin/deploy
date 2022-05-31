@@ -7,7 +7,7 @@ echo "Deploy environment: ${DEPLOY_ENV}"
 if [ "$DEPLOY_TAG" != "main" ]; then
   git fetch --all --tags
 
-  if [ "$DEPLOY_TAG" != "latest" ]; then
+  if [ "$DEPLOY_TAG" == "latest" ]; then
     DEPLOY_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
   fi
 

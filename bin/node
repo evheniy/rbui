@@ -12,6 +12,3 @@ yarn set version berry
 
 echo "Yarn version:"
 yarn -v
-
-echo "Install dependencies..."
-yarn install

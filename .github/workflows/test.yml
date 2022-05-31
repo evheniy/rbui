@@ -37,6 +37,9 @@ jobs:
       - name: Setup Node
         run: bash bin/node
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Unit testing
         run: yarn test
 
