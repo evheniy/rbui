@@ -13,12 +13,13 @@ on:
         required: true
 
 jobs:
-  deploy:
+  e2e:
     runs-on: ubuntu-latest
 
     env:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
       CI: true
+      HEADLESS: 1
       STAGE: ${{ github.event.inputs.environment }}
     
     steps:
