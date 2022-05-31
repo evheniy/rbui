@@ -1,23 +1,24 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 import { getStage as getEnvStage } from '@rbui/core/env';
 
 /**
  * Develop
  */
-export const DEV = 'dev';
+export const DEV: string = 'dev';
 /**
  * Staging
  */
-export const STAGING = 'staging';
+export const STAGING: string = 'staging';
 
 /**
  * Testing
  */
-export const TEST = 'test';
+export const TEST: string = 'test';
 
 /**
  * Production
  */
-export const PRODUCTION = 'production';
+export const PRODUCTION: string = 'production';
 
 /**
  * Get stage
