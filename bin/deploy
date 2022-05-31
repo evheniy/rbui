@@ -4,16 +4,16 @@ echo "Deploy tag: ${DEPLOY_TAG}"
 
 echo "Deploy environment: ${DEPLOY_ENV}"
 
-git fetch --all --tags
+if [ "$DEPLOY_TAG" != "latest" ]; then
+  git fetch --all --tags
 
-if [ "$DEPLOY_TAG" == "latest" ]; then
-  DEPLOY_TAG=$(git describe --tags --abbrev=0)
+  echo "Checkout to ${DEPLOY_TAG}"
+  git checkout tags/$DEPLOY_TAG -b deploy
+
+  yarn install
+  npm run build
+  npm run build-storybook
 fi
-
-echo "Tag for deploy: ${DEPLOY_TAG}"
-
-echo "Checkout to ${DEPLOY_TAG}"
-git checkout $DEPLOY_TAG -b $DEPLOY_TAG
 
 echo "Deploy to ${DEPLOY_ENV}"
 npm run deploy:${DEPLOY_ENV}
