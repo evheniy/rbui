@@ -1,0 +1,59 @@
+name: E2E testing
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment:'
+        type: choice
+        options:
+          - staging
+          - test
+          - production
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      YARN_ENABLE_IMMUTABLE_INSTALLS: false
+      CI: true
+      STAGE: ${{ github.event.inputs.environment }}
+    
+    steps:
+      - name: Test environment
+        run: echo  "${{ env.STAGE }}"
+
+      - name: Env variables
+        run: printenv
+
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Setup Node
+        run: bash bin/node
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: E2E testing
+        run: yarn wdio
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: always()
+        env:
+          SLACK_CHANNEL: general
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          # SLACK_MESSAGE: ':rocket:'
+          # SLACK_TITLE: Test
+          SLACK_USERNAME: rtCamp
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
