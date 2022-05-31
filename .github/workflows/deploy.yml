@@ -25,13 +25,18 @@ jobs:
     env:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
       CI: true
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      DEPLOY_TAG: ${{ github.event.inputs.tag }}
+      DEPLOY_ENV: ${{ github.event.inputs.environment }}
     
     steps:
       - name: Deploy tag
-        run: echo  "${{ github.event.inputs.tag }}"
+        run: echo  "${{ env.DEPLOY_TAG }}"
       
       - name: Deploy environment
-        run: echo  "${{ github.event.inputs.environment }}"
+        run: echo  "${{ env.DEPLOY_ENV }}"
 
       - name: Env variables
         run: printenv
@@ -46,7 +51,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Setup AWS CLI
-        run: bash bin/aws ${{ secrets.AWS_ACCESS_KEY_ID }} ${{ secrets.AWS_SECRET_ACCESS_KEY }} ${{ secrets.AWS_DEFAULT_REGION }}
+        run: bash bin/aws
 
       - name: Setup Node
         run: bash bin/node

@@ -14,6 +14,9 @@ jobs:
     env:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
       CI: true
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
 
     steps:
       - name: Env variables
@@ -29,7 +32,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Setup AWS CLI
-        run: bash bin/aws ${{ secrets.AWS_ACCESS_KEY_ID }} ${{ secrets.AWS_SECRET_ACCESS_KEY }} ${{ secrets.AWS_DEFAULT_REGION }}
+        run: bash bin/aws
 
       - name: Setup Node
         run: bash bin/node

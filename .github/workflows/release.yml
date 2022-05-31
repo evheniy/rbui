@@ -23,10 +23,14 @@ jobs:
       YARN_ENABLE_IMMUTABLE_INSTALLS: false
       CI: true
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      NEW_VERSION: ${{ github.event.inputs.type }}
 
     steps:
       - name: Environment
-        run: echo "environment is ${{ github.event.inputs.type }}"
+        run: echo "environment is ${{ env.NEW_VERSION }}"
 
       - name: Env variables
         run: printenv
@@ -43,13 +47,13 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Setup AWS CLI
-        run: bash bin/aws ${{ secrets.AWS_ACCESS_KEY_ID }} ${{ secrets.AWS_SECRET_ACCESS_KEY }} ${{ secrets.AWS_DEFAULT_REGION }}
+        run: bash bin/aws
 
       - name: Setup Node
         run: bash bin/node
 
       - name: Set a new version
-        run: bash bin/version ${{ github.event.inputs.type }}
+        run: bash bin/version
 
       - name: Get New Version
         id: new_version
