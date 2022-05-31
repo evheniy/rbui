@@ -29,8 +29,8 @@ jobs:
       NEW_VERSION: ${{ github.event.inputs.type }}
 
     steps:
-      - name: Environment
-        run: echo "environment is ${{ env.NEW_VERSION }}"
+      - name: New version type
+        run: echo "${{ env.NEW_VERSION }}"
 
       - name: Env variables
         run: printenv
@@ -81,6 +81,12 @@ jobs:
           version: ${{ steps.new_version.outputs.version }}
           tag: ${{ steps.new_version.outputs.version }}
           publish: true
+
+      - name: "Deploy on test"
+        env: 
+          DEPLOY_TAG: ${{ steps.new_version.outputs.version }}
+          DEPLOY_ENV: test
+        run: bash bin/deploy
 
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
