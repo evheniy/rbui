@@ -7,7 +7,7 @@ import warning from 'warning';
 export const oneOf = <P extends object>(props: P) => {
   const keys = (Object.keys(props) as Array<keyof P>).filter(key => props[key]);
 
-  warning(keys.length < 2, `The component should have only one property of [${keys.map(key => `"${key}"`).join(', ')}]!`);
+  warning(keys.length < 2, `The component should have only one property of [${keys.map(key => `"${String(key)}"`).join(', ')}]!`);
 };
 
 /**
