@@ -43,7 +43,7 @@ jobs:
       - name: "Deploy on staging"
         if: ${{ github.ref == 'refs/heads/main' }}
         env: 
-          DEPLOY_TAG: latest
+          DEPLOY_TAG: main
           DEPLOY_ENV: staging
         run: bash bin/deploy
 
