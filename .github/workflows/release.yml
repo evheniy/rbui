@@ -52,6 +52,9 @@ jobs:
       - name: Setup Node
         run: bash bin/node
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Set a new version
         run: bash bin/version
 

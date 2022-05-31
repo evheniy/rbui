@@ -2,7 +2,7 @@
   "name": "rbui",
   "version": "0.0.12",
   "private": true,
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.2.1",
   "workspaces": [
     "packages/*"
   ],
