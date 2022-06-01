@@ -1,6 +1,6 @@
-import { getEnv, getStage } from '.';
+import * as env from '.';
 
-describe('Test @rb/core-env', () => {
+describe('Test @rb/core/env', () => {
   const OLD_ENV = process.env;
 
   beforeEach(() => {
@@ -13,18 +13,42 @@ describe('Test @rb/core-env', () => {
   });
 
   test('getEnv', () => {
-    expect(getEnv()).toBeDefined();
-    expect(getEnv()).toEqual('test');
+    expect(env.getEnv()).toBeDefined();
+    expect(env.getEnv()).toEqual('test');
 
     process.env.NODE_ENV = 'dev';
-    expect(getEnv()).toEqual('dev');
+    expect(env.getEnv()).toEqual('dev');
   });
 
   test('getStage', () => {
-    expect(getStage()).toBeUndefined();
+    expect(env.getStage()).toBeUndefined();
 
     process.env.STAGE = 'dev';
-    expect(getStage()).toBeDefined();
-    expect(getStage()).toEqual('dev');
+    expect(env.getStage()).toBeDefined();
+    expect(env.getStage()).toEqual('dev');
+  });
+
+  test('getRegion', () => {
+    expect(env.getRegion()).toBeUndefined();
+
+    process.env.REGION = 'test';
+    expect(env.getRegion()).toBeDefined();
+    expect(env.getRegion()).toEqual('test');
+  });
+
+  test('getCdkAccount', () => {
+    expect(env.getCdkAccount()).toBeUndefined();
+
+    process.env.CDK_DEFAULT_ACCOUNT = 'test';
+    expect(env.getCdkAccount()).toBeDefined();
+    expect(env.getCdkAccount()).toEqual('test');
+  });
+
+  test('getCdkRegion', () => {
+    expect(env.getCdkRegion()).toBeUndefined();
+
+    process.env.CDK_DEFAULT_REGION = 'test';
+    expect(env.getCdkRegion()).toBeDefined();
+    expect(env.getCdkRegion()).toEqual('test');
   });
 });
