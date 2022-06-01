@@ -1879,7 +1879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/postcss-cascade-layers@npm:^1.0.1":
+"@csstools/postcss-cascade-layers@npm:^1.0.2":
   version: 1.0.2
   resolution: "@csstools/postcss-cascade-layers@npm:1.0.2"
   dependencies:
@@ -1991,6 +1991,17 @@ __metadata:
   peerDependencies:
     postcss: ^8.3
   checksum: 48e9c20a84f58555c0c26889db76d3cef90413e6b4e47c6d2f3895afd713181405ce2afcf3230447ee139e56fe19d568c665de0c7a19d0c16dc834f439b71d72
+  languageName: node
+  linkType: hard
+
+"@csstools/postcss-trigonometric-functions@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@csstools/postcss-trigonometric-functions@npm:1.0.1"
+  dependencies:
+    postcss-value-parser: ^4.2.0
+  peerDependencies:
+    postcss: ^8.4
+  checksum: 28de7e355016c7dde09cd292b75e4d48945997480c49bbe2ebcd4f88a960f424943bee0d5a54f832de4e1e99313eaac983c2bbbf885500919fef477351e52794
   languageName: node
   linkType: hard
 
@@ -4624,10 +4635,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^17.0.36":
-  version: 17.0.36
-  resolution: "@types/node@npm:17.0.36"
-  checksum: 11055fde0a1e1421113849b5e32c7022911efc0be670729947bf0162970e79962d804b1eb8a9afb291380cac97cf0e684511415d586ae5fe1560322c940fe188
+"@types/node@npm:^17.0.38":
+  version: 17.0.38
+  resolution: "@types/node@npm:17.0.38"
+  checksum: 9db1c39d603850ced665ab60b8f8ebce674ff9d762dfff0f776d520e71e4d73fdcd4c7f69213b804d878cf3e726911b09cae4ee66e35ae2724538de9f4838681
   languageName: node
   linkType: hard
 
@@ -4735,7 +4746,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18.0.9":
+"@types/react@npm:*, @types/react@npm:>=16":
   version: 18.0.9
   resolution: "@types/react@npm:18.0.9"
   dependencies:
@@ -4743,6 +4754,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 162364dad716d9017ee34aabf2ea37499709ebbdef70392ae1b39225985971e1a46f121efb9c5c7da92144ee1d96d4525df806a7c1c03a5db7fd31dd034ddc7a
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.0.10":
+  version: 18.0.10
+  resolution: "@types/react@npm:18.0.10"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 333c99bd46cc2190ec6f6e4f3fa6cdee07e1d4d028fb2bd895d3927d9de6e86ede57befdc79d9acbfb7b1c058091bf3b38b8de3703f83e0f8cd8d15d7457b3d8
   languageName: node
   linkType: hard
 
@@ -6562,9 +6584,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:^2.1145.0":
-  version: 2.1145.0
-  resolution: "aws-sdk@npm:2.1145.0"
+"aws-sdk@npm:^2.1146.0":
+  version: 2.1146.0
+  resolution: "aws-sdk@npm:2.1146.0"
   dependencies:
     buffer: 4.9.2
     events: 1.1.1
@@ -6573,9 +6595,9 @@ __metadata:
     querystring: 0.2.0
     sax: 1.2.1
     url: 0.10.3
-    uuid: 3.3.2
+    uuid: 8.0.0
     xml2js: 0.4.19
-  checksum: 698ace0e4c67ecc0ff02f06517911e78f928f4279a97b22f2657f4c9d34d2f55676d630c0cb66ec10fe39fdd59810b8518ff6203568136e4deb062377f11a9c5
+  checksum: 11fc58eed12d7573d155928690f6533add1e202b70c6c15f48eeedc037cc476189c980a9695bcf4d8df360db174c6e3916aeeac61c36fac6933ad2238c7835de
   languageName: node
   linkType: hard
 
@@ -8474,10 +8496,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"constructs@npm:^10.1.23":
-  version: 10.1.23
-  resolution: "constructs@npm:10.1.23"
-  checksum: a6a22028e1107680877940af0fddc2a57baed3ef0127647a3a305ab54c0e382c3403e06e7c0c2b14b270c578b7c7f7e06a279d0aa077b639cbc969a76859b06e
+"constructs@npm:^10.1.24":
+  version: 10.1.24
+  resolution: "constructs@npm:10.1.24"
+  checksum: 795ed40cbceb2428b8d0030641a7792128d82ca21001f0ac657ad74456355e45477d1c240e5692fab295b20a055364c0e5ad0feff0e8711c77a59f18d5cfa1a6
   languageName: node
   linkType: hard
 
@@ -8956,10 +8978,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssdb@npm:^6.6.1":
-  version: 6.6.1
-  resolution: "cssdb@npm:6.6.1"
-  checksum: 5348fe6690d615f4ebda428e4b379402e4286f6669532b61c5896470b09aef4b62dc53dfb414585b0dd0b52af557e308044a54be24bc65d935fe2fa782046aa2
+"cssdb@npm:^6.6.2":
+  version: 6.6.2
+  resolution: "cssdb@npm:6.6.2"
+  checksum: 4e8d4f5ce27b3aa1a954149d418791ca01f6ce50ac5fefe0edd1594d1bf13dc2b07280b4b4cc00df73e97068e964e9f5644891bdeabc5fb5b1e4186466a29b0d
   languageName: node
   linkType: hard
 
@@ -17964,7 +17986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-color-functional-notation@npm:^4.2.2":
+"postcss-color-functional-notation@npm:^4.2.3":
   version: 4.2.3
   resolution: "postcss-color-functional-notation@npm:4.2.3"
   dependencies:
@@ -18412,7 +18434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-nesting@npm:^10.1.6":
+"postcss-nesting@npm:^10.1.7":
   version: 10.1.7
   resolution: "postcss-nesting@npm:10.1.7"
   dependencies:
@@ -18571,11 +18593,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^7.6.0":
-  version: 7.6.0
-  resolution: "postcss-preset-env@npm:7.6.0"
+"postcss-preset-env@npm:^7.7.0":
+  version: 7.7.0
+  resolution: "postcss-preset-env@npm:7.7.0"
   dependencies:
-    "@csstools/postcss-cascade-layers": ^1.0.1
+    "@csstools/postcss-cascade-layers": ^1.0.2
     "@csstools/postcss-color-function": ^1.1.0
     "@csstools/postcss-font-format-keywords": ^1.0.0
     "@csstools/postcss-hwb-function": ^1.0.1
@@ -18585,16 +18607,17 @@ __metadata:
     "@csstools/postcss-oklab-function": ^1.1.0
     "@csstools/postcss-progressive-custom-properties": ^1.3.0
     "@csstools/postcss-stepped-value-functions": ^1.0.0
+    "@csstools/postcss-trigonometric-functions": ^1.0.0
     "@csstools/postcss-unset-value": ^1.0.1
     autoprefixer: ^10.4.7
     browserslist: ^4.20.3
     css-blank-pseudo: ^3.0.3
     css-has-pseudo: ^3.0.4
     css-prefers-color-scheme: ^6.0.3
-    cssdb: ^6.6.1
+    cssdb: ^6.6.2
     postcss-attribute-case-insensitive: ^5.0.0
     postcss-clamp: ^4.1.0
-    postcss-color-functional-notation: ^4.2.2
+    postcss-color-functional-notation: ^4.2.3
     postcss-color-hex-alpha: ^8.0.3
     postcss-color-rebeccapurple: ^7.0.2
     postcss-custom-media: ^8.0.0
@@ -18612,7 +18635,7 @@ __metadata:
     postcss-lab-function: ^4.2.0
     postcss-logical: ^5.0.4
     postcss-media-minmax: ^5.0.0
-    postcss-nesting: ^10.1.6
+    postcss-nesting: ^10.1.7
     postcss-opacity-percentage: ^1.1.2
     postcss-overflow-shorthand: ^3.0.3
     postcss-page-break: ^3.0.4
@@ -18623,7 +18646,7 @@ __metadata:
     postcss-value-parser: ^4.2.0
   peerDependencies:
     postcss: ^8.4
-  checksum: 9709359ee04209a39ea4d46fb42de95a44d3a314568c6c57cf3650827fda37e5cf56000a932a8d16cf2d006f05dbf413c323c0bbdc2f28c1242604346f60777b
+  checksum: 3f9ce3a3f733b8ba28359b475a0b357e4940ac9cf775cf76e900322bbabd686fe642e0ce96cc992e0b6aac97f04acfc68056dde4efabada7cd211427e1fab419
   languageName: node
   linkType: hard
 
@@ -19274,8 +19297,8 @@ __metadata:
     "@storybook/react": ^6.5.6
     "@types/jest": ^27.5.1
     "@types/mini-css-extract-plugin": ^2.5.1
-    "@types/node": ^17.0.36
-    "@types/react": ^18.0.9
+    "@types/node": ^17.0.38
+    "@types/react": ^18.0.10
     "@types/react-dom": ^18.0.5
     "@types/react-test-renderer": ^18.0.0
     "@types/warning": ^3.0.0
@@ -19292,7 +19315,7 @@ __metadata:
     "@wdio/types": ^7.19.5
     aws-cdk: ^2.26.0
     aws-cdk-lib: ^2.26.0
-    aws-sdk: ^2.1145.0
+    aws-sdk: ^2.1146.0
     babel-loader: ^8.2.5
     bootstrap: ^5.1.3
     browserslist: ^4.20.3
@@ -19301,7 +19324,7 @@ __metadata:
     chromedriver: ^101.0.0
     classnames: ^2.3.1
     colors: ^1.4.0
-    constructs: ^10.1.23
+    constructs: ^10.1.24
     css-loader: ^6.7.1
     cssnano: ^5.1.10
     eslint: ^8.16.0
@@ -19325,7 +19348,7 @@ __metadata:
     npm-run-all: ^4.1.5
     postcss: ^8.4.14
     postcss-loader: ^7.0.0
-    postcss-preset-env: ^7.6.0
+    postcss-preset-env: ^7.7.0
     raf: ^3.4.1
     react: ^18.1.0
     react-dom: ^18.1.0
@@ -19348,7 +19371,7 @@ __metadata:
     wdio-video-reporter: ^3.2.1
     webpack: ^5.72.1
     webpack-cli: ^4.9.2
-    webpack-dev-server: ^4.9.0
+    webpack-dev-server: ^4.9.1
   languageName: unknown
   linkType: soft
 
@@ -20913,7 +20936,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sockjs@npm:^0.3.21":
+"sockjs@npm:^0.3.21, sockjs@npm:^0.3.24":
   version: 0.3.24
   resolution: "sockjs@npm:0.3.24"
   dependencies:
@@ -22971,6 +22994,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uuid@npm:8.0.0":
+  version: 8.0.0
+  resolution: "uuid@npm:8.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 56d4e23aa7ac26fa2db6bd1778db34cb8c9f5a10df1770a27167874bf6705fc8f14a4ac414af58a0d96c7653b2bd4848510b29d1c2ef8c91ccb17429c1872b5e
+  languageName: node
+  linkType: hard
+
 "uuid@npm:^3.0.0, uuid@npm:^3.0.1, uuid@npm:^3.3.2":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
@@ -23387,7 +23419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:*, webpack-dev-server@npm:^4.9.0":
+"webpack-dev-server@npm:*":
   version: 4.9.0
   resolution: "webpack-dev-server@npm:4.9.0"
   dependencies:
@@ -23427,6 +23459,49 @@ __metadata:
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
   checksum: 3ee3fc9650ede7be37440d404fea2420310f3fb6dfdcfdb71b1d9e4675b04f05843832c9be68ecd4bd4e8e2c960e5d9da299990bd29d05702edfd013fef9e8c8
+  languageName: node
+  linkType: hard
+
+"webpack-dev-server@npm:^4.9.1":
+  version: 4.9.1
+  resolution: "webpack-dev-server@npm:4.9.1"
+  dependencies:
+    "@types/bonjour": ^3.5.9
+    "@types/connect-history-api-fallback": ^1.3.5
+    "@types/express": ^4.17.13
+    "@types/serve-index": ^1.9.1
+    "@types/sockjs": ^0.3.33
+    "@types/ws": ^8.5.1
+    ansi-html-community: ^0.0.8
+    bonjour-service: ^1.0.11
+    chokidar: ^3.5.3
+    colorette: ^2.0.10
+    compression: ^1.7.4
+    connect-history-api-fallback: ^1.6.0
+    default-gateway: ^6.0.3
+    express: ^4.17.3
+    graceful-fs: ^4.2.6
+    html-entities: ^2.3.2
+    http-proxy-middleware: ^2.0.3
+    ipaddr.js: ^2.0.1
+    open: ^8.0.9
+    p-retry: ^4.5.0
+    rimraf: ^3.0.2
+    schema-utils: ^4.0.0
+    selfsigned: ^2.0.1
+    serve-index: ^1.9.1
+    sockjs: ^0.3.24
+    spdy: ^4.0.2
+    webpack-dev-middleware: ^5.3.1
+    ws: ^8.4.2
+  peerDependencies:
+    webpack: ^4.37.0 || ^5.0.0
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack-dev-server: bin/webpack-dev-server.js
+  checksum: da1b71d45ed52d6f6de3378e925964f489db84393232e8e6880d1a9cecc6c329206e7b36fb32ce8b3b413b20bb7e032ede8a7060368d3cf61b9c64e2e825e697
   languageName: node
   linkType: hard
 
