@@ -36,6 +36,7 @@
     "jsdoc": "jsdoc dist -r -d jsdoc",
     "presynth": "rimraf cdk.out",
     "postsynth": "npm-run-all 'drawio:*'",
+    "deploy:rbui": "cdk deploy RBUICdkStack",
     "deploy:production": "cdk deploy RBUIProductionCdkStack",
     "deploy:staging": "cdk deploy RBUIStagingCdkStack",
     "deploy:test": "cdk deploy RBUITestCdkStack",
