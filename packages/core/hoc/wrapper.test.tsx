@@ -4,7 +4,7 @@ import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import compose from './compose';
 import withWrapper from './wrapper';
 
-describe('Test @rb/core/hoc/wrapper', () => {
+describe('@rbui/core/hoc/wrapper', () => {
   test('wrapper', () => {
     interface P {
       data: string;

@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 import { getDomain } from '@rbui/core/domains';
 
 /**
  * HTTP protocol
  */
-export const HTTP = 'http';
+export const HTTP: string = 'http';
 
 /**
  * HTTPS protocol
  */
-export const HTTPS = 'https';
+export const HTTPS: string = 'https';
 
 /**
  * Get url

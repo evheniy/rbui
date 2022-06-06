@@ -1,6 +1,6 @@
 import compose from './compose';
 
-describe('Test @rb/core/props/compose', () => {
+describe('@rbui/core/props/compose', () => {
   test('test without props', () => {
     const composed = compose();
 

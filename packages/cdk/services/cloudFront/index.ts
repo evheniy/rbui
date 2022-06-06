@@ -23,6 +23,7 @@ import {
  * @param {string} domainName Domain Name
  * @param {cdk.aws_certificatemanager.Certificate} certificate Certificate
  * @param {cdk.aws_s3.Bucket} bucket Bucket
+ * @param {string} defaultRootObject DefaultRootObject
  * @returns {cdk.aws_cloudfront.Distribution} Distribution
  */
 export const getCloudFront = (
@@ -31,6 +32,7 @@ export const getCloudFront = (
   domainName: string,
   certificate: cm.ICertificate,
   bucket: s3.Bucket,
+  defaultRootObject?: string,
 ) => new cf.Distribution(stack, name, {
   certificate,
   defaultBehavior: {
@@ -39,7 +41,7 @@ export const getCloudFront = (
     viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
   },
   domainNames: [domainName],
-  defaultRootObject: 'index.html',
+  defaultRootObject,
 });
 
 /**
@@ -78,6 +80,7 @@ export const getDomainCloudFront = (
   domain,
   certificate,
   bucket,
+  'index.html',
 );
 
 /**
@@ -97,6 +100,7 @@ export const getStorybookDomainCloudFront = (
   storybookDomain,
   certificate,
   bucket,
+  'index.html',
 );
 
 /**
@@ -116,6 +120,7 @@ export const getStagingDomainCloudFront = (
   stagingDomain,
   certificate,
   bucket,
+  'index.html',
 );
 
 /**
@@ -135,6 +140,7 @@ export const getStorybookStagingDomainCloudFront = (
   storybookStagingDomain,
   certificate,
   bucket,
+  'index.html',
 );
 
 /**
@@ -154,6 +160,7 @@ export const getTestDomainCloudFront = (
   testDomain,
   certificate,
   bucket,
+  'index.html',
 );
 
 /**
@@ -173,4 +180,5 @@ export const getStorybookTestDomainCloudFront = (
   storybookTestDomain,
   certificate,
   bucket,
+  'index.html',
 );
