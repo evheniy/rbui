@@ -1,6 +1,6 @@
 import * as domains from '.';
 
-describe('Test @rb/core/domains', () => {
+describe('@rbui/core/domains', () => {
   test('DOMAIN', () => {
     expect(domains.DOMAIN).toEqual('rbui.tools');
   });

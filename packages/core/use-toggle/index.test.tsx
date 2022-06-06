@@ -44,7 +44,7 @@ const useToggleTest = (component: ReactTestRenderer, isToggled = false): void =>
   testProps(component.toJSON() as renderer.ReactTestRendererJSON, !isToggled);
 };
 
-describe('Test @rb/core/use-toggle', () => {
+describe('@rbui/core/use-toggle', () => {
   test('test useToggle hook initialState:true', () => {
     const isToggled = true;
     useToggleTest(renderer.create(<TestComponent isToggled={isToggled} />), isToggled);

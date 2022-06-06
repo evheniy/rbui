@@ -1,6 +1,6 @@
 import * as env from '.';
 
-describe('Test @rb/core/env', () => {
+describe('@rbui/core/env', () => {
   const OLD_ENV = process.env;
 
   beforeEach(() => {

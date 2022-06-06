@@ -10,4 +10,6 @@ then
 else
   yarn install
   npx browserslist@latest --update-db
+  yarn up
+  yarn test
 fi

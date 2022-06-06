@@ -2,7 +2,7 @@ import { WWW } from '@rbui/core/domains';
 
 import { HTTP, HTTPS, getUrl } from '.';
 
-describe('Test @rb/core/url', () => {
+describe('@rbui/core/url', () => {
   test('HTTP', () => {
     expect(HTTP).toEqual('http');
   });

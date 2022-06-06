@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import compose from './compose';
 
-describe('Test @rb/core/hoc/compose', () => {
+describe('@rbui/core/hoc/compose', () => {
   interface Props {
     isTest: boolean;
   }

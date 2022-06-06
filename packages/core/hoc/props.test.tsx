@@ -4,7 +4,7 @@ import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import compose from './compose';
 import mapProps from './props';
 
-describe('Test @rb/core/hoc/props', () => {
+describe('@rbui/core/hoc/props', () => {
   test('Props', () => {
     interface Base {
       data: string;

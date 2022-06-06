@@ -1,6 +1,6 @@
 import * as stages from '.';
 
-describe('Test @rb/core/stages', () => {
+describe('@rbui/core/stages', () => {
   const OLD_ENV = process.env;
 
   beforeEach(() => {

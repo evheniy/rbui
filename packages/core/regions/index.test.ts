@@ -1,6 +1,6 @@
 import { US_EAST_1, getRegion } from '.';
 
-describe('Test @rb/core/regions', () => {
+describe('@rbui/core/regions', () => {
   const OLD_ENV = process.env;
 
   beforeEach(() => {
