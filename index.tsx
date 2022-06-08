@@ -26,13 +26,13 @@ const App = () => (
 
     <main role="main" className={cn(styles.cover, 'inner')}>
       <h1 className={cn(styles['cover-heading'])}>React Bootstrap UI</h1>
-      <p className={cn('lead')}>Use full Bootstrap css functionality with React and TypeScript</p>
+      <p className={cn('lead')}>Bootstrap functionality with React and TypeScript</p>
     </main>
 
     <footer className={cn(styles.mastfoot, 'mt-auto')}>
       <div className={cn('inner')}>
         <p>
-          Copyright © 2020 RBUI
+          Copyright © 2022 Evheniy Bystrov
         </p>
       </div>
     </footer>
