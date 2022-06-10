@@ -1,6 +1,8 @@
 # React Bootstrap UI
 
-A new React UI kit based on latest Bootstrap.
+Bootstrap functionality with React and TypeScript
+
+[https://rbui.tools/](https://rbui.tools/)
 
 
 [![NPM](https://nodei.co/npm/@rbui/components.png)](https://www.npmjs.com/package/@rbui/components)
@@ -21,5 +23,4 @@ Or
 
 ## How to use
 
-See 
-more examples on [https://sb.rbui.tools/](https://sb.rbui.tools/)
+See more examples in [Storybook](https://sb.rbui.tools/)
