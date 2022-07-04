@@ -34,7 +34,7 @@ export const config: Configuration = {
   resolve: { extensions, alias },
   mode: isProduction ? 'production' : 'development',
   target: isProduction ? 'browserslist' : 'web',
-  entry: ['react-hot-loader/patch', '@babel/polyfill', 'raf/polyfill', getFullPath('index.tsx')], // TODO change @rb/ui-icon to app
+  entry: ['react-hot-loader/patch', '@babel/polyfill', 'raf/polyfill', getFullPath('index.tsx')],
   output: {
     filename: '[name].[contenthash].js',
     path: getFullPath('build'),
