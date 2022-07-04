@@ -1,4 +1,5 @@
 import { createCertificate } from 'pem';
+
 import api, { http } from '@rbui/api';
 
 createCertificate({ days: 1, selfSigned: true }, (err, keys) => {

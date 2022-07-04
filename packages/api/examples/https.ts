@@ -1,4 +1,5 @@
 import { createCertificate } from 'pem';
+
 import api, { http } from '@rbui/api';
 
 const handler: http.HttpHandler = async (req, res) => {
