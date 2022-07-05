@@ -11,16 +11,11 @@ import styles from './styles.scss';
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
-    document.getElementById('root')?.classList.add(styles['cover-container'], 'd-flex', 'w-100', 'h-100', 'p-3', 'mx-auto', 'flex-column');
+    document.getElementById('root')?.classList.add(styles['cover-container']);
   }, []);
 
   return (
     <>
-      <Helmet>
-        <html className={cn('h-100')} lang="en" />
-        <body className={cn('d-flex', 'h-100', 'text-center', 'text-white', 'bg-dark')} />
-      </Helmet>
-
       <Header />
 
       <main role="main" className={cn('px-3')}>

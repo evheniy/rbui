@@ -1,4 +1,4 @@
-const defaultHtmlAttributes = 'lang="en"';
+const defaultHtmlAttributes = 'lang="en" class="h-100"';
 
 const defaultTitle = '<title>Loading...</title>';
 
@@ -9,7 +9,7 @@ const defaultMeta = `
 `;
 
 const defaultBody = `
-<div id="root">
+<div id="root" class="d-flex w-100 h-100 p-3 mx-auto flex-column">
   <style>
     .spinner:before {
       content:"";
@@ -62,7 +62,7 @@ export const html = (props: HtmlProps = {}): string => {
     base = '',
     link = '',
     style = '',
-    bodyAttributes = '',
+    bodyAttributes = 'class="d-flex h-100 text-center text-white bg-dark"',
     body = defaultBody,
     noscript = '',
     script = '',
