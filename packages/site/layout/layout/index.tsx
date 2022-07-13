@@ -1,7 +1,5 @@
 import React, { FC, PropsWithChildren, useEffect } from 'react';
 
-import { Helmet } from 'react-helmet';
-
 import cn from 'classnames';
 
 import { Header } from '../header';
