@@ -52,7 +52,7 @@ yarn plugin import version
 ### Brew
 
 ```bash
-brew update && brew upgrade
+brew update && brew upgrade && brew upgrade --cask
 ```
 
 ### Project dependencies
