@@ -24,3 +24,7 @@ Or
 ## How to use
 
 See more examples in [Storybook](https://sb.rbui.tools/)
+
+## How to setup
+
+[docs/setup](https://github.com/evheniy/rbui/blob/main/docs/setup.md)
